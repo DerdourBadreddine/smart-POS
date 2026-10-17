@@ -196,11 +196,17 @@ export interface ShopSettings {
 
 export interface DeviceHistory {
   phone_unit: PhoneUnit | null;
-  sales: Array<Record<string, unknown>>;
-  repairs: Array<Record<string, unknown>>;
+  sales: Array<{ number: string; date: string; customer: string | null; price: number; warranty_until: string | null }>;
+  repairs: Array<{ number: string; status: string; received_at: string; delivered_at: string | null; warranty_days: number }>;
   warranty: {
     active: boolean;
     ends_on: string | null;
     source: 'sale' | 'repair' | null;
   };
+}
+
+export interface CustomerStatement {
+  customer: Customer;
+  unpaid_sales: Sale[];
+  payments: SalePayment[];
 }

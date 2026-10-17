@@ -14,7 +14,9 @@
     "pagination": "التنقل بين الصفحات",
     "select": "اختيار",
     "remove": "حذف",
-    "close": "إغلاق"
+    "close": "إغلاق",
+    "add": "إضافة",
+    "loading": "جار التحميل..."
   },
   "nav": {
     "dashboard": "لوحة التحكم",
@@ -137,6 +139,27 @@
     "changeStatus": "تغيير الحالة",
     "noTicketsInStatus": "لا توجد تذاكر",
     "statusChangeFailed": "تعذر تغيير الحالة.",
+    "selectCustomer": "اختيار الزبون",
+    "brand": "العلامة",
+    "model": "الموديل",
+    "accessories": "الملحقات المتروكة",
+    "estimatedCost": "التكلفة المقدرة",
+    "deposit": "العربون",
+    "promisedDate": "تاريخ التسليم المتوقع",
+    "warrantyDays": "أيام الضمان",
+    "created": "تم إنشاء التذكرة",
+    "back": "عودة",
+    "parts": "القطع",
+    "partSearch": "البحث عن قطعة",
+    "quantity": "الكمية",
+    "totals": "المجاميع",
+    "partsTotal": "مجموع القطع",
+    "labor": "العمل",
+    "total": "المجموع",
+    "paid": "المدفوع",
+    "notes": "ملاحظات الفني",
+    "whatsapp": "إشعار عبر واتساب",
+    "printReceipt": "طباعة الإيصال",
     "statuses": {
       "RECEIVED": "مستلم",
       "DIAGNOSING": "قيد التشخيص",
@@ -190,5 +213,10 @@
     "void": "إلغاء",
     "voidConfirm": "هل تريد إلغاء البيع وإرجاع المخزون؟",
     "statuses": { "COMPLETED": "مكتمل", "VOIDED": "ملغى" }
-  }
+  },
+  "customers": {"title":"الزبائن","directory":"دليل الزبائن","add":"إضافة زبون","edit":"تعديل الزبون","name":"الاسم","phone":"الهاتف","notes":"ملاحظات","balance":"الرصيد","owing":"عليه دين","details":"التفاصيل","collect":"تحصيل"},
+  "devices": {"title":"الأجهزة","lookup":"البحث عن IMEI","underWarranty":"ضمن الضمان حتى","noWarranty":"لا يوجد ضمان","timeline":"سجل الجهاز","unknown":"IMEI غير معروف","newRepair":"تذكرة إصلاح جديدة"},
+  "settings": {"title":"الإعدادات","shop":"إعدادات المحل","shop_name":"اسم المحل","address":"العنوان","phone":"الهاتف","currency_symbol":"رمز العملة","country_dial_code":"رمز الدولة","receipt_footer_fr":"تذييل الإيصال بالفرنسية","receipt_footer_ar":"تذييل الإيصال بالعربية","defaultLanguage":"اللغة الافتراضية"},
+  "expenses": {"title":"المصاريف","list":"قائمة المصاريف","add":"إضافة مصروف","from":"من","to":"إلى","date":"التاريخ","label":"الوصف","category":"الفئة","amount":"المبلغ"},
+  "reports": {"title":"التقارير","endOfDay":"نهاية اليوم","date":"التاريخ","print":"طباعة"}
 }

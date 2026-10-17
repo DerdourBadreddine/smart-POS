@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import {
   Category,
   Customer,
+  CustomerStatement,
   DeviceHistory,
   Expense,
   Page,
@@ -85,8 +86,12 @@ export class CustomersApi extends BaseApi<Customer> {
     super('customers');
   }
 
-  statement(id: number): Observable<Record<string, unknown>> {
-    return this.client.get<Record<string, unknown>>(`/api/customers/${id}/statement/`);
+  statement(id: number): Observable<CustomerStatement> {
+    return this.client.get<CustomerStatement>(`/api/customers/${id}/statement/`);
+  }
+
+  payment(id: number, payload: Omit<SalePayment, 'id' | 'sale' | 'paid_at'>): Observable<SalePayment> {
+    return this.client.post<SalePayment>(`/api/sales/${id}/payments/`, payload);
   }
 }
 

@@ -432,6 +432,6 @@ Check: on a clean Windows user account, run `install.bat`, then use only the des
 - [ ] Phase 3: Task 3.1 Angular shell + i18n, 3.2 API layer
 - [ ] Phase 4: Task 4.1 products, 4.2 phones by IMEI, 4.3 CSV
 - [x] Phase 5: Task 5.1 checkout, 5.2 receipt and history
-- [ ] Phase 6: Task 6.1 repairs list, 6.2 repair form/detail, 6.3 customers, 6.4 device lookup, 6.5 settings/expenses/reports
+- [x] Phase 6: Task 6.1 repairs list, 6.2 repair form/detail, 6.3 customers, 6.4 device lookup, 6.5 settings/expenses/reports
 - [ ] Phase 7: Task 7.1 dashboard, 7.2 launcher, 7.3 installer and owner guide
 - [ ] Optional: Task 7.4 PyInstaller exe

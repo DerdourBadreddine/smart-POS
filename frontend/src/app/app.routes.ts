@@ -50,8 +50,8 @@ export const routes: Routes = [
         path: 'repairs/new',
         data: { titleKey: 'repairs.newTicket' },
         loadComponent: () =>
-          import('./shared/placeholder-page/placeholder-page.component').then(
-            (m) => m.PlaceholderPageComponent,
+          import('./features/repairs/repair-form-page.component').then(
+            (m) => m.RepairFormPageComponent,
           ),
       },
       {
@@ -60,6 +60,54 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/repairs/repairs-page.component').then(
             (m) => m.RepairsPageComponent,
+          ),
+      },
+      {
+        path: 'repairs/:id',
+        data: { titleKey: 'nav.repairs' },
+        loadComponent: () =>
+          import('./features/repairs/repair-detail-page.component').then(
+            (m) => m.RepairDetailPageComponent,
+          ),
+      },
+      {
+        path: 'customers',
+        data: { titleKey: 'nav.customers' },
+        loadComponent: () =>
+          import('./features/customers/customers-page.component').then(
+            (m) => m.CustomersPageComponent,
+          ),
+      },
+      {
+        path: 'devices',
+        data: { titleKey: 'nav.devices' },
+        loadComponent: () =>
+          import('./features/devices/device-lookup-page.component').then(
+            (m) => m.DeviceLookupPageComponent,
+          ),
+      },
+      {
+        path: 'settings',
+        data: { titleKey: 'nav.settings' },
+        loadComponent: () =>
+          import('./features/settings/settings-page.component').then(
+            (m) => m.SettingsPageComponent,
+          ),
+      },
+      {
+        path: 'expenses',
+        data: { titleKey: 'nav.expenses' },
+        loadComponent: () =>
+          import('./features/expenses/expenses-page.component').then(
+            (m) => m.ExpensesPageComponent,
+          ),
+      },
+      {
+        path: 'reports',
+        data: { titleKey: 'nav.reports' },
+        loadComponent: () =>
+          import('./features/reports/end-of-day-page.component').then(
+            (m) => m.EndOfDayPageComponent,
           ),
       },
       ...featureRoutes.map((feature) => ({

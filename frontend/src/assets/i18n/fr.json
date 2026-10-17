@@ -14,7 +14,9 @@
     "pagination": "Pagination",
     "select": "Sélectionner",
     "remove": "Supprimer",
-    "close": "Fermer"
+    "close": "Fermer",
+    "add": "Ajouter",
+    "loading": "Chargement..."
   },
   "nav": {
     "dashboard": "Tableau de bord",
@@ -137,6 +139,27 @@
     "changeStatus": "Changer le statut",
     "noTicketsInStatus": "Aucun ticket",
     "statusChangeFailed": "Impossible de modifier le statut.",
+    "selectCustomer": "Sélectionner un client",
+    "brand": "Marque",
+    "model": "Modèle",
+    "accessories": "Accessoires laissés",
+    "estimatedCost": "Coût estimé",
+    "deposit": "Acompte",
+    "promisedDate": "Date promise",
+    "warrantyDays": "Jours de garantie",
+    "created": "Ticket créé",
+    "back": "Retour",
+    "parts": "Pièces",
+    "partSearch": "Rechercher une pièce",
+    "quantity": "Quantité",
+    "totals": "Totaux",
+    "partsTotal": "Total pièces",
+    "labor": "Main-d'œuvre",
+    "total": "Total",
+    "paid": "Payé",
+    "notes": "Notes technicien",
+    "whatsapp": "Notifier par WhatsApp",
+    "printReceipt": "Imprimer le reçu",
     "statuses": {
       "RECEIVED": "Reçu",
       "DIAGNOSING": "Diagnostic",
@@ -190,5 +213,10 @@
     "void": "Annuler",
     "voidConfirm": "Annuler cette vente et remettre le stock ?",
     "statuses": { "COMPLETED": "Terminée", "VOIDED": "Annulée" }
-  }
+  },
+  "customers": {"title":"Clients","directory":"Répertoire clients","add":"Ajouter un client","edit":"Modifier le client","name":"Nom","phone":"Téléphone","notes":"Notes","balance":"Solde","owing":"Doit de l'argent","details":"Détails","collect":"Encaisser"},
+  "devices": {"title":"Appareils","lookup":"Recherche IMEI","underWarranty":"Sous garantie jusqu'au","noWarranty":"Aucune garantie","timeline":"Historique de l'appareil","unknown":"IMEI inconnu","newRepair":"Nouveau ticket"},
+  "settings": {"title":"Paramètres","shop":"Paramètres de la boutique","shop_name":"Nom de la boutique","address":"Adresse","phone":"Téléphone","currency_symbol":"Symbole monétaire","country_dial_code":"Indicatif pays","receipt_footer_fr":"Pied de reçu français","receipt_footer_ar":"Pied de reçu arabe","defaultLanguage":"Langue par défaut"},
+  "expenses": {"title":"Dépenses","list":"Liste des dépenses","add":"Ajouter une dépense","from":"Du","to":"Au","date":"Date","label":"Libellé","category":"Catégorie","amount":"Montant"},
+  "reports": {"title":"Rapports","endOfDay":"Fin de journée","date":"Date","print":"Imprimer"}
 }
