@@ -29,6 +29,8 @@ export interface Product {
   low_stock_threshold: number;
   warranty_days: number;
   is_active: boolean;
+  matched_phone_unit_id?: number | null;
+  matched_imei?: string | null;
   created_at: string;
   updated_at: string;
 }

@@ -11,6 +11,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TranslocoPipe } from '@jsverse/transloco';
+import { Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 import { CategoriesApi, ProductsApi } from '../../../core/api/resource-apis';
@@ -46,8 +47,10 @@ export class ProductsPageComponent {
   private readonly categoriesApi = inject(CategoriesApi);
   private readonly dialog = inject(MatDialog);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
 
   readonly search = new FormControl('', { nonNullable: true });
+  readonly imeiSearch = new FormControl('', { nonNullable: true });
   readonly categories = signal<Category[]>([]);
   readonly products = signal<Product[]>([]);
   readonly loading = signal(false);
@@ -74,6 +77,17 @@ export class ProductsPageComponent {
       });
 
     this.loadProducts();
+  }
+
+  findImei(): void {
+    const imei = this.imeiSearch.value.trim();
+    if (!/^\d{15}$/.test(imei)) return;
+    this.productsApi.lookup(imei).subscribe((matches) => {
+      const match = matches.find((product) => product.matched_phone_unit_id);
+      if (match) {
+        this.router.navigate(['/inventory/phones', match.id]);
+      }
+    });
   }
 
   selectKind(kind: ProductKind): void {

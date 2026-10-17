@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>{{ 'inventory.receivePhone' | transloco }}</h2>
+<mat-dialog-content>
+  <p class="product-name">{{ data.product.name }}</p>
+  <form class="form-grid" [formGroup]="form">
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>IMEI</mat-label>
+      <input matInput formControlName="imei" inputmode="numeric" maxlength="15" autocomplete="off" />
+      @if (form.controls.imei.hasError('required') && form.controls.imei.touched) {
+        <mat-error>{{ 'common.required' | transloco }}</mat-error>
+      } @else if (form.controls.imei.hasError('imeiFormat')) {
+        <mat-error>{{ 'inventory.imeiFormat' | transloco }}</mat-error>
+      } @else if (form.controls.imei.hasError('imeiChecksum')) {
+        <mat-error>{{ 'inventory.imeiChecksum' | transloco }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.condition' | transloco }}</mat-label>
+      <mat-select formControlName="condition">
+        <mat-option value="NEW">{{ 'inventory.conditions.new' | transloco }}</mat-option>
+        <mat-option value="USED">{{ 'inventory.conditions.used' | transloco }}</mat-option>
+        <mat-option value="REFURBISHED">{{ 'inventory.conditions.refurbished' | transloco }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.purchaseDate' | transloco }}</mat-label>
+      <input matInput type="date" formControlName="purchased_at" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.cost' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="cost_price" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.price' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="sell_price" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.supplier' | transloco }}</mat-label>
+      <input matInput formControlName="supplier" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'inventory.note' | transloco }}</mat-label>
+      <textarea matInput rows="2" formControlName="notes"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>{{ 'common.cancel' | transloco }}</button>
+  <button mat-flat-button color="primary" (click)="save()" [disabled]="saving">{{ 'common.save' | transloco }}</button>
+</mat-dialog-actions>

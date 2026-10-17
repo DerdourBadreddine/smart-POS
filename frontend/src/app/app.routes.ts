@@ -26,6 +26,14 @@ export const routes: Routes = [
             (m) => m.ProductsPageComponent,
           ),
       },
+      {
+        path: 'inventory/phones/:id',
+        data: { titleKey: 'nav.inventory' },
+        loadComponent: () =>
+          import('./features/inventory/phones/phone-product-page.component').then(
+            (m) => m.PhoneProductPageComponent,
+          ),
+      },
       ...featureRoutes.map((feature) => ({
         path: feature.path,
         data: { titleKey: feature.titleKey },

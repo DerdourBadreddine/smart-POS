@@ -49,12 +49,20 @@ export class PhoneUnitsApi extends BaseApi<PhoneUnit> {
   constructor() {
     super('phone-units');
   }
+
+  byProduct(productId: number, status?: PhoneUnit['status']): Observable<Page<PhoneUnit>> {
+    return this.list({ product: productId, ...(status ? { status } : {}) });
+  }
 }
 
 @Injectable({ providedIn: 'root' })
 export class StockMovementsApi extends BaseApi<StockMovement> {
   constructor() {
     super('stock-movements');
+  }
+
+  byProduct(productId: number): Observable<Page<StockMovement>> {
+    return this.list({ product: productId });
   }
 }
 

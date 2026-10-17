@@ -29,6 +29,13 @@
     <mat-checkbox [checked]="onlyLowStock()" (change)="toggleLowStock()">
       {{ 'inventory.lowStockOnly' | transloco }}
     </mat-checkbox>
+    @if (selectedKind() === 'PHONE') {
+      <mat-form-field appearance="outline" class="imei-field">
+        <mat-label>{{ 'inventory.findByImei' | transloco }}</mat-label>
+        <input matInput [formControl]="imeiSearch" maxlength="15" inputmode="numeric" (keyup.enter)="findImei()" />
+        <mat-icon matSuffix>phonelink</mat-icon>
+      </mat-form-field>
+    }
   </div>
 
   <mat-tab-group [selectedIndex]="tabKinds.indexOf(selectedKind())" (selectedIndexChange)="selectTab($event)">

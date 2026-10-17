@@ -60,6 +60,34 @@
       "adjustment": "تعديل",
       "purchase": "شراء",
       "return": "إرجاع"
+    },
+    "findByImei": "البحث بواسطة IMEI",
+    "phoneInventory": "مخزون الهواتف",
+    "backToProducts": "العودة إلى المنتجات",
+    "receivePhone": "استلام هاتف",
+    "phoneUnits": "وحدات IMEI",
+    "stockHistory": "سجل المخزون",
+    "allStatuses": "كل الحالات",
+    "noPhoneUnits": "لم يتم العثور على وحدات هاتف.",
+    "status": "الحالة",
+    "date": "التاريخ",
+    "quantity": "الكمية",
+    "reference": "المرجع",
+    "supplier": "المورد",
+    "purchaseDate": "تاريخ الشراء",
+    "condition": "الحالة",
+    "imeiFormat": "يجب أن يتكون IMEI من 15 رقما.",
+    "imeiChecksum": "رقم التحقق من IMEI غير صحيح.",
+    "conditions": {
+      "new": "جديد",
+      "used": "مستعمل",
+      "refurbished": "مجدد"
     }
+  },
+  "status": {
+    "IN_STOCK": "في المخزون",
+    "RESERVED": "محجوز",
+    "SOLD": "مباع",
+    "RETURNED": "مرتجع"
   }
 }

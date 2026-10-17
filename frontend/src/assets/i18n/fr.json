@@ -60,6 +60,34 @@
       "adjustment": "Ajustement",
       "purchase": "Achat",
       "return": "Retour"
+    },
+    "findByImei": "Trouver par IMEI",
+    "phoneInventory": "Stock des téléphones",
+    "backToProducts": "Retour aux produits",
+    "receivePhone": "Réceptionner un téléphone",
+    "phoneUnits": "Unités IMEI",
+    "stockHistory": "Historique du stock",
+    "allStatuses": "Tous les statuts",
+    "noPhoneUnits": "Aucune unité téléphonique trouvée.",
+    "status": "Statut",
+    "date": "Date",
+    "quantity": "Quantité",
+    "reference": "Référence",
+    "supplier": "Fournisseur",
+    "purchaseDate": "Date d'achat",
+    "condition": "État",
+    "imeiFormat": "L'IMEI doit contenir exactement 15 chiffres.",
+    "imeiChecksum": "Le chiffre de contrôle de l'IMEI est invalide.",
+    "conditions": {
+      "new": "Neuf",
+      "used": "Occasion",
+      "refurbished": "Reconditionné"
     }
+  },
+  "status": {
+    "IN_STOCK": "En stock",
+    "RESERVED": "Réservé",
+    "SOLD": "Vendu",
+    "RETURNED": "Retourné"
   }
 }
