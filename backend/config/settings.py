@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "repairs",
     "shop",
     "dashboard",
+    "devices",
 ]
 
 MIDDLEWARE = [

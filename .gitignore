@@ -8,3 +8,5 @@ frontend_dist/
 logs/
 backups/
 node_modules/
+.pytest_cache/
+intial_docs/

@@ -426,9 +426,9 @@ Check: on a clean Windows user account, run `install.bat`, then use only the des
 
 ## 9. Progress tracker (Copilot: tick boxes as you finish)
 
-- [ ] Step 0: Git, `.github/copilot-instructions.md`, folders, README
-- [ ] Phase 1: Task 1.1 bootstrap, Task 1.2 models/admin/seed
-- [ ] Phase 2: Task 2.1 catalog/inventory API, 2.2 sales API, 2.3 repairs API, 2.4 devices/expenses/report
+- [x] Step 0: Git, `.github/copilot-instructions.md`, folders, README
+- [x] Phase 1: Task 1.1 bootstrap, Task 1.2 models/admin/seed
+- [x] Phase 2: Task 2.1 catalog/inventory API, 2.2 sales API, 2.3 repairs API, 2.4 devices/expenses/report
 - [ ] Phase 3: Task 3.1 Angular shell + i18n, 3.2 API layer
 - [ ] Phase 4: Task 4.1 products, 4.2 phones by IMEI, 4.3 CSV
 - [ ] Phase 5: Task 5.1 checkout, 5.2 receipt and history

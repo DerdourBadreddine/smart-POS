@@ -8,4 +8,31 @@ Development backend command: `python manage.py runserver` from `backend/`.
 Development frontend command: `ng serve` from `frontend/` with `/api` proxying to the backend.
 Production will run Django plus Waitress and serve the Angular build from the same origin.
 The launcher folder will hold the Windows startup script and desktop shortcut tooling.
-This README will be expanded as each phase is implemented.
+## Current status
+
+The Django backend foundation and REST API are implemented, including:
+
+- catalog, inventory, customer, sales, repairs, shop, dashboard, and device lookup domains;
+- transactional stock receiving, adjustments, checkout, voiding, repair parts, and payments;
+- CSV catalog import/export and shop settings;
+- customer statements, IMEI history/warranty lookup, expenses, and end-of-day reporting;
+- demo data seeding and automated backend tests.
+
+## Backend setup
+
+From `backend/`:
+
+```powershell
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py seed_demo
+python manage.py runserver 127.0.0.1:8000
+```
+
+Run the backend tests with:
+
+```powershell
+pytest
+```
+
+The Angular frontend and Windows launcher will be added in later phases.
