@@ -31,6 +31,13 @@ personne qui entretient l’ordinateur si le problème persiste.
 Fermez l’application, copiez le nouveau dossier sans supprimer `backend\db.sqlite3`,
 `backups/` ni `logs/`, puis lancez `launcher\install.bat`.
 
+## Version EXE
+
+Si le dossier `dist\SmartPOS` est fourni, lancez `SmartPOS.exe`. Gardez
+`backend\db.sqlite3`, `backups/` et `logs/` à côté de l’application. Windows
+Defender peut demander une exception pour une version non signée; utilisez
+uniquement une copie provenant de votre dossier de confiance.
+
 ---
 
 # دليل المالك — Smart POS
@@ -62,3 +69,9 @@ Fermez l’application, copiez le nouveau dossier sans supprimer `backend\db.sql
 
 أغلق البرنامج، انسخ الملفات الجديدة دون حذف `backend\db.sqlite3` أو `backups/`
 أو `logs/`، ثم شغّل `launcher\install.bat`.
+
+## نسخة EXE
+
+إذا تم توفير مجلد `dist\SmartPOS`، شغّل `SmartPOS.exe`. احتفظ بملفات
+`backend\db.sqlite3` ومجلدي `backups/` و`logs/` بجانب التطبيق. قد يطلب Windows
+Defender استثناء للنسخة غير الموقعة؛ استعمل نسخة من مصدر موثوق فقط.

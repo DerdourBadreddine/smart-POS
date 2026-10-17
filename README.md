@@ -59,3 +59,17 @@ checkout, repair workflows, customer credit payments, printable receipts,
 sales history, shop settings, expenses, reports, and device warranty lookup.
 Phase 7 adds the dashboard, production Django serving, Windows launcher,
 backups, installer tooling, and the bilingual owner guide.
+
+## Optional Windows executable
+
+After building the frontend, run this from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File launcher\build_exe.ps1
+```
+
+The one-folder output is `dist\SmartPOS\SmartPOS.exe`. Keep the database,
+backups, and logs beside the packaged application. The build script installs
+PyInstaller and Pillow if they are not already available, includes Django,
+DRF, django-filter, Waitress, the frontend, and static files, and uses a
+windowed entry point.

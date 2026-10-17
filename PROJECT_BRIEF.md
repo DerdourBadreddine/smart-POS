@@ -434,4 +434,4 @@ Check: on a clean Windows user account, run `install.bat`, then use only the des
 - [x] Phase 5: Task 5.1 checkout, 5.2 receipt and history
 - [x] Phase 6: Task 6.1 repairs list, 6.2 repair form/detail, 6.3 customers, 6.4 device lookup, 6.5 settings/expenses/reports
 - [x] Phase 7: Task 7.1 dashboard, 7.2 launcher, 7.3 installer and owner guide
-- [ ] Optional: Task 7.4 PyInstaller exe
+- [x] Optional: Task 7.4 PyInstaller exe

@@ -13,9 +13,13 @@ import webbrowser
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (
+    Path(sys.executable).resolve().parent
+    if getattr(sys, "frozen", False)
+    else Path(__file__).resolve().parent.parent
+)
 BACKEND = ROOT / "backend"
-CONFIG_PATH = Path(__file__).resolve().parent / "config.json"
+CONFIG_PATH = ROOT / "config.json" if getattr(sys, "frozen", False) else Path(__file__).resolve().parent / "config.json"
 LOG_PATH = ROOT / "logs" / "app.log"
 URL = "http://127.0.0.1:8000"
 
@@ -43,6 +47,15 @@ def backup_database(backup_dir: Path) -> None:
 
 
 def run_migrations() -> None:
+    if getattr(sys, "frozen", False):
+        sys.path.insert(0, str(BACKEND))
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+        import django
+        from django.core.management import call_command
+
+        django.setup()
+        call_command("migrate", interactive=False, verbosity=0)
+        return
     env = os.environ.copy()
     env["DJANGO_SETTINGS_MODULE"] = "config.settings"
     subprocess.run([sys.executable, str(BACKEND / "manage.py"), "migrate", "--noinput"], cwd=BACKEND, env=env, check=True)
