@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 import { Sale } from '../../core/models/models';
 import { MoneyPipe } from '../../shared/pipes/money.pipe';
 

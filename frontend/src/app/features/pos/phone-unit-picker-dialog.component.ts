@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 
 import { PhoneUnitsApi } from '../../core/api/resource-apis';
 import { PhoneUnit, Product } from '../../core/models/models';

@@ -7,7 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterLink } from '@angular/router';
-import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import { TranslocoService } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 import { PhoneUnitsApi, ProductsApi, SalesApi } from '../../core/api/resource-apis';

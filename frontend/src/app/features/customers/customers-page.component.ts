@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 import { debounceTime } from 'rxjs';
 import { CustomersApi } from '../../core/api/resource-apis';
 import { Customer, Page } from '../../core/models/models';

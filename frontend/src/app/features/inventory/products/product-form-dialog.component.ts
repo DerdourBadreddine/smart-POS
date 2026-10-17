@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../../core/i18n/bundled-transloco.pipe';
 
 import { ProductsApi } from '../../../core/api/resource-apis';
 import { Category, Product } from '../../../core/models/models';

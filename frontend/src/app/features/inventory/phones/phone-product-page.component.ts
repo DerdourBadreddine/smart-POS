@@ -9,7 +9,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../../core/i18n/bundled-transloco.pipe';
 
 import { PhoneUnitsApi, ProductsApi, StockMovementsApi } from '../../../core/api/resource-apis';
 import { PhoneUnit, Product, StockMovement } from '../../../core/models/models';

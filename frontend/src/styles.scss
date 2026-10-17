@@ -9,6 +9,8 @@
   --mat-sys-on-surface: #1a1b20;
   --mat-sys-on-surface-variant: #45464f;
   --mat-sys-outline-variant: #c5c6d0;
+  --app-radius: 1.1rem;
+  --app-shadow: 0 0.75rem 2rem rgba(35, 42, 67, 0.08);
 }
 
 * {
@@ -22,9 +24,31 @@ body {
 }
 
 body {
-  background: var(--mat-sys-surface-container-low);
+  background:
+    linear-gradient(135deg, rgba(70, 93, 145, 0.06), transparent 24rem),
+    var(--mat-sys-surface-container-low);
   color: var(--mat-sys-on-surface);
   font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  overflow: hidden;
+}
+
+.material-icons,
+.material-symbols-outlined,
+mat-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
 }
 
 button,
@@ -32,4 +56,79 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+.page {
+  inline-size: 100%;
+  max-inline-size: 90rem;
+  margin-inline: auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 2rem;
+}
+
+.page-header h1 {
+  margin: 0.25rem 0 0;
+  color: var(--mat-sys-on-surface);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.page-header p {
+  margin-block: 0.65rem 0;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.eyebrow {
+  color: var(--mat-sys-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toolbar-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-end: 1rem;
+}
+
+.page > mat-card,
+.page .search-panel,
+.page .cart-panel,
+.page .table-card,
+.page .form-card {
+  border: 1px solid rgba(197, 198, 208, 0.65);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow);
+}
+
+html[dir='rtl'] {
+  body {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+
+  .page-header {
+    text-align: start;
+  }
+
+  .mat-mdc-form-field,
+  .mat-mdc-table {
+    text-align: start;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }

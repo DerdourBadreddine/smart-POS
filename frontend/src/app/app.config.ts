@@ -2,12 +2,17 @@ import { CurrencyPipe } from '@angular/common';
 import { ApplicationConfig, inject, provideAppInitializer, provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
-import { provideTransloco, provideTranslocoConfig } from '@jsverse/transloco';
+import {
+  provideTransloco,
+  provideTranslocoConfig,
+  provideTranslocoMissingHandler,
+} from '@jsverse/transloco';
 
 import { errorInterceptor } from './core/interceptors/error.interceptor';
 import { languageInterceptor } from './core/interceptors/language.interceptor';
 import { LanguageService } from './core/i18n/language.service';
 import { TranslationLoader } from './core/i18n/translation-loader';
+import { TranslationMissingHandler } from './core/i18n/translation-missing.handler';
 import { SettingsStore } from './core/stores/settings.store';
 import { routes } from './app.routes';
 
@@ -29,11 +34,11 @@ export const appConfig: ApplicationConfig = {
     provideTranslocoConfig({
       missingHandler: { logMissingKey: false },
     }),
-    provideAppInitializer(() => {
+    provideTranslocoMissingHandler(TranslationMissingHandler),
+    provideAppInitializer(async () => {
       const language = inject(LanguageService);
       const settings = inject(SettingsStore);
-      language.initialize();
-      return settings.load();
+      await Promise.all([language.initialize(), settings.load()]);
     }),
   ],
 };

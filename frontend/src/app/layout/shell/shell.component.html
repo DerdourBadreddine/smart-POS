@@ -1,4 +1,4 @@
-<mat-sidenav-container class="shell">
+<mat-sidenav-container class="shell" [dir]="language.language() === 'ar' ? 'rtl' : 'ltr'">
   <mat-sidenav #drawer mode="side" opened class="sidenav">
     <div class="brand">
       <div class="brand-mark">S</div>

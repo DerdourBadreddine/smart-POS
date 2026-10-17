@@ -4,7 +4,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../../core/i18n/bundled-transloco.pipe';
 
 import { ProductsApi } from '../../../core/api/resource-apis';
 import { ProductImportResult } from '../../../core/models/models';

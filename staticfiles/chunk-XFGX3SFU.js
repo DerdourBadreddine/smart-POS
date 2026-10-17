@@ -1,0 +1,1 @@
+function n(){return l=>{let r=l.value?.trim()??"";if(!r)return null;if(!/^\d{15}$/.test(r))return{imeiFormat:!0};let e=0;for(let t=0;t<14;t+=1){let i=Number(r[t]);t%2===1&&(i*=2,i>9&&(i-=9)),e+=i}return(10-e%10)%10===Number(r[14])?null:{imeiChecksum:!0}}}export{n as a};

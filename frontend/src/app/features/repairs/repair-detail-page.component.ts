@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 import { CustomersApi, ProductsApi, RepairsApi } from '../../core/api/resource-apis';
 import { Customer, Product, RepairTicket } from '../../core/models/models';
 import { MoneyPipe } from '../../shared/pipes/money.pipe';

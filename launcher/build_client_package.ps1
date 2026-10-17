@@ -9,7 +9,13 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 $release = Join-Path $root "SmartPOS-Client"
-Remove-Item -LiteralPath $release -Recurse -Force -ErrorAction SilentlyContinue
+if (Test-Path -LiteralPath $release) {
+    try {
+        Remove-Item -LiteralPath $release -Recurse -Force -ErrorAction Stop
+    } catch {
+        throw "Cannot replace the client package because it is in use. Close SmartPOS and its browser window, then run this script again. $($_.Exception.Message)"
+    }
+}
 New-Item -ItemType Directory -Path $release, (Join-Path $release "backend"), (Join-Path $release "backups"), (Join-Path $release "logs") | Out-Null
 
 Copy-Item dist\SmartPOS\* $release -Recurse -Force
