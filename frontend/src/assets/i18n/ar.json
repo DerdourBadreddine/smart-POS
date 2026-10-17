@@ -115,6 +115,38 @@
     "CARD": "بطاقة",
     "TRANSFER": "تحويل"
   },
+  "repairs": {
+    "title": "الإصلاحات",
+    "tickets": "تذاكر الإصلاح",
+    "subtitle": "تتبع الأجهزة المستلمة وتقدم إصلاحها.",
+    "newTicket": "تذكرة جديدة",
+    "searchPlaceholder": "الرقم أو الزبون أو الجهاز أو IMEI",
+    "openOnly": "التذاكر المفتوحة فقط",
+    "allStatuses": "كل الحالات",
+    "tableView": "جدول",
+    "boardView": "لوحة",
+    "emptyTitle": "لم يتم العثور على تذاكر",
+    "emptyDescription": "غيّر الفلاتر أو أنشئ تذكرة جديدة.",
+    "number": "الرقم",
+    "customer": "الزبون",
+    "device": "الجهاز",
+    "issue": "المشكلة",
+    "days": "الأيام",
+    "balance": "المتبقي",
+    "status": "الحالة",
+    "changeStatus": "تغيير الحالة",
+    "noTicketsInStatus": "لا توجد تذاكر",
+    "statusChangeFailed": "تعذر تغيير الحالة.",
+    "statuses": {
+      "RECEIVED": "مستلم",
+      "DIAGNOSING": "قيد التشخيص",
+      "WAITING_PARTS": "في انتظار القطع",
+      "IN_REPAIR": "قيد الإصلاح",
+      "READY": "جاهز",
+      "DELIVERED": "تم التسليم",
+      "CANCELLED": "ملغى"
+    }
+  },
   "pos": {
     "title": "نقطة البيع",
     "checkout": "بيع جديد",

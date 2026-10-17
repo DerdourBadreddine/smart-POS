@@ -141,7 +141,7 @@ export interface RepairTicket {
   imei: string;
   issue_description: string;
   accessories_left: string;
-  status: string;
+  status: 'RECEIVED' | 'DIAGNOSING' | 'WAITING_PARTS' | 'IN_REPAIR' | 'READY' | 'DELIVERED' | 'CANCELLED';
   estimated_cost: number;
   labor_cost: number;
   deposit_paid: number;

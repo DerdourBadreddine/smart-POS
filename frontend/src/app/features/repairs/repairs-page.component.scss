@@ -1,0 +1,27 @@
+.toolbar-card { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; padding: 16px; background: var(--surface, #fff); border: 1px solid #e5e7eb; border-radius: 16px; }
+.search-field { flex: 1 1 20rem; }
+.status-filter { min-width: 12rem; }
+.view-toggle { display: flex; gap: 8px; }
+.view-toggle .selected { background: #e8efff; border-color: #5876c9; }
+.table-card { overflow: hidden; background: var(--surface, #fff); border: 1px solid #e5e7eb; border-radius: 16px; }
+.table-wrap { overflow-x: auto; }
+.issue-cell { max-width: 16rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.status-chip { display: inline-flex; padding: 4px 9px; border-radius: 999px; font-size: .78rem; font-weight: 700; }
+.status-received { color: #175a9b; background: #e4f1ff; }
+.status-diagnosing { color: #6547a8; background: #eee8ff; }
+.status-waiting_parts { color: #8a5a00; background: #fff1cf; }
+.status-in_repair { color: #006b68; background: #dff7f4; }
+.status-ready { color: #166534; background: #dcfce7; }
+.status-delivered { color: #4b5563; background: #eef0f3; }
+.status-cancelled { color: #991b1b; background: #fee2e2; }
+.board { display: grid; grid-template-columns: repeat(5, minmax(14rem, 1fr)); gap: 12px; overflow-x: auto; }
+.board-column { min-width: 14rem; padding: 12px; background: #f5f7fa; border-radius: 14px; }
+.board-column > header { display: flex; justify-content: space-between; align-items: center; margin-block-end: 10px; }
+.board-column h2 { margin: 0; font-size: 1rem; }
+.ticket-card { margin-block-end: 10px; }
+.ticket-card mat-card-content { display: grid; gap: 4px; }
+.ticket-card p { margin: 0; }
+.issue-preview { color: #68717d; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.column-empty, .empty-state { color: #77808c; text-align: center; padding: 24px 8px; }
+.empty-state mat-icon { font-size: 40px; width: 40px; height: 40px; }
+@media (max-width: 1100px) { .board { grid-template-columns: repeat(5, 17rem); } }

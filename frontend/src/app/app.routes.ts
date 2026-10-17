@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 
 const featureRoutes = [
   { path: 'dashboard', titleKey: 'nav.dashboard' },
-  { path: 'repairs', titleKey: 'nav.repairs' },
   { path: 'customers', titleKey: 'nav.customers' },
   { path: 'devices', titleKey: 'nav.devices' },
   { path: 'expenses', titleKey: 'nav.expenses' },
@@ -46,6 +45,22 @@ export const routes: Routes = [
         data: { titleKey: 'nav.pos' },
         loadComponent: () =>
           import('./features/pos/pos-page.component').then((m) => m.PosPageComponent),
+      },
+      {
+        path: 'repairs/new',
+        data: { titleKey: 'repairs.newTicket' },
+        loadComponent: () =>
+          import('./shared/placeholder-page/placeholder-page.component').then(
+            (m) => m.PlaceholderPageComponent,
+          ),
+      },
+      {
+        path: 'repairs',
+        data: { titleKey: 'nav.repairs' },
+        loadComponent: () =>
+          import('./features/repairs/repairs-page.component').then(
+            (m) => m.RepairsPageComponent,
+          ),
       },
       ...featureRoutes.map((feature) => ({
         path: feature.path,

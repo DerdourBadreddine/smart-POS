@@ -115,6 +115,38 @@
     "CARD": "Carte",
     "TRANSFER": "Virement"
   },
+  "repairs": {
+    "title": "Réparations",
+    "tickets": "Tickets de réparation",
+    "subtitle": "Suivez les appareils reçus et leur avancement.",
+    "newTicket": "Nouveau ticket",
+    "searchPlaceholder": "Numéro, client, appareil ou IMEI",
+    "openOnly": "Tickets ouverts uniquement",
+    "allStatuses": "Tous les statuts",
+    "tableView": "Tableau",
+    "boardView": "Tableau kanban",
+    "emptyTitle": "Aucun ticket trouvé",
+    "emptyDescription": "Modifiez vos filtres ou créez un nouveau ticket.",
+    "number": "Numéro",
+    "customer": "Client",
+    "device": "Appareil",
+    "issue": "Problème",
+    "days": "Jours",
+    "balance": "Solde",
+    "status": "Statut",
+    "changeStatus": "Changer le statut",
+    "noTicketsInStatus": "Aucun ticket",
+    "statusChangeFailed": "Impossible de modifier le statut.",
+    "statuses": {
+      "RECEIVED": "Reçu",
+      "DIAGNOSING": "Diagnostic",
+      "WAITING_PARTS": "En attente de pièces",
+      "IN_REPAIR": "En réparation",
+      "READY": "Prêt",
+      "DELIVERED": "Livré",
+      "CANCELLED": "Annulé"
+    }
+  },
   "pos": {
     "title": "Point de vente",
     "checkout": "Nouvelle vente",
