@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>{{ 'inventory.csv.title' | transloco }}</h2>
+<mat-dialog-content>
+  <p>{{ 'inventory.csv.description' | transloco }}</p>
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="downloadTemplate()">
+      <mat-icon>download</mat-icon>
+      {{ 'inventory.csv.downloadTemplate' | transloco }}
+    </button>
+    <label class="file-picker">
+      <input type="file" accept=".csv,text/csv" (change)="selectFile($event)" />
+      <mat-icon>upload_file</mat-icon>
+      {{ 'inventory.csv.chooseFile' | transloco }}
+    </label>
+  </div>
+  @if (selectedFile(); as file) {
+    <p class="file-name">{{ file.name }}</p>
+    <button mat-flat-button color="primary" (click)="checkFile()" [disabled]="checking()">
+      {{ 'inventory.csv.checkFile' | transloco }}
+    </button>
+  }
+  @if (checking()) {
+    <mat-progress-bar mode="indeterminate" />
+  }
+  @if (result(); as checked) {
+    <div class="summary">
+      <div><strong>{{ checked.created }}</strong><span>{{ 'inventory.csv.created' | transloco }}</span></div>
+      <div><strong>{{ checked.updated }}</strong><span>{{ 'inventory.csv.updated' | transloco }}</span></div>
+      <div><strong>{{ checked.errors.length }}</strong><span>{{ 'inventory.csv.errors' | transloco }}</span></div>
+    </div>
+    @if (checked.errors.length > 0) {
+      <table mat-table [dataSource]="checked.errors">
+        <ng-container matColumnDef="line">
+          <th mat-header-cell *matHeaderCellDef>{{ 'inventory.csv.line' | transloco }}</th>
+          <td mat-cell *matCellDef="let row">{{ row.line }}</td>
+        </ng-container>
+        <ng-container matColumnDef="error">
+          <th mat-header-cell *matHeaderCellDef>{{ 'inventory.csv.error' | transloco }}</th>
+          <td mat-cell *matCellDef="let row">{{ row.error }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="errorColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: errorColumns"></tr>
+      </table>
+    }
+  }
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>{{ 'common.cancel' | transloco }}</button>
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="importFile()"
+    [disabled]="!result() || result()!.errors.length > 0 || importing()"
+  >
+    {{ 'inventory.csv.import' | transloco }}
+  </button>
+</mat-dialog-actions>

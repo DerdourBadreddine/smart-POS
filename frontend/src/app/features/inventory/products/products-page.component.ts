@@ -19,6 +19,7 @@ import { Category, Page, Product } from '../../../core/models/models';
 import { MoneyPipe } from '../../../shared/pipes/money.pipe';
 import { ProductFormDialogComponent } from './product-form-dialog.component';
 import { StockAdjustmentDialogComponent } from './stock-adjustment-dialog.component';
+import { ProductCsvDialogComponent } from './product-csv-dialog.component';
 
 type ProductKind = Category['kind'] | 'ALL';
 
@@ -152,6 +153,26 @@ export class ProductsPageComponent {
       .subscribe((saved: boolean | undefined) => {
         if (saved) this.loadProducts();
       });
+  }
+
+  openCsvDialog(): void {
+    this.dialog
+      .open(ProductCsvDialogComponent, { width: 'min(48rem, calc(100vw - 2rem))' })
+      .afterClosed()
+      .subscribe((imported: boolean | undefined) => {
+        if (imported) this.loadProducts();
+      });
+  }
+
+  exportCsv(): void {
+    this.productsApi.exportCsv().subscribe((blob) => {
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = 'products.csv';
+      anchor.click();
+      URL.revokeObjectURL(url);
+    });
   }
 
   categoryName(product: Product): string {

@@ -82,6 +82,22 @@
       "new": "جديد",
       "used": "مستعمل",
       "refurbished": "مجدد"
+    },
+    "csv": {
+      "title": "استيراد أو تصدير الكتالوج",
+      "description": "استخدم ملف CSV بترميز UTF-8 من Excel. يتم تحديث المنتجات الموجودة حسب SKU.",
+      "importExport": "استيراد / تصدير",
+      "downloadTemplate": "تحميل النموذج",
+      "chooseFile": "اختيار ملف CSV",
+      "checkFile": "فحص الملف",
+      "import": "استيراد",
+      "export": "تصدير الكتالوج",
+      "exportDescription": "حمّل الكتالوج الحالي إلى Excel أو للمحاسب.",
+      "created": "تم إنشاؤها",
+      "updated": "تم تحديثها",
+      "errors": "أخطاء",
+      "line": "السطر",
+      "error": "الخطأ"
     }
   },
   "status": {

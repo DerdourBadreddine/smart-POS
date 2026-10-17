@@ -35,6 +35,17 @@ export interface Product {
   updated_at: string;
 }
 
+export interface ProductImportError {
+  line: number;
+  error: string;
+}
+
+export interface ProductImportResult {
+  created: number;
+  updated: number;
+  errors: ProductImportError[];
+}
+
 export interface PhoneUnit {
   id: number;
   product: number;

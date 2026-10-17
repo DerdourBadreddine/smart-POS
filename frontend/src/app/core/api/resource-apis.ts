@@ -10,6 +10,7 @@ import {
   Page,
   PhoneUnit,
   Product,
+  ProductImportResult,
   RepairPart,
   RepairTicket,
   Sale,
@@ -41,6 +42,16 @@ export class ProductsApi extends BaseApi<Product> {
 
   adjustStock(id: number, payload: { delta: number; reason: string; note: string }): Observable<Product> {
     return this.client.post<Product>(`/api/products/${id}/adjust-stock/`, payload);
+  }
+
+  importCsv(file: File, dryRun: boolean): Observable<ProductImportResult> {
+    const formData = new FormData();
+    formData.append('file', file, file.name);
+    return this.client.post<ProductImportResult>(`/api/products/import-csv/?dry_run=${dryRun}`, formData);
+  }
+
+  exportCsv(): Observable<Blob> {
+    return this.client.get('/api/products/export-csv/', { responseType: 'blob' });
   }
 }
 

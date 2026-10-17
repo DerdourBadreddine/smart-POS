@@ -82,6 +82,22 @@
       "new": "Neuf",
       "used": "Occasion",
       "refurbished": "Reconditionné"
+    },
+    "csv": {
+      "title": "Importer ou exporter le catalogue",
+      "description": "Utilisez un fichier CSV UTF-8 exporté depuis Excel. Les lignes existantes sont mises à jour par SKU.",
+      "importExport": "Import / Export",
+      "downloadTemplate": "Télécharger le modèle",
+      "chooseFile": "Choisir un fichier CSV",
+      "checkFile": "Vérifier le fichier",
+      "import": "Importer",
+      "export": "Exporter le catalogue",
+      "exportDescription": "Téléchargez le catalogue actuel pour Excel ou votre comptable.",
+      "created": "Créés",
+      "updated": "Mis à jour",
+      "errors": "Erreurs",
+      "line": "Ligne",
+      "error": "Erreur"
     }
   },
   "status": {

@@ -5,10 +5,16 @@
       <h1>{{ 'inventory.products' | transloco }}</h1>
       <p>{{ 'inventory.subtitle' | transloco }}</p>
     </div>
-    <button mat-flat-button color="primary" (click)="openCreate()">
-      <mat-icon>add</mat-icon>
-      {{ 'inventory.addProduct' | transloco }}
-    </button>
+    <div class="header-actions">
+      <button mat-stroked-button (click)="openCsvDialog()">
+        <mat-icon>swap_vert</mat-icon>
+        {{ 'inventory.csv.importExport' | transloco }}
+      </button>
+      <button mat-flat-button color="primary" (click)="openCreate()">
+        <mat-icon>add</mat-icon>
+        {{ 'inventory.addProduct' | transloco }}
+      </button>
+    </div>
   </header>
 
   <div class="toolbar-card">
@@ -36,6 +42,14 @@
         <mat-icon matSuffix>phonelink</mat-icon>
       </mat-form-field>
     }
+  </div>
+
+  <div class="export-strip">
+    <span>{{ 'inventory.csv.exportDescription' | transloco }}</span>
+    <button mat-button (click)="exportCsv()">
+      <mat-icon>download</mat-icon>
+      {{ 'inventory.csv.export' | transloco }}
+    </button>
   </div>
 
   <mat-tab-group [selectedIndex]="tabKinds.indexOf(selectedKind())" (selectedIndexChange)="selectTab($event)">
