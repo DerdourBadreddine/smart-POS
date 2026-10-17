@@ -33,6 +33,21 @@ pyinstaller `
     --add-data "frontend_dist;frontend_dist" `
     --add-data "staticfiles;staticfiles" `
     --hidden-import django `
+    --hidden-import corsheaders `
+    --collect-submodules corsheaders `
+    --collect-submodules whitenoise `
+    --collect-submodules rest_framework `
+    --collect-submodules django_filters `
+    --hidden-import config `
+    --hidden-import common `
+    --hidden-import catalog `
+    --hidden-import inventory `
+    --hidden-import customers `
+    --hidden-import sales `
+    --hidden-import repairs `
+    --hidden-import shop `
+    --hidden-import dashboard `
+    --hidden-import devices `
     --hidden-import rest_framework `
     --hidden-import django_filters `
     --hidden-import waitress `
