@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>{{ (data.product ? 'inventory.editProduct' : 'inventory.addProduct') | transloco }}</h2>
+<mat-dialog-content>
+  <form class="form-grid" [formGroup]="form" (ngSubmit)="save()">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.name' | transloco }}</mat-label>
+      <input matInput formControlName="name" />
+      @if (form.controls.name.hasError('required') && form.controls.name.touched) {
+        <mat-error>{{ 'common.required' | transloco }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>SKU</mat-label>
+      <input matInput formControlName="sku" />
+      @if (form.controls.sku.hasError('required') && form.controls.sku.touched) {
+        <mat-error>{{ 'common.required' | transloco }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.category' | transloco }}</mat-label>
+      <mat-select formControlName="category">
+        @for (category of data.categories; track category.id) {
+          <mat-option [value]="category.id">{{ category.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.brand' | transloco }}</mat-label>
+      <input matInput formControlName="brand" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.model' | transloco }}</mat-label>
+      <input matInput formControlName="model_name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.cost' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="cost_price" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.price' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="sell_price" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.stock' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="stock_qty" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.lowStockThreshold' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="low_stock_threshold" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'inventory.warrantyDays' | transloco }}</mat-label>
+      <input matInput type="number" min="0" formControlName="warranty_days" />
+    </mat-form-field>
+    @if (selectedCategory()?.kind === 'PHONE') {
+      <mat-slide-toggle formControlName="track_imei">{{ 'inventory.trackImei' | transloco }}</mat-slide-toggle>
+    }
+    <mat-slide-toggle formControlName="is_active">{{ 'inventory.active' | transloco }}</mat-slide-toggle>
+  </form>
+  @if (serverError) {
+    <p class="server-error">{{ serverError }}</p>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>{{ 'common.cancel' | transloco }}</button>
+  <button mat-flat-button color="primary" (click)="save()" [disabled]="saving">
+    {{ 'common.save' | transloco }}
+  </button>
+</mat-dialog-actions>

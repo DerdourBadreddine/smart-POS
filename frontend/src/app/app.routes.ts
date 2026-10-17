@@ -3,7 +3,6 @@ import { Routes } from '@angular/router';
 const featureRoutes = [
   { path: 'dashboard', titleKey: 'nav.dashboard' },
   { path: 'pos', titleKey: 'nav.pos' },
-  { path: 'inventory', titleKey: 'nav.inventory' },
   { path: 'repairs', titleKey: 'nav.repairs' },
   { path: 'customers', titleKey: 'nav.customers' },
   { path: 'devices', titleKey: 'nav.devices' },
@@ -19,6 +18,14 @@ export const routes: Routes = [
       import('./layout/shell/shell.component').then((m) => m.ShellComponent),
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      {
+        path: 'inventory',
+        data: { titleKey: 'nav.inventory' },
+        loadComponent: () =>
+          import('./features/inventory/products/products-page.component').then(
+            (m) => m.ProductsPageComponent,
+          ),
+      },
       ...featureRoutes.map((feature) => ({
         path: feature.path,
         data: { titleKey: feature.titleKey },

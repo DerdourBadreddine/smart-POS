@@ -1,0 +1,23 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.product-name {
+  color: var(--mat-sys-on-surface-variant);
+}
+
+@media (max-width: 38rem) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,113 @@
+<section class="page">
+  <header class="page-header">
+    <div>
+      <span class="eyebrow">{{ 'inventory.title' | transloco }}</span>
+      <h1>{{ 'inventory.products' | transloco }}</h1>
+      <p>{{ 'inventory.subtitle' | transloco }}</p>
+    </div>
+    <button mat-flat-button color="primary" (click)="openCreate()">
+      <mat-icon>add</mat-icon>
+      {{ 'inventory.addProduct' | transloco }}
+    </button>
+  </header>
+
+  <div class="toolbar-card">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>{{ 'common.search' | transloco }}</mat-label>
+      <input matInput [formControl]="search" [placeholder]="'inventory.searchPlaceholder' | transloco" />
+      @if (search.value) {
+        <button mat-icon-button matSuffix (click)="search.setValue('')" [attr.aria-label]="'common.clear' | transloco">
+          <mat-icon>close</mat-icon>
+        </button>
+      } @else {
+        <mat-icon matSuffix>search</mat-icon>
+      }
+    </mat-form-field>
+    <mat-checkbox [checked]="activeOnly()" (change)="toggleActive()">
+      {{ 'inventory.activeOnly' | transloco }}
+    </mat-checkbox>
+    <mat-checkbox [checked]="onlyLowStock()" (change)="toggleLowStock()">
+      {{ 'inventory.lowStockOnly' | transloco }}
+    </mat-checkbox>
+  </div>
+
+  <mat-tab-group [selectedIndex]="tabKinds.indexOf(selectedKind())" (selectedIndexChange)="selectTab($event)">
+    <mat-tab [label]="'inventory.all' | transloco"></mat-tab>
+    <mat-tab [label]="'inventory.phones' | transloco"></mat-tab>
+    <mat-tab [label]="'inventory.accessories' | transloco"></mat-tab>
+    <mat-tab [label]="'inventory.parts' | transloco"></mat-tab>
+  </mat-tab-group>
+
+  <section class="table-card">
+    @if (loading()) {
+      <mat-progress-bar mode="indeterminate" />
+    }
+    @if (!loading() && products().length === 0) {
+      <div class="empty-state">
+        <mat-icon>inventory_2</mat-icon>
+        <h2>{{ 'inventory.emptyTitle' | transloco }}</h2>
+        <p>{{ 'inventory.emptyDescription' | transloco }}</p>
+        <button mat-stroked-button (click)="openCreate()">{{ 'inventory.addProduct' | transloco }}</button>
+      </div>
+    } @else {
+      <div class="table-wrap">
+        <table mat-table [dataSource]="products()">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>{{ 'inventory.name' | transloco }}</th>
+            <td mat-cell *matCellDef="let product">
+              <strong>{{ product.name }}</strong>
+              @if (product.brand || product.model_name) {
+                <small>{{ product.brand }} {{ product.model_name }}</small>
+              }
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="sku">
+            <th mat-header-cell *matHeaderCellDef>SKU</th>
+            <td mat-cell *matCellDef="let product">{{ product.sku }}</td>
+          </ng-container>
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef>{{ 'inventory.category' | transloco }}</th>
+            <td mat-cell *matCellDef="let product">{{ categoryName(product) }}</td>
+          </ng-container>
+          <ng-container matColumnDef="stock">
+            <th mat-header-cell *matHeaderCellDef>{{ 'inventory.stock' | transloco }}</th>
+            <td mat-cell *matCellDef="let product">
+              <span class="stock" [class.low]="product.stock_qty <= product.low_stock_threshold">
+                {{ product.stock_qty }}
+              </span>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="cost">
+            <th mat-header-cell *matHeaderCellDef>{{ 'inventory.cost' | transloco }}</th>
+            <td mat-cell *matCellDef="let product">{{ product.cost_price | money }}</td>
+          </ng-container>
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>{{ 'inventory.price' | transloco }}</th>
+            <td mat-cell *matCellDef="let product">{{ product.sell_price | money }}</td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let product" class="actions">
+              <button mat-icon-button (click)="openEdit(product)" [attr.aria-label]="'common.edit' | transloco">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button (click)="openAdjustment(product)" [attr.aria-label]="'inventory.adjustStock' | transloco">
+                <mat-icon>tune</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns" [class.low-stock]="row.stock_qty <= row.low_stock_threshold"></tr>
+        </table>
+      </div>
+      <mat-paginator
+        [length]="total()"
+        [pageIndex]="pageIndex()"
+        [pageSize]="pageSize()"
+        [pageSizeOptions]="[10, 25, 50]"
+        (page)="changePage($event)"
+        [attr.aria-label]="'common.pagination' | transloco"
+      />
+    }
+  </section>
+</section>

@@ -4,7 +4,14 @@
     "toggleMenu": "Ouvrir ou fermer le menu",
     "workspace": "Espace de travail",
     "phaseComingSoon": "Cette section sera disponible dans la prochaine phase.",
-    "notFound": "Page introuvable"
+    "notFound": "Page introuvable",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "edit": "Modifier",
+    "required": "Ce champ est obligatoire",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "pagination": "Pagination"
   },
   "nav": {
     "dashboard": "Tableau de bord",
@@ -16,5 +23,43 @@
     "expenses": "Dépenses",
     "reports": "Rapports",
     "settings": "Paramètres"
+  },
+  "inventory": {
+    "title": "Inventaire",
+    "products": "Produits",
+    "subtitle": "Gérez les téléphones, accessoires et pièces de rechange.",
+    "addProduct": "Ajouter un produit",
+    "editProduct": "Modifier le produit",
+    "searchPlaceholder": "Nom, SKU, marque ou modèle",
+    "activeOnly": "Actifs uniquement",
+    "lowStockOnly": "Stock faible uniquement",
+    "all": "Tous",
+    "phones": "Téléphones",
+    "accessories": "Accessoires",
+    "parts": "Pièces",
+    "emptyTitle": "Aucun produit trouvé",
+    "emptyDescription": "Modifiez vos filtres ou ajoutez votre premier produit.",
+    "name": "Nom",
+    "category": "Catégorie",
+    "stock": "Stock",
+    "cost": "Coût",
+    "price": "Prix",
+    "brand": "Marque",
+    "model": "Modèle",
+    "lowStockThreshold": "Seuil de stock faible",
+    "warrantyDays": "Garantie (jours)",
+    "trackImei": "Suivre par IMEI",
+    "active": "Actif",
+    "adjustStock": "Ajuster le stock",
+    "currentStock": "Stock actuel",
+    "quantityChange": "Variation de quantité",
+    "quantityHint": "Utilisez une valeur positive pour ajouter et négative pour retirer.",
+    "reason": "Motif",
+    "note": "Note",
+    "reasons": {
+      "adjustment": "Ajustement",
+      "purchase": "Achat",
+      "return": "Retour"
+    }
   }
 }

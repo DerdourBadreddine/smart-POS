@@ -4,7 +4,14 @@
     "toggleMenu": "فتح أو إغلاق القائمة",
     "workspace": "مساحة العمل",
     "phaseComingSoon": "سيكون هذا القسم متاحا في المرحلة القادمة.",
-    "notFound": "الصفحة غير موجودة"
+    "notFound": "الصفحة غير موجودة",
+    "search": "بحث",
+    "clear": "مسح",
+    "edit": "تعديل",
+    "required": "هذا الحقل إجباري",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "pagination": "التنقل بين الصفحات"
   },
   "nav": {
     "dashboard": "لوحة التحكم",
@@ -16,5 +23,43 @@
     "expenses": "المصاريف",
     "reports": "التقارير",
     "settings": "الإعدادات"
+  },
+  "inventory": {
+    "title": "المخزون",
+    "products": "المنتجات",
+    "subtitle": "إدارة الهواتف والملحقات وقطع الغيار.",
+    "addProduct": "إضافة منتج",
+    "editProduct": "تعديل المنتج",
+    "searchPlaceholder": "الاسم أو SKU أو العلامة أو الموديل",
+    "activeOnly": "النشطة فقط",
+    "lowStockOnly": "المخزون المنخفض فقط",
+    "all": "الكل",
+    "phones": "الهواتف",
+    "accessories": "الملحقات",
+    "parts": "قطع الغيار",
+    "emptyTitle": "لم يتم العثور على منتجات",
+    "emptyDescription": "غيّر الفلاتر أو أضف أول منتج.",
+    "name": "الاسم",
+    "category": "الفئة",
+    "stock": "المخزون",
+    "cost": "التكلفة",
+    "price": "السعر",
+    "brand": "العلامة",
+    "model": "الموديل",
+    "lowStockThreshold": "حد المخزون المنخفض",
+    "warrantyDays": "الضمان (بالأيام)",
+    "trackImei": "التتبع عبر IMEI",
+    "active": "نشط",
+    "adjustStock": "تعديل المخزون",
+    "currentStock": "المخزون الحالي",
+    "quantityChange": "تغيير الكمية",
+    "quantityHint": "استخدم قيمة موجبة للإضافة وسالبة للنقصان.",
+    "reason": "السبب",
+    "note": "ملاحظة",
+    "reasons": {
+      "adjustment": "تعديل",
+      "purchase": "شراء",
+      "return": "إرجاع"
+    }
   }
 }
