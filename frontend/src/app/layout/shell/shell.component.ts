@@ -37,6 +37,7 @@ export class ShellComponent {
   readonly navigation: NavigationItem[] = [
     { path: '/dashboard', label: 'nav.dashboard', icon: 'space_dashboard' },
     { path: '/pos', label: 'nav.pos', icon: 'point_of_sale' },
+    { path: '/sales', label: 'nav.sales', icon: 'history' },
     { path: '/inventory', label: 'nav.inventory', icon: 'inventory_2' },
     { path: '/repairs', label: 'nav.repairs', icon: 'build' },
     { path: '/customers', label: 'nav.customers', icon: 'groups' },

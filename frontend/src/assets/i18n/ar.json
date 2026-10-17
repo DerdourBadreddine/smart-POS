@@ -11,11 +11,15 @@
     "required": "هذا الحقل إجباري",
     "cancel": "إلغاء",
     "save": "حفظ",
-    "pagination": "التنقل بين الصفحات"
+    "pagination": "التنقل بين الصفحات",
+    "select": "اختيار",
+    "remove": "حذف",
+    "close": "إغلاق"
   },
   "nav": {
     "dashboard": "لوحة التحكم",
     "pos": "البيع",
+    "sales": "سجل المبيعات",
     "inventory": "المخزون",
     "repairs": "الإصلاحات",
     "customers": "الزبائن",
@@ -105,5 +109,54 @@
     "RESERVED": "محجوز",
     "SOLD": "مباع",
     "RETURNED": "مرتجع"
+  },
+  "payment": {
+    "CASH": "نقدا",
+    "CARD": "بطاقة",
+    "TRANSFER": "تحويل"
+  },
+  "pos": {
+    "title": "نقطة البيع",
+    "checkout": "بيع جديد",
+    "subtitle": "امسح الرمز أو ابحث عن منتج.",
+    "searchOrScan": "بحث أو مسح",
+    "searchHint": "ابدأ بكتابة الاسم أو SKU أو IMEI.",
+    "inStock": "في المخزون",
+    "cart": "السلة",
+    "emptyCart": "السلة فارغة.",
+    "subtotal": "المجموع الفرعي",
+    "discount": "الخصم",
+    "total": "المجموع",
+    "pay": "الدفع",
+    "paymentTitle": "الدفع",
+    "customer": "الزبون",
+    "walkInCustomer": "زبون عابر",
+    "paymentMethod": "طريقة الدفع",
+    "amountReceived": "المبلغ المستلم",
+    "remainingCredit": "المتبقي بالدين",
+    "changeDue": "الباقي",
+    "confirmSale": "تأكيد البيع",
+    "choosePhone": "اختيار الهاتف",
+    "noPhones": "لا توجد هواتف متاحة.",
+    "price": "السعر",
+    "salesHistory": "السجل",
+    "saleCompleted": "تم تسجيل البيع",
+    "clearCartConfirm": "هل تريد إفراغ السلة؟",
+    "receipt": "الإيصال",
+    "print": "طباعة"
+  },
+  "sales": {
+    "title": "المبيعات",
+    "history": "سجل المبيعات",
+    "subtitle": "عرض أو طباعة أو إلغاء المبيعات.",
+    "newSale": "بيع جديد",
+    "number": "الرقم",
+    "date": "التاريخ",
+    "paid": "المدفوع",
+    "balance": "المتبقي",
+    "status": "الحالة",
+    "void": "إلغاء",
+    "voidConfirm": "هل تريد إلغاء البيع وإرجاع المخزون؟",
+    "statuses": { "COMPLETED": "مكتمل", "VOIDED": "ملغى" }
   }
 }

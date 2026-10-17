@@ -1,0 +1,17 @@
+<section class="page">
+  <header class="page-header"><div><span class="eyebrow">{{ 'sales.title' | transloco }}</span><h1>{{ 'sales.history' | transloco }}</h1><p>{{ 'sales.subtitle' | transloco }}</p></div><a mat-flat-button color="primary" routerLink="/pos">{{ 'sales.newSale' | transloco }}</a></header>
+  <section class="table-card">
+    @if (loading()) { <mat-progress-bar mode="indeterminate" /> }
+    <div class="table-wrap"><table mat-table [dataSource]="sales()">
+      <ng-container matColumnDef="number"><th mat-header-cell *matHeaderCellDef>{{ 'sales.number' | transloco }}</th><td mat-cell *matCellDef="let sale"><strong>{{ sale.number }}</strong></td></ng-container>
+      <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>{{ 'sales.date' | transloco }}</th><td mat-cell *matCellDef="let sale">{{ sale.created_at | date: 'dd/MM/yyyy HH:mm' }}</td></ng-container>
+      <ng-container matColumnDef="total"><th mat-header-cell *matHeaderCellDef>{{ 'pos.total' | transloco }}</th><td mat-cell *matCellDef="let sale">{{ sale.total | money }}</td></ng-container>
+      <ng-container matColumnDef="paid"><th mat-header-cell *matHeaderCellDef>{{ 'sales.paid' | transloco }}</th><td mat-cell *matCellDef="let sale">{{ sale.paid_total | money }}</td></ng-container>
+      <ng-container matColumnDef="balance"><th mat-header-cell *matHeaderCellDef>{{ 'sales.balance' | transloco }}</th><td mat-cell *matCellDef="let sale">{{ sale.balance | money }}</td></ng-container>
+      <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>{{ 'sales.status' | transloco }}</th><td mat-cell *matCellDef="let sale">{{ ('sales.statuses.' + sale.status) | transloco }}</td></ng-container>
+      <ng-container matColumnDef="actions"><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef="let sale"><button mat-icon-button (click)="receipt(sale)" [attr.aria-label]="'pos.receipt' | transloco"><mat-icon>print</mat-icon></button>@if (sale.status === 'COMPLETED') { <button mat-icon-button color="warn" (click)="void(sale)" [attr.aria-label]="'sales.void' | transloco"><mat-icon>undo</mat-icon></button> }</td></ng-container>
+      <tr mat-header-row *matHeaderRowDef="columns"></tr><tr mat-row *matRowDef="let row; columns: columns"></tr>
+    </table></div>
+    <mat-paginator [length]="total()" [pageIndex]="page()" [pageSize]="25" (page)="changePage($event)" />
+  </section>
+</section>

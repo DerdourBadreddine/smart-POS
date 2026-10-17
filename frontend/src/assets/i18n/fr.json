@@ -11,11 +11,15 @@
     "required": "Ce champ est obligatoire",
     "cancel": "Annuler",
     "save": "Enregistrer",
-    "pagination": "Pagination"
+    "pagination": "Pagination",
+    "select": "Sélectionner",
+    "remove": "Supprimer",
+    "close": "Fermer"
   },
   "nav": {
     "dashboard": "Tableau de bord",
     "pos": "Vente",
+    "sales": "Historique des ventes",
     "inventory": "Inventaire",
     "repairs": "Réparations",
     "customers": "Clients",
@@ -105,5 +109,54 @@
     "RESERVED": "Réservé",
     "SOLD": "Vendu",
     "RETURNED": "Retourné"
+  },
+  "payment": {
+    "CASH": "Espèces",
+    "CARD": "Carte",
+    "TRANSFER": "Virement"
+  },
+  "pos": {
+    "title": "Point de vente",
+    "checkout": "Nouvelle vente",
+    "subtitle": "Scannez un code-barres ou recherchez un produit.",
+    "searchOrScan": "Rechercher ou scanner",
+    "searchHint": "Commencez à saisir un nom, un SKU ou un IMEI.",
+    "inStock": "en stock",
+    "cart": "Panier",
+    "emptyCart": "Le panier est vide.",
+    "subtotal": "Sous-total",
+    "discount": "Remise",
+    "total": "Total",
+    "pay": "Encaisser",
+    "paymentTitle": "Paiement",
+    "customer": "Client",
+    "walkInCustomer": "Client de passage",
+    "paymentMethod": "Mode de paiement",
+    "amountReceived": "Montant reçu",
+    "remainingCredit": "Reste à crédit",
+    "changeDue": "Monnaie à rendre",
+    "confirmSale": "Confirmer la vente",
+    "choosePhone": "Choisir le téléphone",
+    "noPhones": "Aucun téléphone disponible.",
+    "price": "Prix",
+    "salesHistory": "Historique",
+    "saleCompleted": "Vente enregistrée",
+    "clearCartConfirm": "Vider le panier ?",
+    "receipt": "Reçu",
+    "print": "Imprimer"
+  },
+  "sales": {
+    "title": "Ventes",
+    "history": "Historique des ventes",
+    "subtitle": "Consultez, imprimez ou annulez une vente.",
+    "newSale": "Nouvelle vente",
+    "number": "Numéro",
+    "date": "Date",
+    "paid": "Payé",
+    "balance": "Reste",
+    "status": "Statut",
+    "void": "Annuler",
+    "voidConfirm": "Annuler cette vente et remettre le stock ?",
+    "statuses": { "COMPLETED": "Terminée", "VOIDED": "Annulée" }
   }
 }

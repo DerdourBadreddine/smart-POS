@@ -1,0 +1,45 @@
+<section class="page pos-page">
+  <header class="page-header">
+    <div><span class="eyebrow">{{ 'pos.title' | transloco }}</span><h1>{{ 'pos.checkout' | transloco }}</h1><p>{{ 'pos.subtitle' | transloco }}</p></div>
+    <a mat-stroked-button routerLink="/sales"><mat-icon>history</mat-icon>{{ 'pos.salesHistory' | transloco }}</a>
+  </header>
+  <div class="pos-grid">
+    <section class="search-panel">
+      <mat-form-field appearance="outline" class="search-box">
+        <mat-label>{{ 'pos.searchOrScan' | transloco }}</mat-label>
+        <input #searchInput matInput [formControl]="search" autofocus (keyup.enter)="addExactMatch()" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      @if (searching()) { <mat-progress-bar mode="indeterminate" /> }
+      <div class="results">
+        @for (product of results(); track product.id) {
+          <button class="result-row" (click)="addProduct(product)">
+            <span><strong>{{ product.name }}</strong><small>{{ product.sku }} @if (product.matched_imei) { · {{ product.matched_imei }} }</small></span>
+            <span class="result-meta"><b>{{ product.sell_price | money }}</b><small>{{ product.stock_qty }} {{ 'pos.inStock' | transloco }}</small></span>
+          </button>
+        } @empty {
+          <div class="empty-search"><mat-icon>qr_code_scanner</mat-icon><p>{{ 'pos.searchHint' | transloco }}</p></div>
+        }
+      </div>
+    </section>
+    <section class="cart-panel">
+      <div class="cart-heading"><h2>{{ 'pos.cart' | transloco }}</h2><button mat-button color="warn" [disabled]="!cart.lines().length" (click)="cart.clear()">{{ 'common.clear' | transloco }}</button></div>
+      @if (!cart.lines().length) {
+        <div class="empty-cart"><mat-icon>shopping_cart</mat-icon><p>{{ 'pos.emptyCart' | transloco }}</p></div>
+      } @else {
+        <div class="cart-lines">
+          @for (line of cart.lines(); track line.key) {
+            <div class="cart-line">
+              <div class="line-name"><strong>{{ line.name }}</strong>@if (line.imei) { <small>IMEI: {{ line.imei }}</small> }</div>
+              <div class="line-controls"><button mat-icon-button (click)="cart.setQuantity(line.key, line.quantity - 1)">−</button><span>{{ line.quantity }}</span><button mat-icon-button (click)="cart.setQuantity(line.key, line.quantity + 1)">+</button></div>
+              <input class="price-input" type="number" min="0" [value]="line.unitPrice" (change)="updatePrice(line.key, $event)" [attr.aria-label]="'pos.price' | transloco" />
+              <span class="line-total">{{ line.quantity * line.unitPrice | money }}</span><button mat-icon-button (click)="cart.remove(line.key)" [attr.aria-label]="'common.remove' | transloco"><mat-icon>delete</mat-icon></button>
+            </div>
+          }
+        </div>
+        <div class="totals"><div><span>{{ 'pos.subtotal' | transloco }}</span><strong>{{ cart.subtotal() | money }}</strong></div><div class="discount-row"><label>{{ 'pos.discount' | transloco }}</label><input type="number" min="0" [value]="cart.discount()" (change)="updateDiscount($event)" /></div><div class="grand-total"><span>{{ 'pos.total' | transloco }}</span><strong>{{ cart.total() | money }}</strong></div></div>
+        <button mat-flat-button color="primary" class="pay-button" (click)="openPayment()"><mat-icon>payments</mat-icon>{{ 'pos.pay' | transloco }} · F9</button>
+      }
+    </section>
+  </div>
+</section>

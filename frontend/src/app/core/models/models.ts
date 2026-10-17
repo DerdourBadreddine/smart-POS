@@ -116,7 +116,7 @@ export interface Sale {
 }
 
 export interface SaleCreate {
-  items: Array<Record<string, number>>;
+  items: Array<{ product_id: number; phone_unit_id?: number; quantity: number; unit_price: number }>;
   customer_id: number | null;
   discount: number;
   payment_method: Sale['payment_method'];
