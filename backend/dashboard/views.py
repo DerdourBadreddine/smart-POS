@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from dashboard.services import end_of_day
+from dashboard.services import dashboard_summary
 
 
 class EndOfDayView(APIView):
@@ -13,3 +14,10 @@ class EndOfDayView(APIView):
     def get(self, request):
         report_date = date.fromisoformat(request.query_params.get("date", date.today().isoformat()))
         return Response(end_of_day(report_date=report_date))
+
+
+class DashboardSummaryView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        return Response(dashboard_summary())

@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
 const featureRoutes = [
-  { path: 'dashboard', titleKey: 'nav.dashboard' },
   { path: 'customers', titleKey: 'nav.customers' },
   { path: 'devices', titleKey: 'nav.devices' },
   { path: 'expenses', titleKey: 'nav.expenses' },
@@ -16,6 +15,14 @@ export const routes: Routes = [
       import('./layout/shell/shell.component').then((m) => m.ShellComponent),
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      {
+        path: 'dashboard',
+        data: { titleKey: 'nav.dashboard' },
+        loadComponent: () =>
+          import('./features/dashboard/dashboard-page.component').then(
+            (m) => m.DashboardPageComponent,
+          ),
+      },
       {
         path: 'inventory',
         data: { titleKey: 'nav.inventory' },

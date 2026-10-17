@@ -54,6 +54,8 @@ npm run build
 The build output is written to `frontend_dist/`, ready for Django to serve.
 The current shell includes bilingual French/Arabic navigation, runtime RTL
 switching, local fonts, Transloco translations, typed API services, and shared
-HTTP error/language interceptors. Phase 5 adds keyboard-first POS checkout,
-IMEI phone selection, customer credit payments, printable receipts, and sales
-history with voiding.
+HTTP error/language interceptors. Phases 5 and 6 add keyboard-first POS
+checkout, repair workflows, customer credit payments, printable receipts,
+sales history, shop settings, expenses, reports, and device warranty lookup.
+Phase 7 adds the dashboard, production Django serving, Windows launcher,
+backups, installer tooling, and the bilingual owner guide.

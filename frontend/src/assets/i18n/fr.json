@@ -16,7 +16,8 @@
     "remove": "Supprimer",
     "close": "Fermer",
     "add": "Ajouter",
-    "loading": "Chargement..."
+    "loading": "Chargement...",
+    "refresh": "Actualiser"
   },
   "nav": {
     "dashboard": "Tableau de bord",
@@ -219,4 +220,5 @@
   "settings": {"title":"Paramètres","shop":"Paramètres de la boutique","shop_name":"Nom de la boutique","address":"Adresse","phone":"Téléphone","currency_symbol":"Symbole monétaire","country_dial_code":"Indicatif pays","receipt_footer_fr":"Pied de reçu français","receipt_footer_ar":"Pied de reçu arabe","defaultLanguage":"Langue par défaut"},
   "expenses": {"title":"Dépenses","list":"Liste des dépenses","add":"Ajouter une dépense","from":"Du","to":"Au","date":"Date","label":"Libellé","category":"Catégorie","amount":"Montant"},
   "reports": {"title":"Rapports","endOfDay":"Fin de journée","date":"Date","print":"Imprimer"}
+  ,"dashboard": {"title":"Tableau de bord","overview":"Vue d'ensemble","subtitle":"L'activité de votre boutique aujourd'hui.","sales":"Ventes du jour","salesCount":"ventes","grossProfit":"Marge brute","repairIncome":"Revenus réparations","openRepairs":"Réparations ouvertes","creditOwed":"Crédit à recouvrer","last7Days":"7 derniers jours","readyForPickup":"Prêts à récupérer","lowStock":"Stock faible","none":"Aucun élément"}
 }

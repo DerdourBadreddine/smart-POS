@@ -1,0 +1,21 @@
+<section class="page">
+  <header class="page-header">
+    <div><span class="eyebrow">{{ 'dashboard.title' | transloco }}</span><h1>{{ 'dashboard.overview' | transloco }}</h1><p>{{ 'dashboard.subtitle' | transloco }}</p></div>
+    <button mat-stroked-button (click)="refresh()"><mat-icon>refresh</mat-icon>{{ 'common.refresh' | transloco }}</button>
+  </header>
+  @if (loading()) { <mat-progress-bar mode="indeterminate" /> }
+  @if (summary(); as data) {
+    <div class="kpis">
+      <mat-card><span>{{ 'dashboard.sales' | transloco }}</span><strong>{{ data.sales_total | money }}</strong><small>{{ data.sales_count }} {{ 'dashboard.salesCount' | transloco }}</small></mat-card>
+      <mat-card><span>{{ 'dashboard.grossProfit' | transloco }}</span><strong>{{ data.gross_profit | money }}</strong></mat-card>
+      <mat-card><span>{{ 'dashboard.repairIncome' | transloco }}</span><strong>{{ data.repair_income | money }}</strong></mat-card>
+      <mat-card><span>{{ 'dashboard.openRepairs' | transloco }}</span><strong>{{ openRepairs(data) }}</strong></mat-card>
+      <mat-card><span>{{ 'dashboard.creditOwed' | transloco }}</span><strong>{{ data.credit_owed_total | money }}</strong></mat-card>
+    </div>
+    <div class="dashboard-grid">
+      <mat-card class="chart-card"><h2>{{ 'dashboard.last7Days' | transloco }}</h2><div class="bars">@for (day of data.last_7_days; track day.date) {<div class="bar-column"><span class="bar" [style.height.%]="day.total / maxDailyTotal(data) * 100"></span><small>{{ day.date | slice:5 }}</small></div>}</div></mat-card>
+      <mat-card><h2>{{ 'dashboard.readyForPickup' | transloco }}</h2>@for (ticket of data.ready_for_pickup; track ticket.id) {<a class="list-row" [routerLink]="['/repairs', ticket.id]"><span>{{ ticket.number }} · {{ ticket.device_brand }} {{ ticket.device_model }}</span><mat-icon>chevron_right</mat-icon></a>} @empty {<p>{{ 'dashboard.none' | transloco }}</p>}</mat-card>
+      <mat-card><h2>{{ 'dashboard.lowStock' | transloco }}</h2>@for (product of data.low_stock; track product.id) {<a class="list-row" routerLink="/inventory"><span>{{ product.name }}</span><strong>{{ product.stock_qty }}</strong></a>} @empty {<p>{{ 'dashboard.none' | transloco }}</p>}</mat-card>
+    </div>
+  }
+</section>

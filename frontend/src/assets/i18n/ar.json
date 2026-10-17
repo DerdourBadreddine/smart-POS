@@ -16,7 +16,8 @@
     "remove": "حذف",
     "close": "إغلاق",
     "add": "إضافة",
-    "loading": "جار التحميل..."
+    "loading": "جار التحميل...",
+    "refresh": "تحديث"
   },
   "nav": {
     "dashboard": "لوحة التحكم",
@@ -219,4 +220,5 @@
   "settings": {"title":"الإعدادات","shop":"إعدادات المحل","shop_name":"اسم المحل","address":"العنوان","phone":"الهاتف","currency_symbol":"رمز العملة","country_dial_code":"رمز الدولة","receipt_footer_fr":"تذييل الإيصال بالفرنسية","receipt_footer_ar":"تذييل الإيصال بالعربية","defaultLanguage":"اللغة الافتراضية"},
   "expenses": {"title":"المصاريف","list":"قائمة المصاريف","add":"إضافة مصروف","from":"من","to":"إلى","date":"التاريخ","label":"الوصف","category":"الفئة","amount":"المبلغ"},
   "reports": {"title":"التقارير","endOfDay":"نهاية اليوم","date":"التاريخ","print":"طباعة"}
+  ,"dashboard": {"title":"لوحة التحكم","overview":"نظرة عامة","subtitle":"نشاط المحل اليوم.","sales":"مبيعات اليوم","salesCount":"مبيعات","grossProfit":"الربح الإجمالي","repairIncome":"إيرادات الإصلاح","openRepairs":"الإصلاحات المفتوحة","creditOwed":"الديون المستحقة","last7Days":"آخر 7 أيام","readyForPickup":"جاهز للاستلام","lowStock":"مخزون منخفض","none":"لا توجد عناصر"}
 }
