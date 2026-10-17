@@ -1,0 +1,20 @@
+{
+  "common": {
+    "pointOfSale": "Point de vente",
+    "toggleMenu": "Ouvrir ou fermer le menu",
+    "workspace": "Espace de travail",
+    "phaseComingSoon": "Cette section sera disponible dans la prochaine phase.",
+    "notFound": "Page introuvable"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "pos": "Vente",
+    "inventory": "Inventaire",
+    "repairs": "Réparations",
+    "customers": "Clients",
+    "devices": "Recherche IMEI",
+    "expenses": "Dépenses",
+    "reports": "Rapports",
+    "settings": "Paramètres"
+  }
+}

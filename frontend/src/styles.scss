@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light;
+  --mat-sys-primary: #465d91;
+  --mat-sys-on-primary: #ffffff;
+  --mat-sys-secondary-container: #dbe2ff;
+  --mat-sys-on-secondary-container: #111b3a;
+  --mat-sys-surface: #fbf8ff;
+  --mat-sys-surface-container-low: #f5f2f9;
+  --mat-sys-on-surface: #1a1b20;
+  --mat-sys-on-surface-variant: #45464f;
+  --mat-sys-outline-variant: #c5c6d0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  block-size: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface);
+  font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

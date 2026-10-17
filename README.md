@@ -35,4 +35,23 @@ Run the backend tests with:
 pytest
 ```
 
-The Angular frontend and Windows launcher will be added in later phases.
+## Frontend setup
+
+From `frontend/`:
+
+```powershell
+npm install
+npm start
+```
+
+The development server runs on port 4200 and proxies `/api` to Django on port
+8000. Build the production frontend with:
+
+```powershell
+npm run build
+```
+
+The build output is written to `frontend_dist/`, ready for Django to serve.
+The current shell includes bilingual French/Arabic navigation, runtime RTL
+switching, local fonts, Transloco translations, typed API services, and shared
+HTTP error/language interceptors.

@@ -1,0 +1,20 @@
+{
+  "common": {
+    "pointOfSale": "نقطة البيع",
+    "toggleMenu": "فتح أو إغلاق القائمة",
+    "workspace": "مساحة العمل",
+    "phaseComingSoon": "سيكون هذا القسم متاحا في المرحلة القادمة.",
+    "notFound": "الصفحة غير موجودة"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "pos": "البيع",
+    "inventory": "المخزون",
+    "repairs": "الإصلاحات",
+    "customers": "الزبائن",
+    "devices": "البحث عن IMEI",
+    "expenses": "المصاريف",
+    "reports": "التقارير",
+    "settings": "الإعدادات"
+  }
+}
