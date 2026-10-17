@@ -10,6 +10,7 @@ dist/
 *.spec
 launcher/icon.ico
 launcher/profile/
+SmartPOS-Client/
 logs/
 backups/
 node_modules/

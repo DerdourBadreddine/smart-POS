@@ -13,12 +13,9 @@ import webbrowser
 from pathlib import Path
 
 
-ROOT = (
-    Path(sys.executable).resolve().parent
-    if getattr(sys, "frozen", False)
-    else Path(__file__).resolve().parent.parent
-)
-BACKEND = ROOT / "backend"
+ROOT = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent.parent
+BUNDLE_ROOT = Path(getattr(sys, "_MEIPASS", ROOT))
+BACKEND = BUNDLE_ROOT / "backend"
 CONFIG_PATH = ROOT / "config.json" if getattr(sys, "frozen", False) else Path(__file__).resolve().parent / "config.json"
 LOG_PATH = ROOT / "logs" / "app.log"
 URL = "http://127.0.0.1:8000"
@@ -47,6 +44,8 @@ def backup_database(backup_dir: Path) -> None:
 
 
 def run_migrations() -> None:
+    os.environ["SMART_POS_DATA_DIR"] = str(ROOT)
+    os.environ["SMART_POS_FRONTEND_DIR"] = str(BUNDLE_ROOT / "frontend_dist")
     if getattr(sys, "frozen", False):
         sys.path.insert(0, str(BACKEND))
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
@@ -65,6 +64,8 @@ def start_server():
     from waitress import serve
 
     sys.path.insert(0, str(BACKEND))
+    os.environ["SMART_POS_DATA_DIR"] = str(ROOT)
+    os.environ["SMART_POS_FRONTEND_DIR"] = str(BUNDLE_ROOT / "frontend_dist")
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     from config.wsgi import application
 

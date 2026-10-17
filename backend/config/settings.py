@@ -6,8 +6,10 @@ import os
 from pathlib import Path
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-FRONTEND_DIR = BASE_DIR / "frontend_dist"
+CODE_DIR = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = Path(os.environ.get("SMART_POS_DATA_DIR", CODE_DIR))
+BASE_DIR = DATA_DIR
+FRONTEND_DIR = Path(os.environ.get("SMART_POS_FRONTEND_DIR", DATA_DIR / "frontend_dist"))
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "unsafe-development-key-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
@@ -70,7 +72,7 @@ ASGI_APPLICATION = "config.asgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": DATA_DIR / "backend" / "db.sqlite3",
     }
 }
 

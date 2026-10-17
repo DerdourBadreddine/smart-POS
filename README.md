@@ -73,3 +73,13 @@ backups, and logs beside the packaged application. The build script installs
 PyInstaller and Pillow if they are not already available, includes Django,
 DRF, django-filter, Waitress, the frontend, and static files, and uses a
 windowed entry point.
+
+For a client-ready folder that requires no Python or Node.js, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File launcher\build_client_package.ps1
+```
+
+Give the client the generated `SmartPOS-Client` folder. The client only
+double-clicks `SmartPOS.exe`; `backend\db.sqlite3`, `backups`, and `logs` are
+created beside it and are not part of the bundled application code.
