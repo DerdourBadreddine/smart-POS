@@ -12,7 +12,7 @@ $release = Join-Path $root "SmartPOS-Client"
 Remove-Item -LiteralPath $release -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Path $release, (Join-Path $release "backend"), (Join-Path $release "backups"), (Join-Path $release "logs") | Out-Null
 
-Copy-Item dist\SmartPOS\SmartPOS.exe (Join-Path $release "SmartPOS.exe")
+Copy-Item dist\SmartPOS\* $release -Recurse -Force
 Copy-Item launcher\config.json.example (Join-Path $release "config.json")
 Copy-Item OWNER_GUIDE.md (Join-Path $release "OWNER_GUIDE.md")
 Copy-Item README.md (Join-Path $release "README.txt")
