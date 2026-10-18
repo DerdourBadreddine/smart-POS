@@ -18,5 +18,8 @@ node_modules/
 Smart POS Vibe Coding Roadmap.md
 PROJECT_BRIEF.md
 .audit-data/
+.release-build/
+release/
+/staticfiles/
 frontend/test-results/
 frontend/playwright-report/

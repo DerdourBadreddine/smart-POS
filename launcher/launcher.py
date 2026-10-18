@@ -10,6 +10,7 @@ import sys
 import threading
 import time
 import webbrowser
+from contextlib import closing
 from pathlib import Path
 
 
@@ -18,7 +19,8 @@ BUNDLE_ROOT = Path(getattr(sys, "_MEIPASS", ROOT))
 BACKEND = BUNDLE_ROOT / "backend"
 CONFIG_PATH = ROOT / "config.json" if getattr(sys, "frozen", False) else Path(__file__).resolve().parent / "config.json"
 LOG_PATH = ROOT / "logs" / "app.log"
-URL = "http://127.0.0.1:8000"
+PORT = int(os.environ.get("SMART_POS_PORT", "8000"))
+URL = f"http://127.0.0.1:{PORT}"
 
 
 def configure_logging() -> None:
@@ -31,12 +33,12 @@ def configure_logging() -> None:
 
 
 def backup_database(backup_dir: Path) -> None:
-    source = BACKEND / "db.sqlite3"
+    source = ROOT / "backend" / "db.sqlite3"
     if not source.exists():
         return
     backup_dir.mkdir(parents=True, exist_ok=True)
-    target = backup_dir / f"db-{time.strftime('%Y%m%d-%H%M')}.sqlite3"
-    with sqlite3.connect(source) as source_connection, sqlite3.connect(target) as target_connection:
+    target = backup_dir / f"db-{time.strftime('%Y%m%d-%H%M%S') + '-' + str(time.time_ns())}.sqlite3"
+    with closing(sqlite3.connect(source)) as source_connection, closing(sqlite3.connect(target)) as target_connection:
         source_connection.backup(target_connection)
     backups = sorted(backup_dir.glob("db-*.sqlite3"), key=lambda path: path.stat().st_mtime, reverse=True)
     for old_backup in backups[14:]:
@@ -44,6 +46,7 @@ def backup_database(backup_dir: Path) -> None:
 
 
 def run_migrations() -> None:
+    (ROOT / "backend").mkdir(parents=True, exist_ok=True)
     os.environ["SMART_POS_DATA_DIR"] = str(ROOT)
     os.environ["SMART_POS_FRONTEND_DIR"] = str(BUNDLE_ROOT / "frontend_dist")
     if getattr(sys, "frozen", False):
@@ -73,14 +76,14 @@ def start_server():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     from config.wsgi import application
 
-    thread = threading.Thread(target=serve, args=(application,), kwargs={"host": "127.0.0.1", "port": 8000}, daemon=True)
+    thread = threading.Thread(target=serve, args=(application,), kwargs={"host": "127.0.0.1", "port": PORT}, daemon=True)
     thread.start()
     return thread
 
 
 def port_in_use() -> bool:
     with socket.socket() as probe:
-        return probe.connect_ex(("127.0.0.1", 8000)) == 0
+        return probe.connect_ex(("127.0.0.1", PORT)) == 0
 
 
 def browser_command() -> list[str] | None:
@@ -90,12 +93,17 @@ def browser_command() -> list[str] | None:
     ]
     for candidate in candidates:
         if candidate.exists():
-            profile = Path(__file__).resolve().parent / "profile"
+            profile = ROOT / "launcher" / "profile"
             return [str(candidate), f"--app={URL}", "--window-size=1366,800", f"--user-data-dir={profile}"]
     return None
 
 
 def main() -> None:
+    if "--restore-backup" in sys.argv:
+        from restore_backup import main as restore_main
+        sys.argv.remove("--restore-backup")
+        restore_main()
+        return
     configure_logging()
     try:
         config = json.loads(CONFIG_PATH.read_text(encoding="utf-8")) if CONFIG_PATH.exists() else {}
@@ -108,6 +116,10 @@ def main() -> None:
         server_thread = None
         if not port_in_use():
             server_thread = start_server()
+        if "--serve-only" in sys.argv:
+            if server_thread is not None:
+                server_thread.join()
+            return
         time.sleep(1)
         if browser:
             process = subprocess.Popen(browser, cwd=ROOT)

@@ -1,1 +1,0 @@
-import{Xc as s,Yc as p,Zc as f,fa as i,nb as o}from"./chunk-SAWFPRTG.js";var m=class a{language=i(f);transform(n){let r=this.language.language()==="ar"?s:p,t=n.split(".").reduce((e,l)=>e&&typeof e=="object"?e[l]:void 0,r);return typeof t=="string"?t:n}static \u0275fac=function(r){return new(r||a)};static \u0275pipe=o({name:"transloco",type:a,pure:!1})};export{m as a};

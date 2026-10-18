@@ -28,6 +28,8 @@ def receive_phone(
         raise ValidationError(_("Only IMEI-tracked products can receive phone units."))
     if PhoneUnit.objects.filter(imei=imei).exists():
         raise ValidationError(_("A phone unit with this IMEI already exists."))
+    if Decimal(cost_price) < 0 or Decimal(sell_price) < 0:
+        raise ValidationError(_("Values cannot be negative."))
 
     unit = PhoneUnit(
         product=product,

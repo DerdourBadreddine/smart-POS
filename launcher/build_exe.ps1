@@ -7,8 +7,8 @@ if (-not (Test-Path "frontend_dist\index.html")) {
     throw "frontend_dist\index.html is missing. Build the Angular frontend first."
 }
 
-$packageCheck = Start-Process -FilePath python -ArgumentList "-c", "import PyInstaller, PIL" -Wait -PassThru -WindowStyle Hidden
-if ($packageCheck.ExitCode -ne 0) {
+python -c "import PyInstaller, PIL"
+if ($LASTEXITCODE -ne 0) {
     python -m pip install pyinstaller pillow
 }
 
@@ -21,17 +21,25 @@ if ($LASTEXITCODE -ne 0) {
     throw "collectstatic failed."
 }
 
-Remove-Item -Recurse -Force build, dist -ErrorAction SilentlyContinue
+$buildId = Get-Date -Format "yyyyMMdd-HHmmss-ffff"
+$buildRoot = Join-Path $root ".release-build\$buildId"
+New-Item -ItemType Directory -Force $buildRoot | Out-Null
+python launcher\prepare_bundle.py $buildRoot
+if ($LASTEXITCODE -ne 0) { throw "Source staging failed." }
 pyinstaller `
+    --distpath "$buildRoot\dist" `
+    --workpath "$buildRoot\work" `
+    --specpath "$buildRoot" `
     --noconfirm `
     --clean `
     --name SmartPOS `
     --windowed `
-    --icon launcher\icon.ico `
-    --paths backend `
-    --add-data "backend;backend" `
-    --add-data "frontend_dist;frontend_dist" `
-    --add-data "staticfiles;staticfiles" `
+    --icon "$root\launcher\icon.ico" `
+    --paths "$root\backend" `
+    --add-data "$buildRoot\backend;backend" `
+    --add-data "$root\frontend_dist;frontend_dist" `
+    --add-data "$root\staticfiles;staticfiles" `
+    --add-data "$root\locale;locale" `
     --hidden-import django `
     --hidden-import corsheaders `
     --collect-submodules corsheaders `
@@ -51,11 +59,17 @@ pyinstaller `
     --hidden-import rest_framework `
     --hidden-import django_filters `
     --hidden-import waitress `
+    --hidden-import restore_backup `
     launcher\launcher.py
 
 if ($LASTEXITCODE -ne 0) {
     throw "PyInstaller build failed."
 }
 
+New-Item -ItemType Directory -Force dist\SmartPOS | Out-Null
+Copy-Item "$buildRoot\dist\SmartPOS\SmartPOS.exe" dist\SmartPOS\SmartPOS.exe -Force
+Copy-Item "$buildRoot\dist\SmartPOS\_internal" dist\SmartPOS -Recurse -Force
 Copy-Item launcher\config.json.example dist\SmartPOS\config.json.example -Force
 Write-Host "Created dist\SmartPOS\SmartPOS.exe"
+
+exit 0

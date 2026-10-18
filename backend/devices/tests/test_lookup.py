@@ -6,6 +6,10 @@ from rest_framework.test import APIClient
 from catalog.models import Category, Product
 from inventory.models import PhoneUnit
 from sales.services import create_sale
+from customers.models import Customer
+from repairs.models import RepairTicket
+from django.utils import timezone
+from datetime import timedelta
 
 
 @pytest.mark.django_db
@@ -41,3 +45,23 @@ def test_device_lookup_returns_sale_and_warranty():
     assert response.status_code == 200
     assert response.data["sales"][0]["number"] == sale.number
     assert response.data["warranty"]["active"] is True
+
+
+@pytest.mark.django_db
+@pytest.mark.parametrize('age,active', [(1,True),(60,False)])
+def test_repaired_imei_active_and_expired_warranty(age,active):
+    customer=Customer.objects.create(name='Repair warranty')
+    RepairTicket.objects.create(number=f'R-WARRANTY-{age}',customer=customer,device_brand='Test',device_model='Phone',issue_description='Broken',imei='490154203237518',status='DELIVERED',delivered_at=timezone.now()-timedelta(days=age),warranty_days=30)
+    response=APIClient().get('/api/devices/lookup/?imei=490154203237518')
+    assert response.data['warranty']['active'] is active
+    assert response.data['warranty']['source']=='repair'
+    assert len(response.data['repairs'])==1
+
+
+@pytest.mark.django_db
+def test_unknown_imei_has_no_warranty_or_history():
+    response=APIClient().get('/api/devices/lookup/?imei=490154203237518')
+    assert response.data['phone_unit'] is None
+    assert response.data['sales']==[]
+    assert response.data['repairs']==[]
+    assert response.data['warranty']=={'active':False,'ends_on':None,'source':None}

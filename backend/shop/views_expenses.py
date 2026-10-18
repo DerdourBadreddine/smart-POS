@@ -3,9 +3,11 @@ from rest_framework import filters, serializers, viewsets
 from rest_framework.permissions import AllowAny
 
 from shop.models import Expense
+from decimal import Decimal
 
 
 class ExpenseSerializer(serializers.ModelSerializer):
+    amount = serializers.DecimalField(max_digits=10, decimal_places=2, min_value=Decimal("0.01"))
     class Meta:
         model = Expense
         fields = ["id", "date", "label", "amount", "category", "note", "created_at", "updated_at"]

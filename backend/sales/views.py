@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from sales.models import Sale
 from sales.serializers import SaleCreateSerializer, SalePaymentSerializer, SaleSerializer
 from sales.services import record_payment, void_sale
+import csv
+from django.http import HttpResponse
 
 
 class SaleViewSet(viewsets.ModelViewSet):
@@ -21,6 +23,17 @@ class SaleViewSet(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         return SaleCreateSerializer if self.action == "create" else SaleSerializer
+
+    @action(detail=False, methods=["get"], url_path="export-csv")
+    def export_csv(self, request):
+        response = HttpResponse(content_type="text/csv; charset=utf-8")
+        response["Content-Disposition"] = 'attachment; filename="sales.csv"'
+        response.write("\ufeff")
+        writer = csv.writer(response)
+        writer.writerow(["number", "date", "customer", "total", "paid", "balance", "status", "payment_method"])
+        for sale in self.filter_queryset(self.get_queryset()):
+            writer.writerow([sale.number, sale.created_at.isoformat(), sale.customer.name if sale.customer else "", sale.total, sale.paid_total, sale.balance, sale.status, sale.payment_method])
+        return response
 
     def get_queryset(self):
         queryset = super().get_queryset()

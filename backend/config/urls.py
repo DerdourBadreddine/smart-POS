@@ -9,6 +9,7 @@ from pathlib import Path
 
 from django.conf import settings
 from django.http import FileResponse, Http404
+from django.http import JsonResponse
 from django.urls import include, path, re_path
 
 FRONTEND_MIME_TYPES = {
@@ -21,6 +22,7 @@ FRONTEND_MIME_TYPES = {
 }
 
 urlpatterns = [
+    path("api/health/", lambda request: JsonResponse({"status": "ok"})),
     path("admin/", admin.site.urls),
     path("api/", include("catalog.urls")),
     path("api/", include("inventory.urls")),
