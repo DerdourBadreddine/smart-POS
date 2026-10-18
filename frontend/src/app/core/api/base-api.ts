@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable, expand, reduce } from 'rxjs';
 
 import { Page } from '../models/models';
 
@@ -17,6 +17,13 @@ export abstract class BaseApi<T> {
       }
     });
     return this.http.get<Page<T>>(`/api/${this.resource}/`, { params: httpParams });
+  }
+
+  all(params: Record<string, string | number | boolean> = {}): Observable<T[]> {
+    return this.list({ ...params, page: 1, page_size: 500 }).pipe(
+      expand(page => page.next ? this.http.get<Page<T>>(page.next) : EMPTY),
+      reduce((items: T[], page) => [...items, ...page.results], []),
+    );
   }
 
   get(id: number): Observable<T> {

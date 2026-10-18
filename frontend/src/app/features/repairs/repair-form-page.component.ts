@@ -49,7 +49,7 @@ export class RepairFormPageComponent {
     promised_date: [''], warranty_days: [0, [Validators.required, Validators.min(0)]],
   });
   constructor() {
-    this.customersApi.list({ page_size: 100, ordering: 'name' }).subscribe((page: Page<Customer>) => this.customers.set(page.results));
+    this.customersApi.all({ ordering: 'name' }).subscribe(customers => this.customers.set(customers));
     const imei = inject(ActivatedRoute).snapshot.queryParamMap.get('imei');
     if (imei) this.form.controls.imei.setValue(imei);
   }
@@ -60,5 +60,5 @@ export class RepairFormPageComponent {
       next: (ticket) => { this.snackBar.open(this.i18n.translate('repairs.created'), this.i18n.translate('confirmation.ok'), { duration: 3000 }); this.router.navigate(['/repairs', ticket.id]); },
     });
   }
-  quickAdd(): void { this.dialog.open(CustomerDialogComponent, {data:null}).afterClosed().subscribe(saved => { if(saved)this.customersApi.list({page_size:100}).subscribe(page=>this.customers.set(page.results)); }); }
+  quickAdd(): void { this.dialog.open(CustomerDialogComponent, {data:null}).afterClosed().subscribe(saved => { if(saved)this.customersApi.all().subscribe(customers=>this.customers.set(customers)); }); }
 }

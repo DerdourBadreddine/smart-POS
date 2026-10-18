@@ -5,7 +5,7 @@ from repairs.services import create_ticket, update_ticket
 
 
 class RepairPartSerializer(serializers.ModelSerializer):
-    product_name = serializers.CharField(source="product.name", read_only=True)
+    product_name = serializers.CharField(source="description", read_only=True)
 
     class Meta:
         model = RepairPart

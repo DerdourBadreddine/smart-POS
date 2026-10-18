@@ -32,3 +32,15 @@ def test_backup_uses_writable_data_keeps_fourteen_and_restores(tmp_path):
         assert connection.execute('SELECT id FROM django_migrations').fetchone()[0]==42
     with sqlite3.connect(safety) as connection:
         assert connection.execute('SELECT id FROM django_migrations').fetchone()[0]==99
+
+
+def test_launcher_finds_standard_x86_edge_and_uses_writable_profile(tmp_path,monkeypatch):
+    launcher=load('launcher')
+    launcher.ROOT=tmp_path
+    browser=tmp_path/'Microsoft/Edge/Application/msedge.exe'
+    browser.parent.mkdir(parents=True)
+    browser.touch()
+    monkeypatch.setenv('PROGRAMFILES(X86)',str(tmp_path))
+    command=launcher.browser_command()
+    assert command[0]==str(browser)
+    assert f'--user-data-dir={tmp_path / "launcher" / "profile"}' in command

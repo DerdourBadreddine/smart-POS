@@ -87,10 +87,8 @@ def port_in_use() -> bool:
 
 
 def browser_command() -> list[str] | None:
-    candidates = [
-        Path(os.environ.get("PROGRAMFILES", "")) / "Microsoft/Edge/Application/msedge.exe",
-        Path(os.environ.get("PROGRAMFILES", "")) / "Google/Chrome/Application/chrome.exe",
-    ]
+    roots = [Path(os.environ[key]) for key in ("PROGRAMFILES(X86)", "PROGRAMFILES", "LOCALAPPDATA") if os.environ.get(key)]
+    candidates = [root / relative for relative in ("Microsoft/Edge/Application/msedge.exe", "Google/Chrome/Application/chrome.exe") for root in roots]
     for candidate in candidates:
         if candidate.exists():
             profile = ROOT / "launcher" / "profile"

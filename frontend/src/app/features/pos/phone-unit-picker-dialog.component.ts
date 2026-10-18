@@ -37,8 +37,8 @@ export class PhoneUnitPickerDialogComponent {
 
   constructor(@Inject(MAT_DIALOG_DATA) data: { product: Product }) {
     this.data = data;
-    this.api.byProduct(data.product.id, 'IN_STOCK').subscribe({
-      next: (page) => { this.units.set(page.results); this.loading.set(false); },
+    this.api.all({product:data.product.id,status:'IN_STOCK'}).subscribe({
+      next: (page) => { this.units.set(page); this.loading.set(false); },
       error: () => this.loading.set(false),
     });
   }

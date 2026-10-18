@@ -61,7 +61,7 @@ export class RepairsPageComponent {
   readonly activeStatuses: RepairStatus[] = ['RECEIVED', 'DIAGNOSING', 'WAITING_PARTS', 'IN_REPAIR', 'READY'];
 
   constructor() {
-    this.customersApi.list({ page_size: 100, ordering: 'name' }).subscribe((page: Page<Customer>) => this.customers.set(page.results));
+    this.customersApi.all({ ordering: 'name' }).subscribe(customers => this.customers.set(customers));
     this.search.valueChanges
       .pipe(debounceTime(250), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.load());
@@ -72,10 +72,10 @@ export class RepairsPageComponent {
     this.loading.set(true);
     const params: Record<string, string | number | boolean> = { search: this.search.value.trim(), open: this.openOnly(), page_size: 100 };
     if (this.selectedStatus()) params['status'] = this.selectedStatus();
-    this.repairsApi.list(params).subscribe({
+    this.repairsApi.all(params).subscribe({
       next: (page) => {
-        this.tickets.set(page.results);
-        this.total.set(page.count);
+        this.tickets.set(page);
+        this.total.set(page.length);
         this.loading.set(false);
       },
       error: () => this.loading.set(false),

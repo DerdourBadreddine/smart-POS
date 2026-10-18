@@ -41,13 +41,16 @@ test('inventory forms, limits, credit refusal, settings, repair refusal and keyb
   const category=await(await request.post('/api/categories/',{data:{name:'00 Forms '+id,kind:'ACCESSORY'}})).json();
   await page.goto('/inventory');
   await page.getByRole('button',{name:t.inventory.addProduct,exact:true}).first().click();
+  await expect(page.locator('[formControlName=name]')).toBeFocused();
   await page.locator('[formControlName=name]').fill('Form product '+id);await page.locator('[formControlName=sku]').fill('FORM'+id);
+  await expect(page.locator('[formControlName=sku]')).toHaveValue('FORM'+id);
   await page.locator('[formControlName=category]').click();await page.getByRole('option',{name:category.name,exact:true}).click();
   await page.locator('[formControlName=cost_price]').fill('5');await page.locator('[formControlName=sell_price]').fill('25');await page.locator('[formControlName=stock_qty]').fill('3');
   const create=page.waitForResponse(r=>r.url().endsWith('/api/products/')&&r.request().method()==='POST');
   await page.getByRole('button',{name:t.common.save,exact:true}).click();const product=await(await create).json();expect(product.stock_qty).toBe(3);
   await page.locator('input').first().fill('FORM'+id);const row=page.getByRole('row').filter({hasText:'Form product '+id});
-  await row.getByRole('button',{name:t.common.edit,exact:true}).click();await page.locator('[formControlName=sell_price]').fill('30');await page.getByRole('button',{name:t.common.save,exact:true}).click();
+  await row.getByRole('button',{name:t.common.edit,exact:true}).click();await expect(page.locator('[formControlName=name]')).toBeFocused();await page.locator('[formControlName=sell_price]').fill('30');await page.getByRole('button',{name:t.common.save,exact:true}).click();
+  await expect.poll(async()=>Number((await(await request.get(`/api/products/${product.id}/`)).json()).sell_price)).toBe(30);
   await row.getByRole('button',{name:t.inventory.adjustStock,exact:true}).click();await page.locator('[formControlName=delta]').fill('2');await page.getByRole('button',{name:t.common.save,exact:true}).click();
   await expect.poll(async()=>(await(await request.get(`/api/products/${product.id}/`)).json()).stock_qty).toBe(5);
   await page.getByRole('button',{name:t.inventory.csv.importExport,exact:true}).click();
@@ -169,12 +172,14 @@ test('checkout, credit collection, void, repair, expenses and report', async ({ 
 
   await page.goto('/expenses');
   await page.getByRole('button',{name:t.expenses.add,exact:true}).click();
+  await expect(page.getByRole('dialog').locator('input').first()).toBeFocused();
   await page.locator('[formControlName=label]').fill(`Expense ${id}`);
   await page.locator('[formControlName=amount]').fill('7.50');
   await page.getByRole('button',{name:t.common.save,exact:true}).click();
   await expect(page.getByRole('row').filter({hasText:`Expense ${id}`})).toBeVisible();
   const expenseRow=page.getByRole('row').filter({hasText:`Expense ${id}`});
   await expenseRow.getByRole('button',{name:t.common.edit,exact:true}).click();
+  await expect(page.getByRole('dialog').locator('input').first()).toBeFocused();
   await page.locator('[formControlName=amount]').fill('8.50');
   await page.getByRole('button',{name:t.common.save,exact:true}).click();
   await expect(expenseRow).toContainText(lang==='fr'?'8,50':'8.50');

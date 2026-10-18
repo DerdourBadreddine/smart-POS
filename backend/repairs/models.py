@@ -67,6 +67,7 @@ class RepairTicket(TimeStampedModel):
 
 
 class RepairPart(TimeStampedModel):
+    description = models.CharField(max_length=200, default="", blank=True)
     ticket = models.ForeignKey(RepairTicket, on_delete=models.CASCADE, related_name="parts")
     product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name="repair_parts")
     quantity = models.IntegerField()

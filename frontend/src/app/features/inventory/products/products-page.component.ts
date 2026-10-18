@@ -72,9 +72,9 @@ export class ProductsPageComponent {
     if(query.get('search'))this.search.setValue(query.get('search')!);
     if(query.get('kind')==='PHONE')this.selectedKind.set('PHONE');
     this.categoriesApi
-      .list({ page_size: 100 })
+      .all()
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((page: Page<Category>) => this.categories.set(page.results));
+      .subscribe(categories => this.categories.set(categories));
 
     this.search.valueChanges
       .pipe(debounceTime(300), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))

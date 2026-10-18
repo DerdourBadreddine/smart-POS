@@ -16,6 +16,10 @@ def test_deposit_persisted_and_parts_removed_through_api():
     category=Category.objects.create(name='Parts',kind='PART')
     product=Product.objects.create(category=category,name='Screen',sku='SCREEN',stock_qty=2,cost_price='5',sell_price='10')
     part=add_part(ticket=ticket,product_id=product.pk,quantity=1)
+    product.name='Renamed screen'
+    product.save(update_fields=['name'])
+    from repairs.serializers import RepairPartSerializer
+    assert RepairPartSerializer(part).data['product_name']=='Screen'
     response=APIClient().delete(f'/api/repairs/{ticket.pk}/parts/{part.pk}/')
     assert response.status_code == 204
     product.refresh_from_db()

@@ -41,7 +41,7 @@ export class PaymentDialogComponent {
       paymentMethod: ['CASH' as Sale['payment_method'], Validators.required],
       amountPaid: [data.total, [Validators.required, Validators.min(0)]],
     });
-    this.customersApi.list({ page_size: 100, ordering: 'name' }).subscribe((page: Page<Customer>) => this.customers.set(page.results));
+    this.customersApi.all({ ordering: 'name' }).subscribe(customers => this.customers.set(customers));
   }
 
   remaining(): number { return Math.max(0, this.data.total - Number(this.form.controls.amountPaid.value || 0)); }

@@ -32,7 +32,7 @@ import { MoneyPipe } from '../../shared/pipes/money.pipe';
 export class CustomersPageComponent {
   private readonly api = inject(CustomersApi); private readonly dialog = inject(MatDialog); readonly search = inject(FormBuilder).nonNullable.control(''); readonly customers = signal<Customer[]>([]); readonly loading = signal(true); readonly owing = signal(false); readonly columns = ['name', 'phone', 'balance', 'actions'];
   constructor() { this.search.valueChanges.pipe(debounceTime(250)).subscribe(() => this.load()); this.load(); }
-  load(): void { this.loading.set(true); this.api.list({ search: this.search.value, has_balance: this.owing(), page_size: 100 }).subscribe({ next: (page: Page<Customer>) => { this.customers.set(page.results); this.loading.set(false); }, error: () => this.loading.set(false) }); }
+  load(): void { this.loading.set(true); this.api.all({ search: this.search.value, has_balance: this.owing() }).subscribe({ next: (customers: Customer[]) => { this.customers.set(customers); this.loading.set(false); }, error: () => this.loading.set(false) }); }
   edit(customer?: Customer): void { this.dialog.open(CustomerDialogComponent, { data: customer }).afterClosed().subscribe((saved) => { if (saved) this.load(); }); }
   statement(customer: Customer): void { this.dialog.open(CustomerStatementDialogComponent, { width: 'min(42rem, calc(100vw - 2rem))', data: { customer, api: this.api } }).afterClosed().subscribe(() => this.load()); }
 }

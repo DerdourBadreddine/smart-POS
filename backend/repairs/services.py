@@ -102,6 +102,7 @@ def add_part(
     part = RepairPart.objects.create(
         ticket=ticket,
         product=product,
+        description=product.name,
         quantity=quantity,
         unit_price=Decimal(unit_price if unit_price is not None else product.sell_price),
         unit_cost=product.cost_price,

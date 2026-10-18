@@ -20,7 +20,7 @@ import { ConfirmService, EmptyStateComponent, PageHeaderComponent } from '../../
 export class ExpensesPageComponent {
  private readonly api=inject(ExpensesApi); private readonly dialog=inject(MatDialog); private readonly confirm=inject(ConfirmService);
  readonly expenses=signal<Expense[]>([]); readonly from=inject(FormBuilder).nonNullable.control(''); readonly to=inject(FormBuilder).nonNullable.control(''); readonly category=inject(FormBuilder).nonNullable.control(''); readonly categories=['RENT','UTILITIES','SUPPLIES','SALARY','OTHER']; readonly columns=['date','label','category','amount','actions']; readonly total=computed(()=>this.expenses().reduce((sum,e)=>sum+Number(e.amount),0));
- constructor(){this.load();} load():void{this.api.list({date_from:this.from.value,date_to:this.to.value,category:this.category.value,page_size:100}).subscribe(page=>this.expenses.set(page.results));}
+ constructor(){this.load();} load():void{this.api.all({date_from:this.from.value,date_to:this.to.value,category:this.category.value}).subscribe(expenses=>this.expenses.set(expenses));}
  edit(expense?:Expense):void{this.dialog.open(ExpenseDialogComponent,{data:expense,width:'480px'}).afterClosed().subscribe(saved=>{if(saved)this.load();});}
  remove(expense:Expense):void{this.confirm.open('expenses.deleteConfirm').subscribe(ok=>{if(ok)this.api.remove(expense.id).subscribe(()=>this.load());});}
 }

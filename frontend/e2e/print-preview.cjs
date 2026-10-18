@@ -7,9 +7,14 @@ const path=require('node:path');
  const base=process.env.BASE_URL||'http://127.0.0.1:8765';
  for(const language of ['fr','ar']){
   const context=await browser.newContext({viewport:{width:1366,height:768}});await context.addInitScript(language=>localStorage.setItem('smart-pos-language',language),language);
-  const page=await context.newPage();await page.goto(base+'/sales');await page.locator('table button').first().click();await page.locator('#print-receipt').waitFor();await page.emulateMedia({media:'print'});
+  const page=await context.newPage();
+  const sales=await(await context.request.get(base+'/api/sales/')).json();
+  const phoneSale=sales.results.find(sale=>sale.items.some(item=>item.phone_unit));
+  if(!phoneSale)throw new Error('Create a phone sale before generating IMEI print evidence');
+  await page.goto(base+'/sales');await page.getByRole('row').filter({hasText:phoneSale.number}).locator('button').first().click();await page.locator('#print-receipt').waitFor();await page.emulateMedia({media:'print'});
   await page.locator('#print-receipt').screenshot({path:path.join(directory,language+'-receipt.png')});
   if(await page.locator('#print-receipt').evaluate(element=>element.getBoundingClientRect().width)>300)throw new Error('Receipt is wider than 80mm');
+  await page.pdf({path:path.join(directory,language+'-imei-receipt.pdf'),width:'80mm',height:'200mm',printBackground:true,margin:{top:'4mm',bottom:'4mm',left:'4mm',right:'4mm'}});
   await page.goto(base+'/reports');await page.locator('.print-document').waitFor();await page.locator('.print-document').screenshot({path:path.join(directory,language+'-report-a4.png')});
   await page.emulateMedia({media:'screen'});await page.evaluate(()=>window.print=()=>{});await page.locator('app-page-header button').last().click();await page.emulateMedia({media:'print'});await page.locator('.print-document.narrow-print').waitFor();
   await page.locator('.print-document').screenshot({path:path.join(directory,language+'-report-80mm.png')});

@@ -59,16 +59,16 @@ export class PhoneProductPageComponent {
       error: () => this.loading.set(false),
     });
     this.loadUnits();
-    this.movementsApi.byProduct(this.productId).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
-      next: (page) => this.movements.set(page.results),
+    this.movementsApi.all({product:this.productId}).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
+      next: (page) => this.movements.set(page),
     });
   }
 
   loadUnits(): void {
     this.loading.set(true);
-    this.unitsApi.byProduct(this.productId, this.status() || undefined).subscribe({
+    this.unitsApi.all({product:this.productId, ...(this.status()?{status:this.status()}:{})}).subscribe({
       next: (page) => {
-        this.units.set(page.results);
+        this.units.set(page);
         this.loading.set(false);
       },
       error: () => this.loading.set(false),
@@ -90,7 +90,7 @@ export class PhoneProductPageComponent {
       if (saved) {
         this.productsApi.get(this.productId).subscribe((updated) => this.product.set(updated));
         this.loadUnits();
-        this.movementsApi.byProduct(this.productId).subscribe((page) => this.movements.set(page.results));
+        this.movementsApi.all({product:this.productId}).subscribe((page) => this.movements.set(page));
       }
     });
   }
