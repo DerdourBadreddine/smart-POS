@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "mime": "text/html",
+    "passed": true
+  },
+  {
+    "path": "main-HRIAFBBP.js",
+    "status": 200,
+    "mime": "text/javascript",
+    "passed": true
+  },
+  {
+    "path": "styles-XBNBMOFJ.css",
+    "status": 200,
+    "mime": "text/css",
+    "passed": true
+  },
+  {
+    "path": "assets/i18n/fr.json",
+    "status": 200,
+    "mime": "application/json",
+    "passed": true
+  },
+  {
+    "path": "assets/i18n/ar.json",
+    "status": 200,
+    "mime": "application/json",
+    "passed": true
+  },
+  {
+    "path": "media/material-icons-latin-400-normal-LEZCGFVT.woff2",
+    "status": 200,
+    "mime": "font/woff2",
+    "passed": true
+  },
+  {
+    "path": "missing-acceptance.js",
+    "status": 404,
+    "mime": "text/html; charset=utf-8",
+    "passed": true
+  }
+]

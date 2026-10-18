@@ -1,5 +1,25 @@
 # Guide du propriétaire — Smart POS
 
+## Version améliorée
+
+Le nouveau dossier à remettre au magasin est `release\SmartPOS-Client`.
+Le dossier d’origine reste intact. Fermez la version déjà ouverte avant de
+lancer la nouvelle version sur le port habituel. Pour conserver vos données,
+copiez votre base et vos sauvegardes dans la nouvelle version uniquement
+lorsque le programme est fermé; conservez toujours la copie d’origine.
+
+Pour une réparation avec acompte, saisissez aussi la main-d’œuvre réellement
+facturée. Le coût estimé reste une estimation. Le montant encaissé ne peut
+pas dépasser le total. Un ticket livré est clôturé.
+
+Dans Clients, ouvrez Détails puis Encaisser. Le paiement rembourse les ventes
+les plus anciennes en premier. Les dépenses peuvent être ajoutées, modifiées
+ou supprimées avec les boutons du tableau. Les reçus s’ouvrent après la vente.
+
+Fermez le programme avant une restauration. Lancez
+`launcher\restore_backup.bat`, sélectionnez la sauvegarde et confirmez.
+Une copie `db-before-restore-…sqlite3` de la base actuelle est conservée.
+
 ## Démarrer
 
 Double-cliquez sur l’icône **Smart POS** du Bureau. La fenêtre de vente s’ouvre automatiquement.
@@ -41,6 +61,21 @@ uniquement une copie provenant de votre dossier de confiance.
 ---
 
 # دليل المالك — Smart POS
+
+## النسخة المحسنة
+
+توجد النسخة الجديدة في `release\SmartPOS-Client` وتبقى النسخة الأصلية محفوظة.
+أغلق النسخة المفتوحة قبل تشغيل النسخة الجديدة على المنفذ المعتاد. انقل قاعدة
+البيانات والنسخ الاحتياطية فقط بعد إغلاق البرنامج، واحتفظ دائماً بالنسخة الأصلية.
+
+عند استلام عربون إصلاح، أدخل أيضاً أجرة العمل الفعلية. التكلفة المقدرة تبقى
+تقديراً، ولا يمكن تحصيل مبلغ يتجاوز الإجمالي. لا يمكن تعديل تذكرة مسلمة.
+
+افتح تفاصيل العميل ثم تحصيل الدفع لتسديد أقدم المبيعات أولاً. يمكنك إضافة
+المصاريف وتعديلها وحذفها من الجدول. يظهر الوصل مباشرة بعد البيع.
+
+أغلق البرنامج قبل الاسترجاع، وشغّل `launcher\restore_backup.bat` ثم اختر
+النسخة الاحتياطية وأكد الاسترجاع. يحتفظ البرنامج بنسخة أمان منفصلة من القاعدة الحالية.
 
 ## التشغيل
 

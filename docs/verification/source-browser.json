@@ -1,0 +1,797 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\coding\\smart POS\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--output",
+      "test-results/source"
+    ],
+    "configFile": "D:\\coding\\smart POS\\frontend\\playwright.config.ts",
+    "rootDir": "D:/coding/smart POS/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/coding/smart POS/frontend/test-results/source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "fr"
+        },
+        "id": "fr-1366",
+        "name": "fr-1366",
+        "testDir": "D:/coding/smart POS/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/coding/smart POS/frontend/test-results/source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "fr"
+        },
+        "id": "fr-1920",
+        "name": "fr-1920",
+        "testDir": "D:/coding/smart POS/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/coding/smart POS/frontend/test-results/source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "ar"
+        },
+        "id": "ar-1366",
+        "name": "ar-1366",
+        "testDir": "D:/coding/smart POS/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/coding/smart POS/frontend/test-results/source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "ar"
+        },
+        "id": "ar-1920",
+        "name": "ar-1920",
+        "testDir": "D:/coding/smart POS/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\coding\\smart POS\\frontend\\test-results\\source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "fr"
+        },
+        "name": "fr-1366",
+        "testDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "snapshotDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "channel": "chromium",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "fr-1366"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\coding\\smart POS\\frontend\\test-results\\source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "fr"
+        },
+        "name": "fr-1920",
+        "testDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "snapshotDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "channel": "chromium",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "fr-1920"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\coding\\smart POS\\frontend\\test-results\\source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "ar"
+        },
+        "name": "ar-1366",
+        "testDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "snapshotDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "channel": "chromium",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "ar-1366"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\coding\\smart POS\\frontend\\test-results\\source",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "lang": "ar"
+        },
+        "name": "ar-1920",
+        "testDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "snapshotDir": "D:\\coding\\smart POS\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "channel": "chromium",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "ar-1920"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/verification/source-browser.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "workflows.spec.ts",
+      "file": "workflows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "inventory forms, limits, credit refusal, settings, repair refusal and keyboard state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1366",
+              "projectName": "fr-1366",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:23:47.024Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-80ebdd5877fb194e0d09",
+          "file": "workflows.spec.ts",
+          "line": 38,
+          "column": 5
+        },
+        {
+          "title": "checkout, credit collection, void, repair, expenses and report",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1366",
+              "projectName": "fr-1366",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:24:00.014Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-0e22933dcbbc63d9610f",
+          "file": "workflows.spec.ts",
+          "line": 90,
+          "column": 5
+        },
+        {
+          "title": "receive valid IMEI, reject invalid check digit, scan sale, CSV preview and import",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1366",
+              "projectName": "fr-1366",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:24:10.506Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-cc4452be1e99e43430de",
+          "file": "workflows.spec.ts",
+          "line": 202,
+          "column": 5
+        },
+        {
+          "title": "routes are accessible and local",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1366",
+              "projectName": "fr-1366",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22929,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:24:13.890Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-dcbc8aba92f3522a9939",
+          "file": "workflows.spec.ts",
+          "line": 243,
+          "column": 5
+        },
+        {
+          "title": "inventory forms, limits, credit refusal, settings, repair refusal and keyboard state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1920",
+              "projectName": "fr-1920",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11466,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:24:38.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-912b6e54abb98e28a73e",
+          "file": "workflows.spec.ts",
+          "line": 38,
+          "column": 5
+        },
+        {
+          "title": "checkout, credit collection, void, repair, expenses and report",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1920",
+              "projectName": "fr-1920",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12299,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:24:50.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-0537b67e0129c2086231",
+          "file": "workflows.spec.ts",
+          "line": 90,
+          "column": 5
+        },
+        {
+          "title": "receive valid IMEI, reject invalid check digit, scan sale, CSV preview and import",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1920",
+              "projectName": "fr-1920",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:25:02.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-a5193baa65918e346fb2",
+          "file": "workflows.spec.ts",
+          "line": 202,
+          "column": 5
+        },
+        {
+          "title": "routes are accessible and local",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "fr-1920",
+              "projectName": "fr-1920",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35252,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:25:08.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-49b04269fa3080edd9db",
+          "file": "workflows.spec.ts",
+          "line": 243,
+          "column": 5
+        },
+        {
+          "title": "inventory forms, limits, credit refusal, settings, repair refusal and keyboard state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1366",
+              "projectName": "ar-1366",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:25:45.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-08d39d7841e462f45e99",
+          "file": "workflows.spec.ts",
+          "line": 38,
+          "column": 5
+        },
+        {
+          "title": "checkout, credit collection, void, repair, expenses and report",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1366",
+              "projectName": "ar-1366",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9813,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:25:57.535Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-454fbf37af016c88fbb3",
+          "file": "workflows.spec.ts",
+          "line": 90,
+          "column": 5
+        },
+        {
+          "title": "receive valid IMEI, reject invalid check digit, scan sale, CSV preview and import",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1366",
+              "projectName": "ar-1366",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:07.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-324ba97aec3fafe85a2f",
+          "file": "workflows.spec.ts",
+          "line": 202,
+          "column": 5
+        },
+        {
+          "title": "routes are accessible and local",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1366",
+              "projectName": "ar-1366",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21204,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:11.104Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-d4ea4851ee51ad64406d",
+          "file": "workflows.spec.ts",
+          "line": 243,
+          "column": 5
+        },
+        {
+          "title": "inventory forms, limits, credit refusal, settings, repair refusal and keyboard state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1920",
+              "projectName": "ar-1920",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:33.619Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-2febb3f56ed02eaa57a5",
+          "file": "workflows.spec.ts",
+          "line": 38,
+          "column": 5
+        },
+        {
+          "title": "checkout, credit collection, void, repair, expenses and report",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1920",
+              "projectName": "ar-1920",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9424,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:45.664Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-dbb5d638c00e99a20672",
+          "file": "workflows.spec.ts",
+          "line": 90,
+          "column": 5
+        },
+        {
+          "title": "receive valid IMEI, reject invalid check digit, scan sale, CSV preview and import",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1920",
+              "projectName": "ar-1920",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:55.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-01c88bcbdbd90d572704",
+          "file": "workflows.spec.ts",
+          "line": 202,
+          "column": 5
+        },
+        {
+          "title": "routes are accessible and local",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ar-1920",
+              "projectName": "ar-1920",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T10:26:58.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-4988f5c4fe5e42da1eb9",
+          "file": "workflows.spec.ts",
+          "line": 243,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T10:23:45.750Z",
+    "duration": 214892.975,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

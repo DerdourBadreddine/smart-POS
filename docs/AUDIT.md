@@ -1,4 +1,4 @@
-# Audit — in progress
+# Audit
 
 Audit started 18 October 2026. No existing user database or backup is modified. Source findings below are distinguished from browser observations; an untested flow is never counted as passing.
 
@@ -32,6 +32,27 @@ Audit started 18 October 2026. No existing user database or backup is modified. 
 | A17 | i18n | Source: gettext calls without locale catalogs | French and Arabic service errors | High | Missing locale resources |
 | A18 | Keyboard | Source: Enter relies on prior debounced results | Scanner input plus Enter resolves current query | High | Search race |
 | A19 | Repairs | Source: parts/payment can change terminal tickets; labor can invalidate balance | Locked terminal financials, nonnegative balance | High | Missing service checks |
+| A20 | Lists/history | Source: secondary lists/selectors consume only the first 25/100 rows | Follow all pages or provide pagination | High | Page response discarded after first request |
+| A21 | Repair history | Source: renaming a product changes the historical repair-part label | Snapshot description when used | High | Serializer reads current Product.name |
 
-## Browser coverage
-Pending Playwright installation and browser startup. Screenshots and screen-by-screen design observations will be recorded here. This is a working audit, not a declaration of completed acceptance.
+## Browser observations and design review
+
+The baseline browser pass saved 22 screenshots (11 routes × FR/AR) in `screenshots/before/`, with machine-readable results in `browser-before.json`. Port 8000 was subsequently identified as an already-running older package. That pass was strictly read-only. All fixture creation and subsequent workflow tests use isolated copied data on port 8765, and packaged copies on port 8766. No claim is made that the first baseline browser pass ran against the copied database.
+
+| Screen | Baseline design / browser finding | Rebuild evidence |
+| --- | --- | --- |
+| Shell | Large undifferentiated sidebar; missing component theme | Grouped sections, compact icons, tooltips, visible active label, generated Material theme |
+| Dashboard | Visible DA0.00; unframed uneven cards; zero-value chart is dashes; serious contrast failure | Shared KPI cards, six metrics, SVG values/dates, honest empty state; screenshots after in both languages |
+| Inventory | Empty action-column header; phone detail not accessible from name | Named actions; linked phone rows, ledger preserving forms and CSV |
+| POS | Empty-state contrast failure; receipt absent after checkout | Contrast corrected, sticky cart, shortcuts, immediate receipt, cash change calculation |
+| History | Empty action header; no filters/export | Named actions, date/search/status filters, filtered CSV, confirm dialog |
+| Repairs | Critical select/checkbox labeling errors; low-contrast empty state; blind repeated part action | Material input import and labels corrected, status progress, sticky totals, labor/deposit intake, one-click part lookup/add |
+| Customers | Unnamed edit control; English prompt; missing repair history | Labeled actions, translated collection dialog, oldest-first allocation, sales/repair statement |
+| Device lookup | Raw dates/prices/status | Shared date/money/enum formatting; live sold-IMEI warranty checked |
+| Expenses | English prompts, ignored dates, incomplete CRUD | Material form, translated categories, correct filters, edit/delete and total |
+| Reports | Hard-coded English cards and unformatted values | Translated KPIs, payment breakdown, shop details, print document |
+| Settings | Critical/serious input naming issues; structural directives missing import | Actual labeled input/textarea controls render; translated success and language names |
+
+The latest completed 26-route screenshot sweep has zero JavaScript page errors, zero HTTP failures, zero external requests, and zero serious/critical axe violations. The remaining moderate `region` finding concerns shell brand/toolbar landmarks. Automated overflow diagnostics include Material control internals (touch targets/notched outlines), so they are recorded as diagnostics rather than certified zero-overflow evidence. Follow-up print and packaged results are in REPORT.md.
+
+Additional findings: cash tender above total was rejected; report labels were English; paginator labels were English; active-only=false filtered inactive products rather than all; inventory IMEI find only found in-stock phones; generic sale deletion bypassed the stock ledger; health endpoint and sales CSV export were absent. These were corrected during the rebuild. The running package prevented in-place replacement, so release output is now `release/SmartPOS-Client`.

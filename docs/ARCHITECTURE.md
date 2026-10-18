@@ -8,10 +8,10 @@ Windows launcher -> migrations -> SQLite backup -> Waitress on 127.0.0.1:8000 ->
 
 | Domain | Models / services | API |
 | --- | --- | --- |
-| catalog | Category, Product; CSV currently in views | categories, products, lookup, adjust-stock, import-csv, export-csv |
+| catalog | Category, Product; save_product and import_catalog services | categories, products, lookup, adjust-stock, import-csv, export-csv |
 | inventory | PhoneUnit, StockMovement; receive_phone, adjust_stock | phone-units, stock-movements |
 | sales | Sale, SaleItem, SalePayment; checkout, void, payment | sales, payments, void, export-csv |
-| repairs | RepairTicket, RepairPart; create, status, parts, payment | repairs and nested actions |
+| repairs | RepairTicket, RepairPart with description snapshot; create, status, parts, payment | repairs and nested actions |
 | customers | Customer with computed sale balance | customers, statement |
 | shop | ShopSettings singleton, Expense | settings, expenses |
 | dashboard | summary and end_of_day aggregations | dashboard/summary, reports/end-of-day |
@@ -29,3 +29,7 @@ Angular 19 standalone lazy routes in `app.routes.ts`: dashboard, inventory, inve
 
 ## Packaging
 `launcher/build_exe.ps1` builds Angular, collects static assets and runs PyInstaller. `build_client_package.ps1` copies dist into SmartPOS-Client. Baseline package builder recursively deletes an existing release (including potential data); it must be corrected before execution. `restore_backup.bat` restores a selected backup. `launcher.py` handles startup backup retention and browser lifecycle.
+
+## Rebuild additions
+
+Shared BaseApi.all follows every server page for secondary lists and selectors. Shared UI primitives and generated Material 3 theme are in frontend/src/app/shared/ui.ts and frontend/src/theme.scss. Customer collections now have an atomic oldest-first service and endpoint. Repair migration 0002 adds/backfills descriptions without deleting records. Release builds stage code without data and output release/SmartPOS-Client; the original running client folder is preserved. See REPORT for verified runtime evidence and remaining manual checks.

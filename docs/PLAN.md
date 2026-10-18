@@ -1,6 +1,6 @@
 # Rebuild plan
 
-18 October 2026. Continue automatically through phases as explicitly requested in CODEX_PROMPT.md; its workflow overrides the older wait-for-next rule copied into AGENTS.md. No stack changes, data deletion, or existing database migrations are authorized or needed for the initial fixes.
+18 October 2026. Continue automatically through phases as explicitly requested in CODEX_PROMPT.md; its workflow overrides the older wait-for-next rule copied into AGENTS.md. Keep the stack and user data. Never rewrite existing migrations; add a tested forward migration only when required by the historical-record rules.
 
 ## Priority and acceptance
 
@@ -22,7 +22,7 @@ Dashboard uses a broad chart plus two operational lists; POS keeps a persistent 
 
 - Keep repair income recognition on delivery, as section 5 of the brief specifies. Do not silently replace it with a payment-ledger accounting model.
 - Repair deposits must be covered by an explicit labor charge at intake; estimated cost remains an estimate. Add the missing labor input rather than treating the estimate as money earned.
-- Preserve all existing records. No repair-description snapshot migration in this first pass; any remaining limitation is reported explicitly.
+- Preserve all existing records. Final review established that repair descriptions need a snapshot to satisfy the historical-record rule. Add a forward field/backfill migration, test preservation and rename behavior, and migrate only copied data during acceptance. Previously lost historical names cannot be reconstructed.
 - Reject invalid CSV rows atomically. Phone quantities are derived from IMEI units, never overwritten by CSV.
 - Preserve existing client database, backup folder, logs and config during packaging. Never execute the baseline destructive package script.
 - npm reports 40 dependency advisories after installing requested test tooling; record separately, do not run force-upgrades that change the required Angular stack.

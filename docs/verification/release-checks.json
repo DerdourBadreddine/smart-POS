@@ -1,0 +1,13 @@
+{
+  "exe_sha256": "c12d0a7cf62bd59a0731c38d57bb7e52aa4b45dadbdc6e64c230f50750ec57ee",
+  "copied_exe_matches": true,
+  "frontend_index_matches": true,
+  "startup_backup": "db-20261018-112731-1792319251108423600.sqlite3",
+  "backup_contains_description_migration": true,
+  "root_database_sha256": "df7a43d5f3db16ad7346b280593ae1c21171517ee4bb0ed9fee23acf5ebacc68",
+  "original_client_db_mtime": 1792251159.2029095,
+  "restored_copy_integrity": "ok",
+  "restore_safety_copy_exists": true,
+  "frontend_index_sha256": "de6c8bb063cfb304777e936a167a7b32ccbf1f536c29d571c92483b33dc34bf6",
+  "native_transloco_pipe": true
+}
