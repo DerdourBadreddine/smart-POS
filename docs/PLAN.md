@@ -22,6 +22,7 @@ Dashboard uses a broad chart plus two operational lists; POS keeps a persistent 
 
 - Keep repair income recognition on delivery, as section 5 of the brief specifies. Do not silently replace it with a payment-ledger accounting model.
 - Repair deposits must be covered by an explicit labor charge at intake; estimated cost remains an estimate. Add the missing labor input rather than treating the estimate as money earned.
+- Warranty dates use the shop calendar date, including delivery near UTC midnight. Immediate receipt change is display data; do not invent historical tender amounts or alter the sale accounting model. Ambiguous repair-part names require explicit selection; exact SKU or a single available match remains fast to add.
 - Preserve all existing records. Final review established that repair descriptions need a snapshot to satisfy the historical-record rule. Add a forward field/backfill migration, test preservation and rename behavior, and migrate only copied data during acceptance. Previously lost historical names cannot be reconstructed.
 - Reject invalid CSV rows atomically. Phone quantities are derived from IMEI units, never overwritten by CSV.
 - Preserve existing client database, backup folder, logs and config during packaging. Never execute the baseline destructive package script.

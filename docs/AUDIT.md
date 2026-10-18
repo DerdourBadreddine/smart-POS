@@ -34,6 +34,12 @@ Audit started 18 October 2026. No existing user database or backup is modified. 
 | A19 | Repairs | Source: parts/payment can change terminal tickets; labor can invalidate balance | Locked terminal financials, nonnegative balance | High | Missing service checks |
 | A20 | Lists/history | Source: secondary lists/selectors consume only the first 25/100 rows | Follow all pages or provide pagination | High | Page response discarded after first request |
 | A21 | Repair history | Source: renaming a product changes the historical repair-part label | Snapshot description when used | High | Serializer reads current Product.name |
+| A22 | Receipt | Source: cash tender/change is discarded before receipt; customer name absent | Show customer and immediate cash change | Medium | Receipt receives only persisted sale fields |
+| A23 | Repair parts | Source: partial search can select an unintended first match | Require explicit choice for ambiguous names | High | Search result chosen without user selection |
+| A24 | WhatsApp | Source: local phone number used directly in wa.me URL | Normalize using shop dial code | Medium | Country setting unused |
+| A25 | Warranty/print | Source: UTC date truncation can shorten warranty near local midnight; repair print lacks expiry | Use shop calendar date and print repair warranty | High | Date truncation and missing display field |
+| A26 | Device lookup | Source/UI: missing invalid-input feedback and unknown-device receive shortcut; garbled timeline glyphs | Inline validation, prefilled reception, local Material icons and history links | Medium | Incomplete form/timeline |
+| A27 | Source launcher | Source: non-frozen launcher retains DEBUG=1, root production page unavailable | Launcher always serves built frontend | High | Only frozen mode forces production settings |
 
 ## Browser observations and design review
 

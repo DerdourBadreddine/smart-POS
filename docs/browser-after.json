@@ -5,7 +5,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "TABLEAU DE BORD\nVue d'ensemble\n\nL'activité de votre boutique aujourd'hui.\n\nrefresh\nActualiser\nVentes du jour\npoint_of_sale\n⁦42 864,00 DA⁩\nMarge brute\ntrending_up\n⁦16 791,50 DA⁩\nRevenus réparations\nbuild\n⁦930,00 DA⁩\nRéparations ouvertes\nhandyman\n23\nCrédit à recouvrer\naccount_balance_wallet\n⁦0,00 DA⁩\nDépenses du jour\nreceipt_long\n⁦227,00 DA⁩\nadd_shopping_cart\nNouvelle vente\nadd\nNouveau ticket\nsmartphone\nRéceptionner un téléphone\n7 derniers jours\n53 ventes\n0\n⁦0,00 DA⁩\n12/10\n⁦0,00 DA⁩\n13/10\n⁦0,00 DA⁩\n14/10\n⁦0,00 DA⁩\n15/10\n⁦0,00 DA⁩\n16/10\n⁦0,00 DA⁩\n17/10\n⁦42 864,00 DA⁩\n18/10\nPrêts à récupérer\ntask_alt\n\nAucun élément\n\nStock faible\nForm product 1792318057192\n0\nForm product 1792318192790\n0\nForm product 1792318205652\n0\nForm product 1792318373667\n0\nForm product 1792318524321\n0\nForm product 1792318615301\n0\nForm product 1792318672062\n0\nForm product 1792318730536\n0\nForm product 1792318783839\n0\nForm product 1792319028521\n0",
+    "body": "TABLEAU DE BORD\nVue d'ensemble\n\nL'activité de votre boutique aujourd'hui.\n\nrefresh\nActualiser\nVentes du jour\npoint_of_sale\n⁦43 184,00 DA⁩\nMarge brute\ntrending_up\n⁦17 066,50 DA⁩\nRevenus réparations\nbuild\n⁦870,00 DA⁩\nRéparations ouvertes\nhandyman\n29\nCrédit à recouvrer\naccount_balance_wallet\n⁦0,00 DA⁩\nDépenses du jour\nreceipt_long\n⁦184,50 DA⁩\nadd_shopping_cart\nNouvelle vente\nadd\nNouveau ticket\nsmartphone\nRéceptionner un téléphone\n7 derniers jours\n55 ventes\n0\n⁦0,00 DA⁩\n12/10\n⁦0,00 DA⁩\n13/10\n⁦0,00 DA⁩\n14/10\n⁦0,00 DA⁩\n15/10\n⁦0,00 DA⁩\n16/10\n⁦0,00 DA⁩\n17/10\n⁦43 184,00 DA⁩\n18/10\nPrêts à récupérer\ntask_alt\n\nAucun élément\n\nStock faible\nForm product 1792318057192\n0\nForm product 1792318192790\n0\nForm product 1792318205652\n0\nForm product 1792318373667\n0\nForm product 1792318524321\n0\nForm product 1792318615301\n0\nForm product 1792318672062\n0\nForm product 1792318730536\n0\nForm product 1792318783839\n0\nForm product 1792319028521\n0",
     "violations": [
       {
         "id": "region",
@@ -16,6 +16,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -28,7 +31,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "INVENTAIRE\nProduits\n\nGérez les téléphones, accessoires et pièces de rechange.\n\nswap_vert\nImport / Export\nadd\nAjouter un produit\nRechercher\nsearch\nActifs uniquement\nStock faible uniquement\nTéléchargez le catalogue actuel pour Excel ou votre comptable.\ndownload\nExporter le catalogue\nTous\nTéléphones\nAccessoires\nPièces\nNom\tSKU\tCatégorie\tStock\tCoût\tPrix\tActions\n\nBlack Silicone Case\n\tCASE-BLK\tCases\t12\t⁦250,00 DA⁩\t⁦500,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316447689-fr-1366\n\t1792316447689-fr-1366\tE2E 1792316447689-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316532619-fr-1366\n\t1792316532619-fr-1366\tE2E 1792316532619-fr-1366\t9\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316572042-fr-1920\n\t1792316572042-fr-1920\tE2E 1792316572042-fr-1920\t9\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316618574-ar-1366\n\t1792316618574-ar-1366\tE2E 1792316618574-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316654271-ar-1920\n\t1792316654271-ar-1920\tE2E 1792316654271-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316813683-fr-1366\n\t1792316813683-fr-1366\tE2E 1792316813683-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316843514-fr-1920\n\t1792316843514-fr-1920\tE2E 1792316843514-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316881569-ar-1366\n\t1792316881569-ar-1366\tE2E 1792316881569-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316918131-ar-1920\n\t1792316918131-ar-1920\tE2E 1792316918131-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317381463-fr-1366\n\t1792317381463-fr-1366\tE2E 1792317381463-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317412961-fr-1920\n\t1792317412961-fr-1920\tE2E 1792317412961-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317448217-ar-1366\n\t1792317448217-ar-1366\tE2E 1792317448217-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317490653-ar-1920\n\t1792317490653-ar-1920\tE2E 1792317490653-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318327960-fr-1366\n\t1792318327960-fr-1366\tE2E 1792318327960-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318384047-fr-1920\n\t1792318384047-fr-1920\tE2E 1792318384047-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318486014-ar-1366\n\t1792318486014-ar-1366\tE2E 1792318486014-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318535219-ar-1920\n\t1792318535219-ar-1920\tE2E 1792318535219-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318628913-fr-1366\n\t1792318628913-fr-1366\tE2E 1792318628913-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318685939-fr-1920\n\t1792318685939-fr-1920\tE2E 1792318685939-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318745195-ar-1366\n\t1792318745195-ar-1366\tE2E 1792318745195-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318793528-ar-1920\n\t1792318793528-ar-1920\tE2E 1792318793528-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319040314-fr-1366\n\t1792319040314-fr-1366\tE2E 1792319040314-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319090956-fr-1920\n\t1792319090956-fr-1920\tE2E 1792319090956-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319157730-ar-1366\n\t1792319157730-ar-1366\tE2E 1792319157730-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\nArticles par page\n25\n1–25 / 139",
+    "body": "INVENTAIRE\nProduits\n\nGérez les téléphones, accessoires et pièces de rechange.\n\nswap_vert\nImport / Export\nadd\nAjouter un produit\nRechercher\nsearch\nActifs uniquement\nStock faible uniquement\nTéléchargez le catalogue actuel pour Excel ou votre comptable.\ndownload\nExporter le catalogue\nTous\nTéléphones\nAccessoires\nPièces\nNom\tSKU\tCatégorie\tStock\tCoût\tPrix\tActions\n\nBlack Silicone Case\n\tCASE-BLK\tCases\t12\t⁦250,00 DA⁩\t⁦500,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316447689-fr-1366\n\t1792316447689-fr-1366\tE2E 1792316447689-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316532619-fr-1366\n\t1792316532619-fr-1366\tE2E 1792316532619-fr-1366\t9\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316572042-fr-1920\n\t1792316572042-fr-1920\tE2E 1792316572042-fr-1920\t9\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316618574-ar-1366\n\t1792316618574-ar-1366\tE2E 1792316618574-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316654271-ar-1920\n\t1792316654271-ar-1920\tE2E 1792316654271-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316813683-fr-1366\n\t1792316813683-fr-1366\tE2E 1792316813683-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316843514-fr-1920\n\t1792316843514-fr-1920\tE2E 1792316843514-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316881569-ar-1366\n\t1792316881569-ar-1366\tE2E 1792316881569-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792316918131-ar-1920\n\t1792316918131-ar-1920\tE2E 1792316918131-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317381463-fr-1366\n\t1792317381463-fr-1366\tE2E 1792317381463-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317412961-fr-1920\n\t1792317412961-fr-1920\tE2E 1792317412961-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317448217-ar-1366\n\t1792317448217-ar-1366\tE2E 1792317448217-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792317490653-ar-1920\n\t1792317490653-ar-1920\tE2E 1792317490653-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318327960-fr-1366\n\t1792318327960-fr-1366\tE2E 1792318327960-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318384047-fr-1920\n\t1792318384047-fr-1920\tE2E 1792318384047-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318486014-ar-1366\n\t1792318486014-ar-1366\tE2E 1792318486014-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318535219-ar-1920\n\t1792318535219-ar-1920\tE2E 1792318535219-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318628913-fr-1366\n\t1792318628913-fr-1366\tE2E 1792318628913-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318685939-fr-1920\n\t1792318685939-fr-1920\tE2E 1792318685939-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318745195-ar-1366\n\t1792318745195-ar-1366\tE2E 1792318745195-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792318793528-ar-1920\n\t1792318793528-ar-1920\tE2E 1792318793528-ar-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319040314-fr-1366\n\t1792319040314-fr-1366\tE2E 1792319040314-fr-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319090956-fr-1920\n\t1792319090956-fr-1920\tE2E 1792319090956-fr-1920\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\n\n\nCable 1792319157730-ar-1366\n\t1792319157730-ar-1366\tE2E 1792319157730-ar-1366\t10\t⁦5,00 DA⁩\t⁦25,00 DA⁩\t\nedit\ntune\nArticles par page\n25\n1–25 / 151",
     "violations": [
       {
         "id": "region",
@@ -39,6 +42,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -93,6 +99,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -107,7 +116,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "VENTES\nHistorique des ventes\n\nConsultez, imprimez ou annulez une vente.\n\nNouvelle vente\nRechercher\nDu\nAu\nStatut\nTous\nRechercher\nExporter les ventes\nNuméro\tDate\tTotal\tPayé\tReste\tStatut\tActions\nS-20261018-086\t18/10/2026 11:38\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-085\t18/10/2026 11:38\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-084\t18/10/2026 11:38\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-083\t18/10/2026 11:37\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-082\t18/10/2026 11:37\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-081\t18/10/2026 11:37\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-080\t18/10/2026 11:36\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-079\t18/10/2026 11:36\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-078\t18/10/2026 11:36\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-077\t18/10/2026 11:35\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-076\t18/10/2026 11:35\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-075\t18/10/2026 11:35\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-074\t18/10/2026 11:30\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-073\t18/10/2026 11:30\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-072\t18/10/2026 11:30\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-071\t18/10/2026 11:29\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-070\t18/10/2026 11:29\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-069\t18/10/2026 11:29\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-068\t18/10/2026 11:28\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-067\t18/10/2026 11:28\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-066\t18/10/2026 11:28\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-065\t18/10/2026 11:27\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-064\t18/10/2026 11:27\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-063\t18/10/2026 11:27\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-062\t18/10/2026 11:26\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\nArticles par page\n25\n1–25 / 86",
+    "body": "VENTES\nHistorique des ventes\n\nConsultez, imprimez ou annulez une vente.\n\nNouvelle vente\nRechercher\nDu\nAu\nStatut\nTous\nRechercher\nExporter les ventes\nNuméro\tDate\tTotal\tPayé\tReste\tStatut\tActions\nS-20261018-090\t18/10/2026 12:03\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-089\t18/10/2026 12:03\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-088\t18/10/2026 12:03\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-087\t18/10/2026 12:02\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-086\t18/10/2026 12:02\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-085\t18/10/2026 12:01\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-084\t18/10/2026 12:01\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-083\t18/10/2026 12:01\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-082\t18/10/2026 12:00\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-081\t18/10/2026 12:00\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-080\t18/10/2026 12:00\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-079\t18/10/2026 11:59\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-078\t18/10/2026 11:56\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-077\t18/10/2026 11:56\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-076\t18/10/2026 11:56\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-075\t18/10/2026 11:55\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-074\t18/10/2026 11:55\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-073\t18/10/2026 11:53\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-072\t18/10/2026 11:53\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-071\t18/10/2026 11:53\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-070\t18/10/2026 11:52\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-069\t18/10/2026 11:52\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-068\t18/10/2026 11:35\t⁦1 234,50 DA⁩\t⁦1 234,50 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\n\nS-20261018-067\t18/10/2026 11:35\t⁦25,00 DA⁩\t⁦25,00 DA⁩\t⁦0,00 DA⁩\tAnnulée\t\nprint\n\nS-20261018-066\t18/10/2026 11:35\t⁦160,00 DA⁩\t⁦160,00 DA⁩\t⁦0,00 DA⁩\tTerminée\t\nprint\nundo\nArticles par page\n25\n1–25 / 90",
     "violations": [
       {
         "id": "region",
@@ -118,6 +127,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -152,7 +164,7 @@
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base",
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base",
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base",
-      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base"
+      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base"
     ]
   },
   {
@@ -161,7 +173,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "RÉPARATIONS\nTickets de réparation\n\nSuivez les appareils reçus et leur avancement.\n\nadd\nNouveau ticket\nRechercher\nsearch\nTickets ouverts uniquement\nTous les statuts\ntable_rows\nTableau\nview_kanban\nTableau kanban\nNuméro\tClient\tAppareil\tProblème\tJours\tSolde\tStatut\tActions\nR-20261018-053\tQuick 1792319876518\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-051\tQuick 1792319825604\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-049\tQuick 1792319774931\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-047\tQuick 1792319717959\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-045\tQuick 1792319397415\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-043\tQuick 1792319347183\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-041\tQuick 1792319300144\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-039\tQuick 1792319255694\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-037\tQuick 1792319194804\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-035\tQuick 1792319146969\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-033\tQuick 1792319079475\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-031\tQuick 1792319028521\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-029\tQuick 1792318783839\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-027\tQuick 1792318730536\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-025\tQuick 1792318672062\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-023\tQuick 1792318615301\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-021\tQuick 1792318524321\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-018\tQuick 1792318373667\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-016\tQuick 1792318205652\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-015\tQuick 1792318192790\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-014\tQuick 1792318057192\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-003\tClient 1792316572042-fr-1920\tTest Phone\tBroken screen\t0\t⁦45,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-002\tClient 1792316532619-fr-1366\tTest Phone\tBroken screen\t0\t⁦45,00 DA⁩\tReçu\t\nReçu",
+    "body": "RÉPARATIONS\nTickets de réparation\n\nSuivez les appareils reçus et leur avancement.\n\nadd\nNouveau ticket\nRechercher\nsearch\nTickets ouverts uniquement\nTous les statuts\ntable_rows\nTableau\nview_kanban\nTableau kanban\nNuméro\tClient\tAppareil\tProblème\tJours\tSolde\tStatut\tActions\nR-20261018-057\tQuick 1792321371837\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-055\tQuick 1792321310501\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-053\tQuick 1792321249918\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-051\tQuick 1792321187252\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-050\tClient 1792321017780-fr-1920\tTest Phone\tBroken screen\t0\t⁦20,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-049\tQuick 1792321006642\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-048\tClient 1792320908594-fr-1366\tTest Phone\tBroken screen\t0\t⁦20,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-047\tQuick 1792320896356\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-046\tClient 1792320835969-fr-1366\tTest Phone\tBroken screen\t0\t⁦20,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-045\tQuick 1792320825855\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-044\tClient 1792320724143-fr-1366\tTest Phone\tBroken screen\t0\t⁦45,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-043\tQuick 1792320713568\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-041\tQuick 1792319709198\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-039\tQuick 1792319657949\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-037\tQuick 1792319194804\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-035\tQuick 1792319146969\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-033\tQuick 1792319079475\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-031\tQuick 1792319028521\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-029\tQuick 1792318783839\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-027\tQuick 1792318730536\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-025\tQuick 1792318672062\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-023\tQuick 1792318615301\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-021\tQuick 1792318524321\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-018\tQuick 1792318373667\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-016\tQuick 1792318205652\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-015\tQuick 1792318192790\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-014\tQuick 1792318057192\tTest Phone\tIssue\t0\t⁦10,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-003\tClient 1792316572042-fr-1920\tTest Phone\tBroken screen\t0\t⁦45,00 DA⁩\tReçu\t\nReçu\n\nR-20261018-002\tClient 1792316532619-fr-1366\tTest Phone\tBroken screen\t0\t⁦45,00 DA⁩\tReçu\t\nReçu",
     "violations": [
       {
         "id": "region",
@@ -172,6 +184,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -226,6 +241,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -256,7 +274,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "CLIENTS\nRépertoire clients\nadd\nAjouter un client\nRechercher\nDoit de l'argent\nNom\tTéléphone\tSolde\tActions\nAhmed Benali\t+213555010101\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316447689-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316532619-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316572042-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316618574-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316654271-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316813683-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316843514-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316881569-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316918131-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317381463-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317412961-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317448217-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317490653-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318327960-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318384047-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318486014-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318535219-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318628913-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318685939-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318745195-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318793528-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319040314-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319090956-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319157730-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319205899-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319266302-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319310344-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319358209-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319407975-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319730778-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319785349-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319836297-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319886868-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318057192\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318192790\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318205652\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318373667\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318524321\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318615301\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318672062\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318730536\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318783839\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319028521\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319079475\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319146969\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319194804\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319255694\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319300144\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319347183\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319397415\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319717959\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319774931\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319825604\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319876518\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nSara Haddad\t+213555010102\t⁦0,00 DA⁩\t\nDétails\nedit\n\nمريم بن صالح\t+213555010103\t⁦0,00 DA⁩\t\nDétails\nedit",
+    "body": "CLIENTS\nRépertoire clients\nadd\nAjouter un client\nRechercher\nDoit de l'argent\nNom\tTéléphone\tSolde\tActions\nAhmed Benali\t+213555010101\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316447689-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316532619-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316572042-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316618574-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316654271-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316813683-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316843514-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316881569-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792316918131-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317381463-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317412961-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317448217-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792317490653-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318327960-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318384047-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318486014-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318535219-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318628913-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318685939-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318745195-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792318793528-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319040314-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319090956-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319157730-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319205899-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319668576-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792319721098-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792320724143-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792320835969-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792320908594-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792321017780-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792321200094-fr-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792321263815-fr-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792321323717-ar-1366\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nClient 1792321385304-ar-1920\t0555123456\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318057192\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318192790\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318205652\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318373667\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318524321\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318615301\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318672062\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318730536\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792318783839\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319028521\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319079475\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319146969\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319194804\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319657949\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792319709198\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792320713568\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792320825855\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792320896356\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792321006642\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792321187252\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792321249918\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792321310501\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nQuick 1792321371837\t\t⁦0,00 DA⁩\t\nDétails\nedit\n\nSara Haddad\t+213555010102\t⁦0,00 DA⁩\t\nDétails\nedit\n\nمريم بن صالح\t+213555010103\t⁦0,00 DA⁩\t\nDétails\nedit",
     "violations": [
       {
         "id": "region",
@@ -267,6 +285,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -310,7 +331,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "APPAREILS\nRecherche IMEI\nIMEI\nRechercher",
+    "body": "APPAREILS\nRecherche IMEI\nIMEI\nRechercher\nSous garantie jusqu'au 17/11/2026\nHistorique de l'appareil\nsmartphone\nPhone 1792316549175\n\nDate d'achat: 18/10/2026 · Vendu\n\nshopping_bag\nS-20261018-003\n18/10/2026\n⁦1 234,50 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -321,6 +342,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -335,7 +359,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "DÉPENSES\nListe des dépenses\nAjouter une dépense\nDu\nAu\nCatégorie\nTous\nRechercher\nDate\tLibellé\tCatégorie\tMontant\tActions\n18/10/2026\tExpense 1792319836297-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319785349-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319730778-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319407975-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319358209-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319310344-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319266302-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319205899-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319157730-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319040314-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318793528-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318745195-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318685939-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318628913-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318535219-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318486014-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318384047-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317490653-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317448217-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317412961-fr-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317381463-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316918131-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316881569-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316843514-fr-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316813683-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316654271-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316618574-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316447689-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\nTotal des dépenses\n⁦227,00 DA⁩",
+    "body": "DÉPENSES\nListe des dépenses\nAjouter une dépense\nDu\nAu\nCatégorie\nTous\nRechercher\nDate\tLibellé\tCatégorie\tMontant\tActions\n18/10/2026\tExpense 1792321200094-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319668576-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319205899-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319157730-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792319040314-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318793528-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318745195-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318685939-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318628913-fr-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318535219-ar-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318486014-ar-1366\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792318384047-fr-1920\tAutres\t⁦8,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317490653-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317448217-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317412961-fr-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792317381463-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316918131-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316881569-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316843514-fr-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316813683-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316654271-ar-1920\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316618574-ar-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\n\n18/10/2026\tExpense 1792316447689-fr-1366\tAutres\t⁦7,50 DA⁩\t\nModifier\nSupprimer\nTotal des dépenses\n⁦184,50 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -346,6 +370,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -366,7 +393,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "RAPPORTS\nFin de journée\nImprimer\nImprimer · 80 mm\nDate\nRechercher\nSmart POS\n\n·\n\n18/10/2026\n\nTotal des ventes\npayments\n⁦42 864,00 DA⁩\nNombre de ventes\nshopping_bag\n53\nRevenus réparations\nbuild\n⁦930,00 DA⁩\nDépenses\nreceipt_long\n⁦227,00 DA⁩\nSolde net\naccount_balance_wallet\n⁦43 567,00 DA⁩\nMode de paiement\tVentes encaissées\tDettes recouvrées\nEspèces\t⁦42 864,00 DA⁩\t⁦0,00 DA⁩\nCarte\t⁦0,00 DA⁩\t⁦0,00 DA⁩\nVirement\t⁦0,00 DA⁩\t⁦0,00 DA⁩",
+    "body": "RAPPORTS\nFin de journée\nImprimer\nImprimer · 80 mm\nDate\nRechercher\nSmart POS\n\n·\n\n18/10/2026\n\nTotal des ventes\npayments\n⁦43 184,00 DA⁩\nNombre de ventes\nshopping_bag\n55\nRevenus réparations\nbuild\n⁦870,00 DA⁩\nDépenses\nreceipt_long\n⁦184,50 DA⁩\nSolde net\naccount_balance_wallet\n⁦43 869,50 DA⁩\nMode de paiement\tVentes encaissées\tDettes recouvrées\nEspèces\t⁦43 184,00 DA⁩\t⁦0,00 DA⁩\nCarte\t⁦0,00 DA⁩\t⁦0,00 DA⁩\nVirement\t⁦0,00 DA⁩\t⁦0,00 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -377,6 +404,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -400,6 +430,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -438,6 +471,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -452,11 +488,11 @@
   },
   {
     "lang": "fr",
-    "route": "repairs/54",
+    "route": "repairs/58",
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "← Retour\nR-20261018-054\nTest Phone\n\nBroken screen\n\nLivré\nReçu\nDiagnostic\nEn attente de pièces\nEn réparation\nPrêt\nSmart POS\n\n·\n\nClient 1792319886868-ar-1920 · 0555123456 ·\n\nR-20261018-054 · Test Phone\n\nBroken screen\n\nPièces\nRechercher une pièce\nQuantité\nAjouter\nTotaux\n\nTotal pièces: ⁦0,00 DA⁩\n\nMain-d'œuvre\n\nTotal: ⁦30,00 DA⁩\n\nPayé: ⁦30,00 DA⁩\n\nSolde: ⁦0,00 DA⁩\n\nEnregistrer un paiement\nNotes technicien\nImprimer le reçu\nImprimer la fiche",
+    "body": "← Retour\nR-20261018-058\nTest Phone\n\nBroken screen\n\nLivré\nReçu\nDiagnostic\nEn attente de pièces\nEn réparation\nPrêt\nSmart POS\n\n·\n\nClient 1792321385304-ar-1920 · 0555123456 ·\n\nR-20261018-058 · Test Phone\n\nBroken screen\n\nJours de garantie: 30 Garantie jusqu’au 17/11/2026\n\nPièces\nRechercher une pièce\nQuantité\nAjouter\nTotaux\n\nTotal pièces: ⁦0,00 DA⁩\n\nMain-d'œuvre\n\nTotal: ⁦30,00 DA⁩\n\nPayé: ⁦30,00 DA⁩\n\nSolde: ⁦0,00 DA⁩\n\nEnregistrer un paiement\nNotes technicien\nImprimer le reçu\nImprimer la fiche",
     "violations": [
       {
         "id": "region",
@@ -467,6 +503,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -489,7 +528,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "لوحة التحكم\nنظرة عامة\n\nنشاط المحل اليوم.\n\nrefresh\nتحديث\nمبيعات اليوم\npoint_of_sale\n⁦42,864.00 DA⁩\nالربح الإجمالي\ntrending_up\n⁦16,791.50 DA⁩\nإيرادات الإصلاح\nbuild\n⁦930.00 DA⁩\nالإصلاحات المفتوحة\nhandyman\n23\nالديون المستحقة\naccount_balance_wallet\n⁦0.00 DA⁩\nمصاريف اليوم\nreceipt_long\n⁦227.00 DA⁩\nadd_shopping_cart\nبيع جديد\nadd\nتذكرة جديدة\nsmartphone\nاستلام هاتف\nآخر 7 أيام\n53 مبيعات\n0\n⁦0.00 DA⁩\n12/10\n⁦0.00 DA⁩\n13/10\n⁦0.00 DA⁩\n14/10\n⁦0.00 DA⁩\n15/10\n⁦0.00 DA⁩\n16/10\n⁦0.00 DA⁩\n17/10\n⁦42,864.00 DA⁩\n18/10\nجاهز للاستلام\ntask_alt\n\nلا توجد عناصر\n\nمخزون منخفض\nForm product 1792318057192\n0\nForm product 1792318192790\n0\nForm product 1792318205652\n0\nForm product 1792318373667\n0\nForm product 1792318524321\n0\nForm product 1792318615301\n0\nForm product 1792318672062\n0\nForm product 1792318730536\n0\nForm product 1792318783839\n0\nForm product 1792319028521\n0",
+    "body": "لوحة التحكم\nنظرة عامة\n\nنشاط المحل اليوم.\n\nrefresh\nتحديث\nمبيعات اليوم\npoint_of_sale\n⁦43,184.00 DA⁩\nالربح الإجمالي\ntrending_up\n⁦17,066.50 DA⁩\nإيرادات الإصلاح\nbuild\n⁦870.00 DA⁩\nالإصلاحات المفتوحة\nhandyman\n29\nالديون المستحقة\naccount_balance_wallet\n⁦0.00 DA⁩\nمصاريف اليوم\nreceipt_long\n⁦184.50 DA⁩\nadd_shopping_cart\nبيع جديد\nadd\nتذكرة جديدة\nsmartphone\nاستلام هاتف\nآخر 7 أيام\n55 مبيعات\n0\n⁦0.00 DA⁩\n12/10\n⁦0.00 DA⁩\n13/10\n⁦0.00 DA⁩\n14/10\n⁦0.00 DA⁩\n15/10\n⁦0.00 DA⁩\n16/10\n⁦0.00 DA⁩\n17/10\n⁦43,184.00 DA⁩\n18/10\nجاهز للاستلام\ntask_alt\n\nلا توجد عناصر\n\nمخزون منخفض\nForm product 1792318057192\n0\nForm product 1792318192790\n0\nForm product 1792318205652\n0\nForm product 1792318373667\n0\nForm product 1792318524321\n0\nForm product 1792318615301\n0\nForm product 1792318672062\n0\nForm product 1792318730536\n0\nForm product 1792318783839\n0\nForm product 1792319028521\n0",
     "violations": [
       {
         "id": "region",
@@ -500,6 +539,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -512,7 +554,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "المخزون\nالمنتجات\n\nإدارة الهواتف والملحقات وقطع الغيار.\n\nswap_vert\nاستيراد / تصدير\nadd\nإضافة منتج\nبحث\nsearch\nالنشطة فقط\nالمخزون المنخفض فقط\nحمّل الكتالوج الحالي إلى Excel أو للمحاسب.\ndownload\nتصدير الكتالوج\nالكل\nالهواتف\nالملحقات\nقطع الغيار\nالاسم\tSKU\tالفئة\tالمخزون\tالتكلفة\tالسعر\tإجراءات\n\nBlack Silicone Case\n\tCASE-BLK\tCases\t12\t⁦250.00 DA⁩\t⁦500.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316447689-fr-1366\n\t1792316447689-fr-1366\tE2E 1792316447689-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316532619-fr-1366\n\t1792316532619-fr-1366\tE2E 1792316532619-fr-1366\t9\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316572042-fr-1920\n\t1792316572042-fr-1920\tE2E 1792316572042-fr-1920\t9\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316618574-ar-1366\n\t1792316618574-ar-1366\tE2E 1792316618574-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316654271-ar-1920\n\t1792316654271-ar-1920\tE2E 1792316654271-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316813683-fr-1366\n\t1792316813683-fr-1366\tE2E 1792316813683-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316843514-fr-1920\n\t1792316843514-fr-1920\tE2E 1792316843514-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316881569-ar-1366\n\t1792316881569-ar-1366\tE2E 1792316881569-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316918131-ar-1920\n\t1792316918131-ar-1920\tE2E 1792316918131-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317381463-fr-1366\n\t1792317381463-fr-1366\tE2E 1792317381463-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317412961-fr-1920\n\t1792317412961-fr-1920\tE2E 1792317412961-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317448217-ar-1366\n\t1792317448217-ar-1366\tE2E 1792317448217-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317490653-ar-1920\n\t1792317490653-ar-1920\tE2E 1792317490653-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318327960-fr-1366\n\t1792318327960-fr-1366\tE2E 1792318327960-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318384047-fr-1920\n\t1792318384047-fr-1920\tE2E 1792318384047-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318486014-ar-1366\n\t1792318486014-ar-1366\tE2E 1792318486014-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318535219-ar-1920\n\t1792318535219-ar-1920\tE2E 1792318535219-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318628913-fr-1366\n\t1792318628913-fr-1366\tE2E 1792318628913-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318685939-fr-1920\n\t1792318685939-fr-1920\tE2E 1792318685939-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318745195-ar-1366\n\t1792318745195-ar-1366\tE2E 1792318745195-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318793528-ar-1920\n\t1792318793528-ar-1920\tE2E 1792318793528-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319040314-fr-1366\n\t1792319040314-fr-1366\tE2E 1792319040314-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319090956-fr-1920\n\t1792319090956-fr-1920\tE2E 1792319090956-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319157730-ar-1366\n\t1792319157730-ar-1366\tE2E 1792319157730-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\nالعناصر في الصفحة\n25\n1–25 / 139",
+    "body": "المخزون\nالمنتجات\n\nإدارة الهواتف والملحقات وقطع الغيار.\n\nswap_vert\nاستيراد / تصدير\nadd\nإضافة منتج\nبحث\nsearch\nالنشطة فقط\nالمخزون المنخفض فقط\nحمّل الكتالوج الحالي إلى Excel أو للمحاسب.\ndownload\nتصدير الكتالوج\nالكل\nالهواتف\nالملحقات\nقطع الغيار\nالاسم\tSKU\tالفئة\tالمخزون\tالتكلفة\tالسعر\tإجراءات\n\nBlack Silicone Case\n\tCASE-BLK\tCases\t12\t⁦250.00 DA⁩\t⁦500.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316447689-fr-1366\n\t1792316447689-fr-1366\tE2E 1792316447689-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316532619-fr-1366\n\t1792316532619-fr-1366\tE2E 1792316532619-fr-1366\t9\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316572042-fr-1920\n\t1792316572042-fr-1920\tE2E 1792316572042-fr-1920\t9\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316618574-ar-1366\n\t1792316618574-ar-1366\tE2E 1792316618574-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316654271-ar-1920\n\t1792316654271-ar-1920\tE2E 1792316654271-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316813683-fr-1366\n\t1792316813683-fr-1366\tE2E 1792316813683-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316843514-fr-1920\n\t1792316843514-fr-1920\tE2E 1792316843514-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316881569-ar-1366\n\t1792316881569-ar-1366\tE2E 1792316881569-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792316918131-ar-1920\n\t1792316918131-ar-1920\tE2E 1792316918131-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317381463-fr-1366\n\t1792317381463-fr-1366\tE2E 1792317381463-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317412961-fr-1920\n\t1792317412961-fr-1920\tE2E 1792317412961-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317448217-ar-1366\n\t1792317448217-ar-1366\tE2E 1792317448217-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792317490653-ar-1920\n\t1792317490653-ar-1920\tE2E 1792317490653-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318327960-fr-1366\n\t1792318327960-fr-1366\tE2E 1792318327960-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318384047-fr-1920\n\t1792318384047-fr-1920\tE2E 1792318384047-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318486014-ar-1366\n\t1792318486014-ar-1366\tE2E 1792318486014-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318535219-ar-1920\n\t1792318535219-ar-1920\tE2E 1792318535219-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318628913-fr-1366\n\t1792318628913-fr-1366\tE2E 1792318628913-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318685939-fr-1920\n\t1792318685939-fr-1920\tE2E 1792318685939-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318745195-ar-1366\n\t1792318745195-ar-1366\tE2E 1792318745195-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792318793528-ar-1920\n\t1792318793528-ar-1920\tE2E 1792318793528-ar-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319040314-fr-1366\n\t1792319040314-fr-1366\tE2E 1792319040314-fr-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319090956-fr-1920\n\t1792319090956-fr-1920\tE2E 1792319090956-fr-1920\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\n\n\nCable 1792319157730-ar-1366\n\t1792319157730-ar-1366\tE2E 1792319157730-ar-1366\t10\t⁦5.00 DA⁩\t⁦25.00 DA⁩\t\nedit\ntune\nالعناصر في الصفحة\n25\n1–25 / 151",
     "violations": [
       {
         "id": "region",
@@ -523,6 +565,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -577,6 +622,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -591,7 +639,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "المبيعات\nسجل المبيعات\n\nعرض أو طباعة أو إلغاء المبيعات.\n\nبيع جديد\nبحث\nمن\nإلى\nالحالة\nالكل\nبحث\nتصدير المبيعات\nالرقم\tالتاريخ\tالمجموع\tالمدفوع\tالمتبقي\tالحالة\tإجراءات\nS-20261018-086\t18/10/2026 11:38\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-085\t18/10/2026 11:38\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-084\t18/10/2026 11:38\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-083\t18/10/2026 11:37\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-082\t18/10/2026 11:37\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-081\t18/10/2026 11:37\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-080\t18/10/2026 11:36\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-079\t18/10/2026 11:36\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-078\t18/10/2026 11:36\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-077\t18/10/2026 11:35\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-076\t18/10/2026 11:35\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-075\t18/10/2026 11:35\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-074\t18/10/2026 11:30\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-073\t18/10/2026 11:30\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-072\t18/10/2026 11:30\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-071\t18/10/2026 11:29\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-070\t18/10/2026 11:29\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-069\t18/10/2026 11:29\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-068\t18/10/2026 11:28\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-067\t18/10/2026 11:28\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-066\t18/10/2026 11:28\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-065\t18/10/2026 11:27\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-064\t18/10/2026 11:27\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-063\t18/10/2026 11:27\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-062\t18/10/2026 11:26\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\nالعناصر في الصفحة\n25\n1–25 / 86",
+    "body": "المبيعات\nسجل المبيعات\n\nعرض أو طباعة أو إلغاء المبيعات.\n\nبيع جديد\nبحث\nمن\nإلى\nالحالة\nالكل\nبحث\nتصدير المبيعات\nالرقم\tالتاريخ\tالمجموع\tالمدفوع\tالمتبقي\tالحالة\tإجراءات\nS-20261018-090\t18/10/2026 12:03\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-089\t18/10/2026 12:03\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-088\t18/10/2026 12:03\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-087\t18/10/2026 12:02\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-086\t18/10/2026 12:02\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-085\t18/10/2026 12:01\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-084\t18/10/2026 12:01\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-083\t18/10/2026 12:01\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-082\t18/10/2026 12:00\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-081\t18/10/2026 12:00\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-080\t18/10/2026 12:00\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-079\t18/10/2026 11:59\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-078\t18/10/2026 11:56\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-077\t18/10/2026 11:56\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-076\t18/10/2026 11:56\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-075\t18/10/2026 11:55\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-074\t18/10/2026 11:55\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-073\t18/10/2026 11:53\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-072\t18/10/2026 11:53\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-071\t18/10/2026 11:53\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-070\t18/10/2026 11:52\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-069\t18/10/2026 11:52\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-068\t18/10/2026 11:35\t⁦1,234.50 DA⁩\t⁦1,234.50 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\n\nS-20261018-067\t18/10/2026 11:35\t⁦25.00 DA⁩\t⁦25.00 DA⁩\t⁦0.00 DA⁩\tملغى\t\nprint\n\nS-20261018-066\t18/10/2026 11:35\t⁦160.00 DA⁩\t⁦160.00 DA⁩\t⁦0.00 DA⁩\tمكتمل\t\nprint\nundo\nالعناصر في الصفحة\n25\n1–25 / 90",
     "violations": [
       {
         "id": "region",
@@ -602,6 +650,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -635,8 +686,8 @@
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base",
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base",
       "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base",
-      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base",
-      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base"
+      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base",
+      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base"
     ]
   },
   {
@@ -645,7 +696,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "الإصلاحات\nتذاكر الإصلاح\n\nتتبع الأجهزة المستلمة وتقدم إصلاحها.\n\nadd\nتذكرة جديدة\nبحث\nsearch\nالتذاكر المفتوحة فقط\nكل الحالات\ntable_rows\nجدول\nview_kanban\nلوحة\nالرقم\tالزبون\tالجهاز\tالمشكلة\tالأيام\tالمتبقي\tالحالة\tإجراءات\nR-20261018-053\tQuick 1792319876518\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-051\tQuick 1792319825604\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-049\tQuick 1792319774931\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-047\tQuick 1792319717959\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-045\tQuick 1792319397415\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-043\tQuick 1792319347183\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-041\tQuick 1792319300144\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-039\tQuick 1792319255694\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-037\tQuick 1792319194804\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-035\tQuick 1792319146969\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-033\tQuick 1792319079475\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-031\tQuick 1792319028521\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-029\tQuick 1792318783839\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-027\tQuick 1792318730536\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-025\tQuick 1792318672062\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-023\tQuick 1792318615301\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-021\tQuick 1792318524321\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-018\tQuick 1792318373667\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-016\tQuick 1792318205652\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-015\tQuick 1792318192790\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-014\tQuick 1792318057192\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-003\tClient 1792316572042-fr-1920\tTest Phone\tBroken screen\t0\t⁦45.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-002\tClient 1792316532619-fr-1366\tTest Phone\tBroken screen\t0\t⁦45.00 DA⁩\tمستلم\t\nمستلم",
+    "body": "الإصلاحات\nتذاكر الإصلاح\n\nتتبع الأجهزة المستلمة وتقدم إصلاحها.\n\nadd\nتذكرة جديدة\nبحث\nsearch\nالتذاكر المفتوحة فقط\nكل الحالات\ntable_rows\nجدول\nview_kanban\nلوحة\nالرقم\tالزبون\tالجهاز\tالمشكلة\tالأيام\tالمتبقي\tالحالة\tإجراءات\nR-20261018-057\tQuick 1792321371837\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-055\tQuick 1792321310501\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-053\tQuick 1792321249918\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-051\tQuick 1792321187252\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-050\tClient 1792321017780-fr-1920\tTest Phone\tBroken screen\t0\t⁦20.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-049\tQuick 1792321006642\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-048\tClient 1792320908594-fr-1366\tTest Phone\tBroken screen\t0\t⁦20.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-047\tQuick 1792320896356\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-046\tClient 1792320835969-fr-1366\tTest Phone\tBroken screen\t0\t⁦20.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-045\tQuick 1792320825855\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-044\tClient 1792320724143-fr-1366\tTest Phone\tBroken screen\t0\t⁦45.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-043\tQuick 1792320713568\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-041\tQuick 1792319709198\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-039\tQuick 1792319657949\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-037\tQuick 1792319194804\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-035\tQuick 1792319146969\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-033\tQuick 1792319079475\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-031\tQuick 1792319028521\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-029\tQuick 1792318783839\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-027\tQuick 1792318730536\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-025\tQuick 1792318672062\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-023\tQuick 1792318615301\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-021\tQuick 1792318524321\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-018\tQuick 1792318373667\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-016\tQuick 1792318205652\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-015\tQuick 1792318192790\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-014\tQuick 1792318057192\tTest Phone\tIssue\t0\t⁦10.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-003\tClient 1792316572042-fr-1920\tTest Phone\tBroken screen\t0\t⁦45.00 DA⁩\tمستلم\t\nمستلم\n\nR-20261018-002\tClient 1792316532619-fr-1366\tTest Phone\tBroken screen\t0\t⁦45.00 DA⁩\tمستلم\t\nمستلم",
     "violations": [
       {
         "id": "region",
@@ -656,6 +707,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -710,6 +764,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -740,7 +797,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "الزبائن\nدليل الزبائن\nadd\nإضافة زبون\nبحث\nعليه دين\nالاسم\tالهاتف\tالرصيد\tإجراءات\nAhmed Benali\t+213555010101\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316447689-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316532619-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316572042-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316618574-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316654271-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316813683-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316843514-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316881569-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316918131-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317381463-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317412961-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317448217-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317490653-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318327960-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318384047-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318486014-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318535219-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318628913-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318685939-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318745195-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318793528-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319040314-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319090956-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319157730-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319205899-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319266302-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319310344-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319358209-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319407975-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319730778-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319785349-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319836297-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319886868-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318057192\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318192790\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318205652\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318373667\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318524321\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318615301\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318672062\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318730536\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318783839\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319028521\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319079475\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319146969\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319194804\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319255694\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319300144\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319347183\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319397415\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319717959\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319774931\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319825604\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319876518\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nSara Haddad\t+213555010102\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nمريم بن صالح\t+213555010103\t⁦0.00 DA⁩\t\nالتفاصيل\nedit",
+    "body": "الزبائن\nدليل الزبائن\nadd\nإضافة زبون\nبحث\nعليه دين\nالاسم\tالهاتف\tالرصيد\tإجراءات\nAhmed Benali\t+213555010101\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316447689-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316532619-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316572042-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316618574-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316654271-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316813683-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316843514-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316881569-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792316918131-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317381463-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317412961-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317448217-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792317490653-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318327960-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318384047-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318486014-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318535219-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318628913-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318685939-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318745195-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792318793528-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319040314-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319090956-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319157730-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319205899-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319668576-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792319721098-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792320724143-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792320835969-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792320908594-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792321017780-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792321200094-fr-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792321263815-fr-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792321323717-ar-1366\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nClient 1792321385304-ar-1920\t0555123456\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318057192\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318192790\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318205652\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318373667\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318524321\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318615301\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318672062\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318730536\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792318783839\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319028521\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319079475\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319146969\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319194804\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319657949\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792319709198\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792320713568\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792320825855\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792320896356\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792321006642\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792321187252\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792321249918\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792321310501\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nQuick 1792321371837\t\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nSara Haddad\t+213555010102\t⁦0.00 DA⁩\t\nالتفاصيل\nedit\n\nمريم بن صالح\t+213555010103\t⁦0.00 DA⁩\t\nالتفاصيل\nedit",
     "violations": [
       {
         "id": "region",
@@ -751,6 +808,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -794,7 +854,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "الأجهزة\nالبحث عن IMEI\nIMEI\nبحث",
+    "body": "الأجهزة\nالبحث عن IMEI\nIMEI\nبحث\nضمن الضمان حتى 17/11/2026\nسجل الجهاز\nsmartphone\nPhone 1792316549175\n\nتاريخ الشراء: 18/10/2026 · مباع\n\nshopping_bag\nS-20261018-003\n18/10/2026\n⁦1,234.50 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -805,6 +865,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -819,7 +882,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "المصاريف\nقائمة المصاريف\nإضافة مصروف\nمن\nإلى\nالفئة\nالكل\nبحث\nالتاريخ\tالوصف\tالفئة\tالمبلغ\tإجراءات\n18/10/2026\tExpense 1792319836297-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319785349-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319730778-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319407975-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319358209-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319310344-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319266302-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319205899-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319157730-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319040314-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318793528-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318745195-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318685939-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318628913-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318535219-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318486014-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318384047-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317490653-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317448217-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317412961-fr-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317381463-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316918131-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316881569-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316843514-fr-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316813683-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316654271-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316618574-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316447689-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\nإجمالي المصاريف\n⁦227.00 DA⁩",
+    "body": "المصاريف\nقائمة المصاريف\nإضافة مصروف\nمن\nإلى\nالفئة\nالكل\nبحث\nالتاريخ\tالوصف\tالفئة\tالمبلغ\tإجراءات\n18/10/2026\tExpense 1792321200094-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319668576-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319205899-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319157730-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792319040314-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318793528-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318745195-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318685939-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318628913-fr-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318535219-ar-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318486014-ar-1366\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792318384047-fr-1920\tأخرى\t⁦8.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317490653-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317448217-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317412961-fr-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792317381463-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316918131-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316881569-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316843514-fr-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316813683-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316654271-ar-1920\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316618574-ar-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\n\n18/10/2026\tExpense 1792316447689-fr-1366\tأخرى\t⁦7.50 DA⁩\t\nتعديل\nحذف\nإجمالي المصاريف\n⁦184.50 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -830,6 +893,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -849,7 +915,7 @@
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "التقارير\nنهاية اليوم\nطباعة\nطباعة · 80 مم\nالتاريخ\nبحث\nSmart POS\n\n·\n\n18/10/2026\n\nإجمالي المبيعات\npayments\n⁦42,864.00 DA⁩\nعدد المبيعات\nshopping_bag\n53\nإيراد الإصلاحات\nbuild\n⁦930.00 DA⁩\nالمصاريف\nreceipt_long\n⁦227.00 DA⁩\nالصافي\naccount_balance_wallet\n⁦43,567.00 DA⁩\nطريقة الدفع\tالمبيعات المحصلة\tالديون المحصلة\nنقدا\t⁦42,864.00 DA⁩\t⁦0.00 DA⁩\nبطاقة\t⁦0.00 DA⁩\t⁦0.00 DA⁩\nتحويل\t⁦0.00 DA⁩\t⁦0.00 DA⁩",
+    "body": "التقارير\nنهاية اليوم\nطباعة\nطباعة · 80 مم\nالتاريخ\nبحث\nSmart POS\n\n·\n\n18/10/2026\n\nإجمالي المبيعات\npayments\n⁦43,184.00 DA⁩\nعدد المبيعات\nshopping_bag\n55\nإيراد الإصلاحات\nbuild\n⁦870.00 DA⁩\nالمصاريف\nreceipt_long\n⁦184.50 DA⁩\nالصافي\naccount_balance_wallet\n⁦43,869.50 DA⁩\nطريقة الدفع\tالمبيعات المحصلة\tالديون المحصلة\nنقدا\t⁦43,184.00 DA⁩\t⁦0.00 DA⁩\nبطاقة\t⁦0.00 DA⁩\t⁦0.00 DA⁩\nتحويل\t⁦0.00 DA⁩\t⁦0.00 DA⁩",
     "violations": [
       {
         "id": "region",
@@ -860,6 +926,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -883,6 +952,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -921,6 +993,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
@@ -935,11 +1010,11 @@
   },
   {
     "lang": "ar",
-    "route": "repairs/54",
+    "route": "repairs/58",
     "errors": [],
     "failed": [],
     "external": [],
-    "body": "← عودة\nR-20261018-054\nTest Phone\n\nBroken screen\n\nتم التسليم\nمستلم\nقيد التشخيص\nفي انتظار القطع\nقيد الإصلاح\nجاهز\nSmart POS\n\n·\n\nClient 1792319886868-ar-1920 · 0555123456 ·\n\nR-20261018-054 · Test Phone\n\nBroken screen\n\nالقطع\nالبحث عن قطعة\nالكمية\nإضافة\nالمجاميع\n\nمجموع القطع: ⁦0.00 DA⁩\n\nالعمل\n\nالمجموع: ⁦30.00 DA⁩\n\nالمدفوع: ⁦30.00 DA⁩\n\nالمتبقي: ⁦0.00 DA⁩\n\nتسجيل دفعة\nملاحظات الفني\nطباعة الإيصال\nطباعة وصل الاستلام",
+    "body": "← عودة\nR-20261018-058\nTest Phone\n\nBroken screen\n\nتم التسليم\nمستلم\nقيد التشخيص\nفي انتظار القطع\nقيد الإصلاح\nجاهز\nSmart POS\n\n·\n\nClient 1792321385304-ar-1920 · 0555123456 ·\n\nR-20261018-058 · Test Phone\n\nBroken screen\n\nأيام الضمان: 30 الضمان حتى 17/11/2026\n\nالقطع\nالبحث عن قطعة\nالكمية\nإضافة\nالمجاميع\n\nمجموع القطع: ⁦0.00 DA⁩\n\nالعمل\n\nالمجموع: ⁦30.00 DA⁩\n\nالمدفوع: ⁦30.00 DA⁩\n\nالمتبقي: ⁦0.00 DA⁩\n\nتسجيل دفعة\nملاحظات الفني\nطباعة الإيصال\nطباعة وصل الاستلام",
     "violations": [
       {
         "id": "region",
@@ -950,6 +1025,9 @@
           ],
           [
             ".toolbar-title"
+          ],
+          [
+            ".toolbar-shop"
           ]
         ]
       }
