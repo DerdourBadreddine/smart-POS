@@ -17,10 +17,11 @@ export interface CartLine {
 export class CartStore {
   readonly lines = signal<CartLine[]>([]);
   readonly discount = signal(0);
-  readonly subtotal = computed(() => this.lines().reduce((sum, line) => sum + line.quantity * line.unitPrice, 0));
-  readonly total = computed(() => Math.max(0, this.subtotal() - this.discount()));
+  readonly subtotal = computed(() => this.lines().reduce((sum, line) => sum + line.quantity * Math.round(Number(line.unitPrice) * 100), 0) / 100);
+  readonly total = computed(() => Math.max(0, (Math.round(this.subtotal() * 100) - Math.round(this.discount() * 100)) / 100));
 
   addProduct(product: Product): void {
+    if (product.stock_qty <= 0) return;
     const existing = this.lines().find((line) => line.productId === product.id && !line.phoneUnitId);
     if (existing) {
       this.setQuantity(existing.key, Math.min(existing.quantity + 1, product.stock_qty));

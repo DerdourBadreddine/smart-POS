@@ -3,7 +3,7 @@
   <p class="product-name">{{ data.product.name }}</p>
   <form class="form-grid" [formGroup]="form">
     <mat-form-field appearance="outline" class="full">
-      <mat-label>IMEI</mat-label>
+      <mat-label>{{ 'common.imei' | transloco }}</mat-label>
       <input matInput formControlName="imei" inputmode="numeric" maxlength="15" autocomplete="off" />
       @if (form.controls.imei.hasError('required') && form.controls.imei.touched) {
         <mat-error>{{ 'common.required' | transloco }}</mat-error>

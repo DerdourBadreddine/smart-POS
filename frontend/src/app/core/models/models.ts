@@ -95,6 +95,7 @@ export interface SaleItem {
   unit_cost: number;
   line_total: number;
   warranty_until: string | null;
+  imei?: string;
 }
 
 export interface Sale {
@@ -206,6 +207,8 @@ export interface DeviceHistory {
 }
 
 export interface CustomerStatement {
+  sales: Sale[];
+  repairs: RepairTicket[];
   customer: Customer;
   unpaid_sales: Sale[];
   payments: SalePayment[];

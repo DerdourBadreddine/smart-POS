@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>{{ 'pos.paymentTitle' | transloco }}</h2>
 <mat-dialog-content class="payment-form">
-  <div class="total">{{ 'pos.total' | transloco }} <strong>{{ data.total | number: '1.2-2' }}</strong></div>
+  <div class="total">{{ 'pos.total' | transloco }} <strong>{{ data.total | money }}</strong></div>
   <mat-form-field appearance="outline">
     <mat-label>{{ 'pos.customer' | transloco }}</mat-label>
     <mat-select [formControl]="form.controls.customerId">
@@ -18,7 +18,7 @@
     <mat-label>{{ 'pos.amountReceived' | transloco }}</mat-label>
     <input matInput type="number" min="0" [formControl]="form.controls.amountPaid" />
   </mat-form-field>
-  @if (remaining() > 0) { <p class="credit">{{ 'pos.remainingCredit' | transloco }}: {{ remaining() | number: '1.2-2' }}</p> }
-  @if (change() > 0) { <p>{{ 'pos.changeDue' | transloco }}: {{ change() | number: '1.2-2' }}</p> }
+  @if (remaining() > 0) { <p class="credit">{{ 'pos.remainingCredit' | transloco }}: {{ remaining() | money }}</p> }
+  @if (change() > 0) { <p>{{ 'pos.changeDue' | transloco }}: {{ change() | money }}</p> }
 </mat-dialog-content>
-<mat-dialog-actions align="end"><button mat-button mat-dialog-close>{{ 'common.cancel' | transloco }}</button><button mat-flat-button color="primary" (click)="submit()">{{ 'pos.confirmSale' | transloco }}</button></mat-dialog-actions>
+@if(remaining() > 0 && !form.controls.customerId.value){<p role="alert">{{ 'pos.creditCustomerRequired' | transloco }}</p>}<mat-dialog-actions align="end"><button mat-button mat-dialog-close>{{ 'common.cancel' | transloco }}</button><button mat-flat-button color="primary" (click)="submit()">{{ 'pos.confirmSale' | transloco }}</button></mat-dialog-actions>

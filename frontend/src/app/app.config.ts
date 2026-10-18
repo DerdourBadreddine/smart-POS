@@ -4,7 +4,6 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import {
   provideTransloco,
-  provideTranslocoConfig,
   provideTranslocoMissingHandler,
 } from '@jsverse/transloco';
 
@@ -28,11 +27,9 @@ export const appConfig: ApplicationConfig = {
         defaultLang: 'fr',
         reRenderOnLangChange: true,
         prodMode: false,
+        missingHandler: { logMissingKey: false },
       },
       loader: TranslationLoader,
-    }),
-    provideTranslocoConfig({
-      missingHandler: { logMissingKey: false },
     }),
     provideTranslocoMissingHandler(TranslationMissingHandler),
     provideAppInitializer(async () => {

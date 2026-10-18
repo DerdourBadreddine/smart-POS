@@ -76,14 +76,14 @@
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef>{{ 'inventory.name' | transloco }}</th>
             <td mat-cell *matCellDef="let product">
-              <strong>{{ product.name }}</strong>
+              @if(product.track_imei){<a [routerLink]="['/inventory/phones',product.id]">{{product.name}}</a>}@else{<strong>{{ product.name }}</strong>}
               @if (product.brand || product.model_name) {
                 <small>{{ product.brand }} {{ product.model_name }}</small>
               }
             </td>
           </ng-container>
           <ng-container matColumnDef="sku">
-            <th mat-header-cell *matHeaderCellDef>SKU</th>
+            <th mat-header-cell *matHeaderCellDef>{{ 'common.sku' | transloco }}</th>
             <td mat-cell *matCellDef="let product">{{ product.sku }}</td>
           </ng-container>
           <ng-container matColumnDef="category">
@@ -107,7 +107,7 @@
             <td mat-cell *matCellDef="let product">{{ product.sell_price | money }}</td>
           </ng-container>
           <ng-container matColumnDef="actions">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>{{ 'common.actions' | transloco }}</th>
             <td mat-cell *matCellDef="let product" class="actions">
               <button mat-icon-button (click)="openEdit(product)" [attr.aria-label]="'common.edit' | transloco">
                 <mat-icon>edit</mat-icon>

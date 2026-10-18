@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((color: (primary: mat.$azure-palette, tertiary: mat.$blue-palette), typography: Inter, density: 0));
+}
+html {
+  --mat-sys-primary: #3949ab;
+  --mat-sys-on-primary: #fff;
+  --mat-sys-secondary-container: #e8ecff;
+  --mat-sys-on-secondary-container: #24317e;
+  --mat-sys-surface: #fff;
+  --mat-sys-on-surface: #17233a;
+  --mat-sys-on-surface-variant: #536079;
+  --mat-sys-surface-container-low: #f4f6fa;
+  --mat-sys-outline: #73809a;
+  --mat-sys-outline-variant: #dce2ec;
+  --app-success: #166534;
+  --app-warning: #854d0e;
+  --app-danger: #b42318;
+  --app-radius: 16px;
+  --app-shadow: 0 4px 20px #17233a08;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+}

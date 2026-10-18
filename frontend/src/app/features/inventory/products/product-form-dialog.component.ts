@@ -1,3 +1,5 @@
+import { TranslocoService } from '@jsverse/transloco';
+import { fieldErrors } from '../../../core/interceptors/error.interceptor';
 import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -33,6 +35,7 @@ interface ProductDialogData {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductFormDialogComponent {
+  private readonly i18n = inject(TranslocoService);
   private readonly fb = inject(FormBuilder);
   private readonly api = inject(ProductsApi);
   private readonly ref = inject(MatDialogRef<ProductFormDialogComponent>);
@@ -80,7 +83,7 @@ export class ProductFormDialogComponent {
       next: () => this.ref.close(true),
       error: (error: { error?: { detail?: string } }) => {
         this.saving = false;
-        this.serverError = error.error?.detail ?? 'Could not save the product.';
+        this.serverError = fieldErrors(error.error) || this.i18n.translate('errors.request');
       },
     });
   }

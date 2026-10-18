@@ -16,7 +16,7 @@ import { PhoneUnit, Product } from '../../core/models/models';
     <mat-dialog-content>
       @if (loading()) { <mat-progress-bar mode="indeterminate" /> }
       <table mat-table [dataSource]="units()">
-        <ng-container matColumnDef="imei"><th mat-header-cell *matHeaderCellDef>IMEI</th><td mat-cell *matCellDef="let unit">{{ unit.imei }}</td></ng-container>
+        <ng-container matColumnDef="imei"><th mat-header-cell *matHeaderCellDef>{{ 'common.imei' | transloco }}</th><td mat-cell *matCellDef="let unit">{{ unit.imei }}</td></ng-container>
         <ng-container matColumnDef="price"><th mat-header-cell *matHeaderCellDef>{{ 'pos.price' | transloco }}</th><td mat-cell *matCellDef="let unit">{{ unit.sell_price }}</td></ng-container>
         <ng-container matColumnDef="action"><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef="let unit"><button mat-flat-button color="primary" (click)="select(unit)">{{ 'common.select' | transloco }}</button></td></ng-container>
         <tr mat-header-row *matHeaderRowDef="columns"></tr><tr mat-row *matRowDef="let row; columns: columns"></tr>

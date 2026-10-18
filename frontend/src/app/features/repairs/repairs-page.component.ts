@@ -1,3 +1,4 @@
+import { MatInputModule } from '@angular/material/input';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -23,7 +24,7 @@ type RepairStatus = RepairTicket['status'];
 @Component({
   selector: 'app-repairs-page',
   imports: [
-    MatButtonModule,
+    MatButtonModule, MatInputModule,
     MatCardModule,
     MatCheckboxModule,
     MatIconModule,

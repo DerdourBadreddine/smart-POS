@@ -16,6 +16,8 @@ small { color: #68717d; }
 .totals { display: grid; gap: 12px; padding-block: 18px; }
 .grand-total { font-size: 1.25rem; }
 .pay-button { width: 100%; min-height: 48px; }
-.empty-cart, .empty-search { display: grid; justify-items: center; gap: 8px; color: #77808c; padding: 48px 16px; text-align: center; }
+.empty-cart, .empty-search { display: grid; justify-items: center; gap: 8px; color: #536079; padding: 48px 16px; text-align: center; }
 .empty-cart mat-icon, .empty-search mat-icon { font-size: 40px; width: 40px; height: 40px; }
 @media (max-width: 850px) { .pos-grid { grid-template-columns: 1fr; } }
+
+.cart-panel{position:sticky;inset-block-start:16px}.shortcut-hint{color:#536079;font-size:12px;margin-block:0 16px}.cart-line{grid-template-columns:minmax(0,1fr) auto}.line-name{grid-column:1/-1}.line-total{grid-column:1}.price-input{inline-size:90px}

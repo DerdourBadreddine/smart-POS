@@ -3,7 +3,7 @@
     <div><span class="eyebrow">{{ 'pos.title' | transloco }}</span><h1>{{ 'pos.checkout' | transloco }}</h1><p>{{ 'pos.subtitle' | transloco }}</p></div>
     <a mat-stroked-button routerLink="/sales"><mat-icon>history</mat-icon>{{ 'pos.salesHistory' | transloco }}</a>
   </header>
-  <div class="pos-grid">
+  <p class="shortcut-hint">{{ 'pos.shortcuts' | transloco }}</p><div class="pos-grid">
     <section class="search-panel">
       <mat-form-field appearance="outline" class="search-box">
         <mat-label>{{ 'pos.searchOrScan' | transloco }}</mat-label>
@@ -31,7 +31,7 @@
           @for (line of cart.lines(); track line.key) {
             <div class="cart-line">
               <div class="line-name"><strong>{{ line.name }}</strong>@if (line.imei) { <small>IMEI: {{ line.imei }}</small> }</div>
-              <div class="line-controls"><button mat-icon-button (click)="cart.setQuantity(line.key, line.quantity - 1)">−</button><span>{{ line.quantity }}</span><button mat-icon-button (click)="cart.setQuantity(line.key, line.quantity + 1)">+</button></div>
+              <div class="line-controls"><button mat-icon-button [attr.aria-label]="'common.decrease'|transloco" (click)="cart.setQuantity(line.key, line.quantity - 1)">−</button><span>{{ line.quantity }}</span><button mat-icon-button [attr.aria-label]="'common.increase'|transloco" (click)="cart.setQuantity(line.key, line.quantity + 1)">+</button></div>
               <input class="price-input" type="number" min="0" [value]="line.unitPrice" (change)="updatePrice(line.key, $event)" [attr.aria-label]="'pos.price' | transloco" />
               <span class="line-total">{{ line.quantity * line.unitPrice | money }}</span><button mat-icon-button (click)="cart.remove(line.key)" [attr.aria-label]="'common.remove' | transloco"><mat-icon>delete</mat-icon></button>
             </div>

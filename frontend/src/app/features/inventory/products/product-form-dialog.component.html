@@ -9,7 +9,7 @@
       }
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>SKU</mat-label>
+      <mat-label>{{ 'common.sku' | transloco }}</mat-label>
       <input matInput formControlName="sku" />
       @if (form.controls.sku.hasError('required') && form.controls.sku.touched) {
         <mat-error>{{ 'common.required' | transloco }}</mat-error>

@@ -14,6 +14,8 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { PhoneUnitsApi, ProductsApi, SalesApi } from '../../core/api/resource-apis';
 import { Product, Sale } from '../../core/models/models';
 import { MoneyPipe } from '../../shared/pipes/money.pipe';
+import { ReceiptDialogComponent } from './receipt-dialog.component';
+import { ConfirmService } from '../../shared/ui';
 import { CartStore } from './cart.store';
 import { PaymentDialogComponent, PaymentResult } from './payment-dialog.component';
 import { PhoneUnitPickerDialogComponent } from './phone-unit-picker-dialog.component';
@@ -27,6 +29,7 @@ import { PhoneUnitPickerDialogComponent } from './phone-unit-picker-dialog.compo
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PosPageComponent {
+  private readonly confirm = inject(ConfirmService);
   private readonly productsApi = inject(ProductsApi);
   private readonly phoneUnitsApi = inject(PhoneUnitsApi);
   private readonly salesApi = inject(SalesApi);
@@ -65,12 +68,16 @@ export class PosPageComponent {
   }
 
   addExactMatch(): void {
-    const match = this.results().find((product) => product.matched_phone_unit_id);
-    if (!match?.matched_phone_unit_id) return;
-    this.phoneUnitsApi.get(match.matched_phone_unit_id).subscribe((unit) => {
-      this.cart.addPhone(match, unit);
-      this.search.setValue('');
-      this.searchInput?.nativeElement.focus();
+    const query = this.search.value.trim();
+    if (!query) return;
+    this.productsApi.lookup(query).subscribe(products => {
+      this.results.set(products);
+      const match = products.find(product => product.matched_phone_unit_id);
+      if (match?.matched_phone_unit_id) {
+        this.phoneUnitsApi.get(match.matched_phone_unit_id).subscribe(unit => {
+          this.cart.addPhone(match, unit); this.search.setValue(''); this.searchInput?.nativeElement.focus();
+        });
+      } else if (products.length === 1) this.addProduct(products[0]);
     });
   }
 
@@ -97,7 +104,8 @@ export class PosPageComponent {
     }));
     this.salesApi.createSale({ items, customer_id: payment.customerId, discount: this.cart.discount(), payment_method: payment.paymentMethod, amount_paid: payment.amountPaid }).subscribe({
       next: (sale) => {
-        this.snackBar.open(`${sale.number} ${this.transloco.translate('pos.saleCompleted')}`, 'OK', { duration: 4000 });
+        this.snackBar.open(`${sale.number} ${this.transloco.translate('pos.saleCompleted')}`, this.transloco.translate('confirmation.ok'), { duration: 4000 });
+        this.dialog.open(ReceiptDialogComponent, { data: sale, width: '440px' });
         this.cart.clear();
         this.search.setValue('');
       },
@@ -109,7 +117,7 @@ export class PosPageComponent {
     if (event.key === 'F2') { event.preventDefault(); this.searchInput?.nativeElement.focus(); }
     if (event.key === 'F9') { event.preventDefault(); this.openPayment(); }
     if (event.key === 'Escape' && this.cart.lines().length) {
-      if (window.confirm(this.transloco.translate('pos.clearCartConfirm'))) this.cart.clear();
+      this.confirm.open('pos.clearCartConfirm').subscribe(confirmed => { if(confirmed) this.cart.clear(); });
     }
   }
 }

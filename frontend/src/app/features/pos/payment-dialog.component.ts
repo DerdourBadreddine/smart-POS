@@ -1,3 +1,4 @@
+import { MoneyPipe } from '../../shared/pipes/money.pipe';
 import { ChangeDetectionStrategy, Component, Inject, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -20,7 +21,7 @@ export interface PaymentResult {
 
 @Component({
   selector: 'app-payment-dialog',
-  imports: [DecimalPipe, MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule, TranslocoPipe],
+  imports: [MoneyPipe, MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule, TranslocoPipe],
   templateUrl: './payment-dialog.component.html',
   styleUrl: './payment-dialog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -52,6 +53,6 @@ export class PaymentDialogComponent {
       this.form.markAllAsTouched();
       return;
     }
-    this.ref.close({ customerId, paymentMethod: this.form.controls.paymentMethod.value, amountPaid: amount } satisfies PaymentResult);
+    this.ref.close({ customerId, paymentMethod: this.form.controls.paymentMethod.value, amountPaid: Math.min(amount, this.data.total) } satisfies PaymentResult);
   }
 }

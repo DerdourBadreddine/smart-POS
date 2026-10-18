@@ -17,7 +17,16 @@
     "close": "إغلاق",
     "add": "إضافة",
     "loading": "جار التحميل...",
-    "refresh": "تحديث"
+    "refresh": "تحديث",
+    "confirm": "تأكيد",
+    "noResults": "لا توجد نتائج",
+    "navigation": "القائمة الرئيسية",
+    "language": "تغيير اللغة",
+    "imei": "IMEI",
+    "sku": "SKU",
+    "decrease": "تقليل الكمية",
+    "increase": "زيادة الكمية",
+    "actions": "إجراءات"
   },
   "nav": {
     "dashboard": "لوحة التحكم",
@@ -29,7 +38,12 @@
     "devices": "البحث عن IMEI",
     "expenses": "المصاريف",
     "reports": "التقارير",
-    "settings": "الإعدادات"
+    "settings": "الإعدادات",
+    "groupSales": "المبيعات",
+    "groupStock": "المخزون",
+    "groupService": "الصيانة",
+    "groupPeople": "العملاء",
+    "groupTools": "الأدوات"
   },
   "inventory": {
     "title": "المخزون",
@@ -169,7 +183,11 @@
       "READY": "جاهز",
       "DELIVERED": "تم التسليم",
       "CANCELLED": "ملغى"
-    }
+    },
+    "recordPayment": "تسجيل دفعة",
+    "printSlip": "طباعة وصل الاستلام",
+    "readyMessage": "جهازك جاهز للاستلام.",
+    "selectPart": "اختيار قطعة"
   },
   "pos": {
     "title": "نقطة البيع",
@@ -199,7 +217,10 @@
     "saleCompleted": "تم تسجيل البيع",
     "clearCartConfirm": "هل تريد إفراغ السلة؟",
     "receipt": "الإيصال",
-    "print": "طباعة"
+    "print": "طباعة",
+    "shortcuts": "F2 بحث · F9 دفع · Esc إفراغ",
+    "creditCustomerRequired": "اختر عميلاً للبيع بالدين.",
+    "warranty": "الضمان حتى"
   },
   "sales": {
     "title": "المبيعات",
@@ -213,12 +234,132 @@
     "status": "الحالة",
     "void": "إلغاء",
     "voidConfirm": "هل تريد إلغاء البيع وإرجاع المخزون؟",
-    "statuses": { "COMPLETED": "مكتمل", "VOIDED": "ملغى" }
+    "statuses": {
+      "COMPLETED": "مكتمل",
+      "VOIDED": "ملغى"
+    },
+    "export": "تصدير المبيعات"
   },
-  "customers": {"title":"الزبائن","directory":"دليل الزبائن","add":"إضافة زبون","edit":"تعديل الزبون","name":"الاسم","phone":"الهاتف","notes":"ملاحظات","balance":"الرصيد","owing":"عليه دين","details":"التفاصيل","collect":"تحصيل"},
-  "devices": {"title":"الأجهزة","lookup":"البحث عن IMEI","underWarranty":"ضمن الضمان حتى","noWarranty":"لا يوجد ضمان","timeline":"سجل الجهاز","unknown":"IMEI غير معروف","newRepair":"تذكرة إصلاح جديدة"},
-  "settings": {"title":"الإعدادات","shop":"إعدادات المحل","shop_name":"اسم المحل","address":"العنوان","phone":"الهاتف","currency_symbol":"رمز العملة","country_dial_code":"رمز الدولة","receipt_footer_fr":"تذييل الإيصال بالفرنسية","receipt_footer_ar":"تذييل الإيصال بالعربية","defaultLanguage":"اللغة الافتراضية"},
-  "expenses": {"title":"المصاريف","list":"قائمة المصاريف","add":"إضافة مصروف","from":"من","to":"إلى","date":"التاريخ","label":"الوصف","category":"الفئة","amount":"المبلغ"},
-  "reports": {"title":"التقارير","endOfDay":"نهاية اليوم","date":"التاريخ","print":"طباعة"}
-  ,"dashboard": {"title":"لوحة التحكم","overview":"نظرة عامة","subtitle":"نشاط المحل اليوم.","sales":"مبيعات اليوم","salesCount":"مبيعات","grossProfit":"الربح الإجمالي","repairIncome":"إيرادات الإصلاح","openRepairs":"الإصلاحات المفتوحة","creditOwed":"الديون المستحقة","last7Days":"آخر 7 أيام","readyForPickup":"جاهز للاستلام","lowStock":"مخزون منخفض","none":"لا توجد عناصر"}
+  "customers": {
+    "title": "الزبائن",
+    "directory": "دليل الزبائن",
+    "add": "إضافة زبون",
+    "edit": "تعديل الزبون",
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "notes": "ملاحظات",
+    "balance": "الرصيد",
+    "owing": "عليه دين",
+    "details": "التفاصيل",
+    "collect": "تحصيل",
+    "paymentAmount": "المبلغ المحصل",
+    "oldestFirst": "يطبق الدفع على أقدم المبيعات أولاً.",
+    "sales": "المبيعات",
+    "repairs": "الإصلاحات"
+  },
+  "devices": {
+    "title": "الأجهزة",
+    "lookup": "البحث عن IMEI",
+    "underWarranty": "ضمن الضمان حتى",
+    "noWarranty": "لا يوجد ضمان",
+    "timeline": "سجل الجهاز",
+    "unknown": "IMEI غير معروف",
+    "newRepair": "تذكرة إصلاح جديدة"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "shop": "إعدادات المحل",
+    "shop_name": "اسم المحل",
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "currency_symbol": "رمز العملة",
+    "country_dial_code": "رمز الدولة",
+    "receipt_footer_fr": "تذييل الإيصال بالفرنسية",
+    "receipt_footer_ar": "تذييل الإيصال بالعربية",
+    "defaultLanguage": "اللغة الافتراضية",
+    "saved": "تم حفظ الإعدادات",
+    "french": "الفرنسية",
+    "arabic": "العربية"
+  },
+  "expenses": {
+    "title": "المصاريف",
+    "list": "قائمة المصاريف",
+    "add": "إضافة مصروف",
+    "from": "من",
+    "to": "إلى",
+    "date": "التاريخ",
+    "label": "الوصف",
+    "category": "الفئة",
+    "amount": "المبلغ",
+    "edit": "تعديل المصروف",
+    "deleteConfirm": "حذف هذا المصروف؟",
+    "total": "إجمالي المصاريف",
+    "note": "ملاحظة"
+  },
+  "reports": {
+    "title": "التقارير",
+    "endOfDay": "نهاية اليوم",
+    "date": "التاريخ",
+    "print": "طباعة",
+    "salesTotal": "إجمالي المبيعات",
+    "salesCount": "عدد المبيعات",
+    "salesCollected": "المبيعات المحصلة",
+    "debtsCollected": "الديون المحصلة",
+    "repairIncome": "إيراد الإصلاحات",
+    "expenses": "المصاريف",
+    "netTotal": "الصافي",
+    "method": "طريقة الدفع"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "overview": "نظرة عامة",
+    "subtitle": "نشاط المحل اليوم.",
+    "sales": "مبيعات اليوم",
+    "salesCount": "مبيعات",
+    "grossProfit": "الربح الإجمالي",
+    "repairIncome": "إيرادات الإصلاح",
+    "openRepairs": "الإصلاحات المفتوحة",
+    "creditOwed": "الديون المستحقة",
+    "last7Days": "آخر 7 أيام",
+    "readyForPickup": "جاهز للاستلام",
+    "lowStock": "مخزون منخفض",
+    "none": "لا توجد عناصر",
+    "expenses": "مصاريف اليوم",
+    "noSales": "لا توجد مبيعات في هذه الفترة",
+    "quickActions": "إجراءات سريعة",
+    "activity": "نشاط المبيعات"
+  },
+  "errors": {
+    "network": "تعذر الاتصال. تأكد من تشغيل Smart POS.",
+    "request": "تعذر إتمام العملية. أعد المحاولة.",
+    "invalid": "تحقق من حقول النموذج."
+  },
+  "expenseCategories": {
+    "RENT": "الإيجار",
+    "UTILITIES": "الخدمات",
+    "SUPPLIES": "اللوازم",
+    "SALARY": "الرواتب",
+    "OTHER": "أخرى"
+  },
+  "movementReasons": {
+    "PURCHASE": "شراء",
+    "SALE": "بيع",
+    "REPAIR_USE": "إصلاح",
+    "ADJUSTMENT": "تعديل",
+    "RETURN": "إرجاع",
+    "VOID": "إلغاء"
+  },
+  "pagination": {
+    "itemsPerPage": "العناصر في الصفحة",
+    "nextPage": "الصفحة التالية",
+    "previousPage": "الصفحة السابقة",
+    "firstPage": "الصفحة الأولى",
+    "lastPage": "الصفحة الأخيرة"
+  },
+  "confirmation": {
+    "ok": "موافق"
+  },
+  "printing": {
+    "narrow": "طباعة · 80 مم"
+  }
 }

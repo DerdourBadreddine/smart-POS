@@ -17,7 +17,16 @@
     "close": "Fermer",
     "add": "Ajouter",
     "loading": "Chargement...",
-    "refresh": "Actualiser"
+    "refresh": "Actualiser",
+    "confirm": "Confirmer",
+    "noResults": "Aucun résultat",
+    "navigation": "Navigation principale",
+    "language": "Changer de langue",
+    "imei": "IMEI",
+    "sku": "SKU",
+    "decrease": "Diminuer la quantité",
+    "increase": "Augmenter la quantité",
+    "actions": "Actions"
   },
   "nav": {
     "dashboard": "Tableau de bord",
@@ -29,7 +38,12 @@
     "devices": "Recherche IMEI",
     "expenses": "Dépenses",
     "reports": "Rapports",
-    "settings": "Paramètres"
+    "settings": "Paramètres",
+    "groupSales": "Ventes",
+    "groupStock": "Stock",
+    "groupService": "Service",
+    "groupPeople": "Clients",
+    "groupTools": "Outils"
   },
   "inventory": {
     "title": "Inventaire",
@@ -169,7 +183,11 @@
       "READY": "Prêt",
       "DELIVERED": "Livré",
       "CANCELLED": "Annulé"
-    }
+    },
+    "recordPayment": "Enregistrer un paiement",
+    "printSlip": "Imprimer la fiche",
+    "readyMessage": "Votre appareil est prêt à récupérer.",
+    "selectPart": "Sélectionner une pièce"
   },
   "pos": {
     "title": "Point de vente",
@@ -199,7 +217,10 @@
     "saleCompleted": "Vente enregistrée",
     "clearCartConfirm": "Vider le panier ?",
     "receipt": "Reçu",
-    "print": "Imprimer"
+    "print": "Imprimer",
+    "shortcuts": "F2 Rechercher · F9 Encaisser · Échap Vider",
+    "creditCustomerRequired": "Sélectionnez un client pour une vente à crédit.",
+    "warranty": "Garantie jusqu’au"
   },
   "sales": {
     "title": "Ventes",
@@ -213,12 +234,132 @@
     "status": "Statut",
     "void": "Annuler",
     "voidConfirm": "Annuler cette vente et remettre le stock ?",
-    "statuses": { "COMPLETED": "Terminée", "VOIDED": "Annulée" }
+    "statuses": {
+      "COMPLETED": "Terminée",
+      "VOIDED": "Annulée"
+    },
+    "export": "Exporter les ventes"
   },
-  "customers": {"title":"Clients","directory":"Répertoire clients","add":"Ajouter un client","edit":"Modifier le client","name":"Nom","phone":"Téléphone","notes":"Notes","balance":"Solde","owing":"Doit de l'argent","details":"Détails","collect":"Encaisser"},
-  "devices": {"title":"Appareils","lookup":"Recherche IMEI","underWarranty":"Sous garantie jusqu'au","noWarranty":"Aucune garantie","timeline":"Historique de l'appareil","unknown":"IMEI inconnu","newRepair":"Nouveau ticket"},
-  "settings": {"title":"Paramètres","shop":"Paramètres de la boutique","shop_name":"Nom de la boutique","address":"Adresse","phone":"Téléphone","currency_symbol":"Symbole monétaire","country_dial_code":"Indicatif pays","receipt_footer_fr":"Pied de reçu français","receipt_footer_ar":"Pied de reçu arabe","defaultLanguage":"Langue par défaut"},
-  "expenses": {"title":"Dépenses","list":"Liste des dépenses","add":"Ajouter une dépense","from":"Du","to":"Au","date":"Date","label":"Libellé","category":"Catégorie","amount":"Montant"},
-  "reports": {"title":"Rapports","endOfDay":"Fin de journée","date":"Date","print":"Imprimer"}
-  ,"dashboard": {"title":"Tableau de bord","overview":"Vue d'ensemble","subtitle":"L'activité de votre boutique aujourd'hui.","sales":"Ventes du jour","salesCount":"ventes","grossProfit":"Marge brute","repairIncome":"Revenus réparations","openRepairs":"Réparations ouvertes","creditOwed":"Crédit à recouvrer","last7Days":"7 derniers jours","readyForPickup":"Prêts à récupérer","lowStock":"Stock faible","none":"Aucun élément"}
+  "customers": {
+    "title": "Clients",
+    "directory": "Répertoire clients",
+    "add": "Ajouter un client",
+    "edit": "Modifier le client",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "notes": "Notes",
+    "balance": "Solde",
+    "owing": "Doit de l'argent",
+    "details": "Détails",
+    "collect": "Encaisser",
+    "paymentAmount": "Montant à encaisser",
+    "oldestFirst": "Le paiement est appliqué aux ventes les plus anciennes.",
+    "sales": "Ventes",
+    "repairs": "Réparations"
+  },
+  "devices": {
+    "title": "Appareils",
+    "lookup": "Recherche IMEI",
+    "underWarranty": "Sous garantie jusqu'au",
+    "noWarranty": "Aucune garantie",
+    "timeline": "Historique de l'appareil",
+    "unknown": "IMEI inconnu",
+    "newRepair": "Nouveau ticket"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "shop": "Paramètres de la boutique",
+    "shop_name": "Nom de la boutique",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "currency_symbol": "Symbole monétaire",
+    "country_dial_code": "Indicatif pays",
+    "receipt_footer_fr": "Pied de reçu français",
+    "receipt_footer_ar": "Pied de reçu arabe",
+    "defaultLanguage": "Langue par défaut",
+    "saved": "Paramètres enregistrés",
+    "french": "Français",
+    "arabic": "Arabe"
+  },
+  "expenses": {
+    "title": "Dépenses",
+    "list": "Liste des dépenses",
+    "add": "Ajouter une dépense",
+    "from": "Du",
+    "to": "Au",
+    "date": "Date",
+    "label": "Libellé",
+    "category": "Catégorie",
+    "amount": "Montant",
+    "edit": "Modifier la dépense",
+    "deleteConfirm": "Supprimer cette dépense ?",
+    "total": "Total des dépenses",
+    "note": "Note"
+  },
+  "reports": {
+    "title": "Rapports",
+    "endOfDay": "Fin de journée",
+    "date": "Date",
+    "print": "Imprimer",
+    "salesTotal": "Total des ventes",
+    "salesCount": "Nombre de ventes",
+    "salesCollected": "Ventes encaissées",
+    "debtsCollected": "Dettes recouvrées",
+    "repairIncome": "Revenus réparations",
+    "expenses": "Dépenses",
+    "netTotal": "Solde net",
+    "method": "Mode de paiement"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "overview": "Vue d'ensemble",
+    "subtitle": "L'activité de votre boutique aujourd'hui.",
+    "sales": "Ventes du jour",
+    "salesCount": "ventes",
+    "grossProfit": "Marge brute",
+    "repairIncome": "Revenus réparations",
+    "openRepairs": "Réparations ouvertes",
+    "creditOwed": "Crédit à recouvrer",
+    "last7Days": "7 derniers jours",
+    "readyForPickup": "Prêts à récupérer",
+    "lowStock": "Stock faible",
+    "none": "Aucun élément",
+    "expenses": "Dépenses du jour",
+    "noSales": "Aucune vente sur cette période",
+    "quickActions": "Actions rapides",
+    "activity": "Activité des ventes"
+  },
+  "errors": {
+    "network": "Connexion impossible. Vérifiez que Smart POS est démarré.",
+    "request": "Impossible de terminer cette opération. Réessayez.",
+    "invalid": "Vérifiez les champs du formulaire."
+  },
+  "expenseCategories": {
+    "RENT": "Loyer",
+    "UTILITIES": "Services",
+    "SUPPLIES": "Fournitures",
+    "SALARY": "Salaires",
+    "OTHER": "Autres"
+  },
+  "movementReasons": {
+    "PURCHASE": "Achat",
+    "SALE": "Vente",
+    "REPAIR_USE": "Réparation",
+    "ADJUSTMENT": "Ajustement",
+    "RETURN": "Retour",
+    "VOID": "Annulation"
+  },
+  "pagination": {
+    "itemsPerPage": "Articles par page",
+    "nextPage": "Page suivante",
+    "previousPage": "Page précédente",
+    "firstPage": "Première page",
+    "lastPage": "Dernière page"
+  },
+  "confirmation": {
+    "ok": "OK"
+  },
+  "printing": {
+    "narrow": "Imprimer · 80 mm"
+  }
 }

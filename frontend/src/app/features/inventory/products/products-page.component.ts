@@ -1,3 +1,4 @@
+import { LocalPaginatorIntl } from '../../../core/i18n/paginator-intl';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -6,15 +7,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+import { MatPaginatorModule, MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TranslocoPipe } from '../../../core/i18n/bundled-transloco.pipe';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
-import { CategoriesApi, ProductsApi } from '../../../core/api/resource-apis';
+import { CategoriesApi, PhoneUnitsApi, ProductsApi } from '../../../core/api/resource-apis';
 import { Category, Page, Product } from '../../../core/models/models';
 import { MoneyPipe } from '../../../shared/pipes/money.pipe';
 import { ProductFormDialogComponent } from './product-form-dialog.component';
@@ -24,9 +25,10 @@ import { ProductCsvDialogComponent } from './product-csv-dialog.component';
 type ProductKind = Category['kind'] | 'ALL';
 
 @Component({
+  providers: [{provide:MatPaginatorIntl,useClass:LocalPaginatorIntl}],
   selector: 'app-products-page',
   imports: [
-    MatButtonModule,
+    MatButtonModule, RouterLink,
     MatCheckboxModule,
     MatDialogModule,
     MatIconModule,
@@ -44,6 +46,7 @@ type ProductKind = Category['kind'] | 'ALL';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsPageComponent {
+  private readonly phoneUnitsApi=inject(PhoneUnitsApi);
   private readonly productsApi = inject(ProductsApi);
   private readonly categoriesApi = inject(CategoriesApi);
   private readonly dialog = inject(MatDialog);
@@ -65,6 +68,9 @@ export class ProductsPageComponent {
   readonly tabKinds: ProductKind[] = ['ALL', 'PHONE', 'ACCESSORY', 'PART'];
 
   constructor() {
+    const query=inject(ActivatedRoute).snapshot.queryParamMap;
+    if(query.get('search'))this.search.setValue(query.get('search')!);
+    if(query.get('kind')==='PHONE')this.selectedKind.set('PHONE');
     this.categoriesApi
       .list({ page_size: 100 })
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -83,12 +89,7 @@ export class ProductsPageComponent {
   findImei(): void {
     const imei = this.imeiSearch.value.trim();
     if (!/^\d{15}$/.test(imei)) return;
-    this.productsApi.lookup(imei).subscribe((matches) => {
-      const match = matches.find((product) => product.matched_phone_unit_id);
-      if (match) {
-        this.router.navigate(['/inventory/phones', match.id]);
-      }
-    });
+    this.phoneUnitsApi.list({search:imei}).subscribe(page=>{const unit=page.results.find(unit=>unit.imei===imei);if(unit)this.router.navigate(['/inventory/phones',unit.product]);});
   }
 
   selectKind(kind: ProductKind): void {
@@ -185,7 +186,7 @@ export class ProductsPageComponent {
       page: this.pageIndex() + 1,
       page_size: this.pageSize(),
       search: this.search.value.trim(),
-      is_active: this.activeOnly(),
+      ...(this.activeOnly() ? { is_active: true } : {}),
       low_stock: this.onlyLowStock(),
     };
     if (this.selectedKind() !== 'ALL') {

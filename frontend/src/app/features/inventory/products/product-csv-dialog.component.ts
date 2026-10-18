@@ -1,3 +1,5 @@
+import { TranslocoService } from '@jsverse/transloco';
+import { fieldErrors } from '../../../core/interceptors/error.interceptor';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -24,6 +26,7 @@ import { ProductImportResult } from '../../../core/models/models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductCsvDialogComponent {
+  private readonly i18n = inject(TranslocoService);
   private readonly api = inject(ProductsApi);
   private readonly ref = inject(MatDialogRef<ProductCsvDialogComponent>);
 
@@ -59,7 +62,7 @@ export class ProductCsvDialogComponent {
         this.checking.set(false);
       },
       error: (error: { error?: { detail?: string } }) => {
-        this.error.set(error.error?.detail ?? 'Could not check the CSV file.');
+        this.error.set(fieldErrors(error.error) || this.i18n.translate('errors.request'));
         this.checking.set(false);
       },
     });
@@ -74,7 +77,7 @@ export class ProductCsvDialogComponent {
     this.api.importCsv(file, false).subscribe({
       next: () => this.ref.close(true),
       error: (error: { error?: { detail?: string } }) => {
-        this.error.set(error.error?.detail ?? 'Could not import the CSV file.');
+        this.error.set(fieldErrors(error.error) || this.i18n.translate('errors.request'));
         this.importing.set(false);
       },
     });

@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
-import { SlicePipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
+import { PageHeaderComponent, KpiCardComponent, EmptyStateComponent } from '../../shared/ui';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
-import { interval, startWith, switchMap } from 'rxjs';
+import { EMPTY, catchError, interval, startWith, switchMap } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
 import { MoneyPipe } from '../../shared/pipes/money.pipe';
@@ -26,7 +27,7 @@ interface DashboardSummary {
 
 @Component({
   selector: 'app-dashboard-page',
-  imports: [MatButtonModule, MatCardModule, MatIconModule, MatProgressBarModule, MoneyPipe, RouterLink, SlicePipe, TranslocoPipe],
+  imports: [MatButtonModule, MatCardModule, MatIconModule, MatProgressBarModule, MoneyPipe, RouterLink, DatePipe, TranslocoPipe, PageHeaderComponent, KpiCardComponent, EmptyStateComponent],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,7 +41,7 @@ export class DashboardPageComponent {
   constructor() {
     interval(60000).pipe(
       startWith(0),
-      switchMap(() => this.http.get<DashboardSummary>('/api/dashboard/summary/')),
+      switchMap(() => this.http.get<DashboardSummary>('/api/dashboard/summary/').pipe(catchError(() => {this.loading.set(false);return EMPTY;}))),
       takeUntilDestroyed(this.destroyRef),
     ).subscribe({
       next: (summary) => { this.summary.set(summary); this.loading.set(false); },
@@ -59,6 +60,8 @@ export class DashboardPageComponent {
   openRepairs(summary: DashboardSummary): number {
     return Object.values(summary.open_repairs_by_status).reduce((total, value) => total + value, 0);
   }
+
+  hasSales(summary: DashboardSummary): boolean { return summary.last_7_days.some(day => Number(day.total) > 0); }
 
   maxDailyTotal(summary: DashboardSummary): number {
     return Math.max(...summary.last_7_days.map((day) => day.total), 1);

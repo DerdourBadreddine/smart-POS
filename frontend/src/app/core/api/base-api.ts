@@ -28,7 +28,7 @@ export abstract class BaseApi<T> {
   }
 
   update(id: number, payload: Partial<T>): Observable<T> {
-    return this.http.put<T>(`/api/${this.resource}/${id}/`, payload);
+    return this.http.patch<T>(`/api/${this.resource}/${id}/`, payload);
   }
 
   remove(id: number): Observable<void> {

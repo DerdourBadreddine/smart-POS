@@ -86,6 +86,10 @@ export class CustomersApi extends BaseApi<Customer> {
     super('customers');
   }
 
+  collect(id: number, amount: number): Observable<Customer> {
+    return this.client.post<Customer>(`/api/customers/${id}/collect/`, { amount, method: 'CASH', note: '' });
+  }
+
   statement(id: number): Observable<CustomerStatement> {
     return this.client.get<CustomerStatement>(`/api/customers/${id}/statement/`);
   }
@@ -101,6 +105,10 @@ export class SalesApi extends BaseApi<Sale> {
 
   constructor() {
     super('sales');
+  }
+
+  exportCsv(params: Record<string, string>): Observable<Blob> {
+    return this.client.get('/api/sales/export-csv/', { params, responseType: 'blob' });
   }
 
   createSale(payload: SaleCreate): Observable<Sale> {

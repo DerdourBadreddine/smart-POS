@@ -22,6 +22,6 @@
 .ticket-card mat-card-content { display: grid; gap: 4px; }
 .ticket-card p { margin: 0; }
 .issue-preview { color: #68717d; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.column-empty, .empty-state { color: #77808c; text-align: center; padding: 24px 8px; }
+.column-empty, .empty-state { color: #536079; text-align: center; padding: 24px 8px; }
 .empty-state mat-icon { font-size: 40px; width: 40px; height: 40px; }
 @media (max-width: 1100px) { .board { grid-template-columns: repeat(5, 17rem); } }

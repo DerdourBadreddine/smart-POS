@@ -1,21 +1,31 @@
 <section class="page">
-  <header class="page-header">
-    <div><span class="eyebrow">{{ 'dashboard.title' | transloco }}</span><h1>{{ 'dashboard.overview' | transloco }}</h1><p>{{ 'dashboard.subtitle' | transloco }}</p></div>
-    <button mat-stroked-button (click)="refresh()"><mat-icon>refresh</mat-icon>{{ 'common.refresh' | transloco }}</button>
-  </header>
+  <app-page-header eyebrow="dashboard.title" title="dashboard.overview" subtitle="dashboard.subtitle"><button mat-stroked-button (click)="refresh()"><mat-icon>refresh</mat-icon>{{ 'common.refresh' | transloco }}</button></app-page-header>
   @if (loading()) { <mat-progress-bar mode="indeterminate" /> }
   @if (summary(); as data) {
     <div class="kpis">
-      <mat-card><span>{{ 'dashboard.sales' | transloco }}</span><strong>{{ data.sales_total | money }}</strong><small>{{ data.sales_count }} {{ 'dashboard.salesCount' | transloco }}</small></mat-card>
-      <mat-card><span>{{ 'dashboard.grossProfit' | transloco }}</span><strong>{{ data.gross_profit | money }}</strong></mat-card>
-      <mat-card><span>{{ 'dashboard.repairIncome' | transloco }}</span><strong>{{ data.repair_income | money }}</strong></mat-card>
-      <mat-card><span>{{ 'dashboard.openRepairs' | transloco }}</span><strong>{{ openRepairs(data) }}</strong></mat-card>
-      <mat-card><span>{{ 'dashboard.creditOwed' | transloco }}</span><strong>{{ data.credit_owed_total | money }}</strong></mat-card>
+      <app-kpi-card label="dashboard.sales" icon="point_of_sale">{{ data.sales_total | money }}</app-kpi-card>
+      <app-kpi-card label="dashboard.grossProfit" icon="trending_up">{{ data.gross_profit | money }}</app-kpi-card>
+      <app-kpi-card label="dashboard.repairIncome" icon="build">{{ data.repair_income | money }}</app-kpi-card>
+      <app-kpi-card label="dashboard.openRepairs" icon="handyman">{{ openRepairs(data) }}</app-kpi-card>
+      <app-kpi-card label="dashboard.creditOwed" icon="account_balance_wallet">{{ data.credit_owed_total | money }}</app-kpi-card>
+      <app-kpi-card label="dashboard.expenses" icon="receipt_long">{{ data.expenses_today | money }}</app-kpi-card>
     </div>
+    <div class="quick-actions"><a mat-flat-button routerLink="/pos"><mat-icon>add_shopping_cart</mat-icon>{{ 'sales.newSale' | transloco }}</a><a mat-stroked-button routerLink="/repairs/new"><mat-icon>add</mat-icon>{{ 'repairs.newTicket' | transloco }}</a><a mat-stroked-button routerLink="/inventory" [queryParams]="{kind:'PHONE'}"><mat-icon>smartphone</mat-icon>{{ 'inventory.receivePhone' | transloco }}</a></div>
+    <mat-card class="chart-card"><div class="section-heading"><h2>{{ 'dashboard.last7Days' | transloco }}</h2><span>{{ data.sales_count }} {{ 'dashboard.salesCount' | transloco }}</span></div>
+      @if(hasSales(data)) {
+        <svg viewBox="0 0 800 230" role="img" [attr.aria-label]="'dashboard.activity' | transloco">
+          <line x1="48" y1="184" x2="790" y2="184" stroke="#dce2ec" />
+          <line x1="48" y1="100" x2="790" y2="100" stroke="#edf0f6" />
+          <text x="8" y="188">0</text>
+          @for(day of data.last_7_days; track day.date; let i = $index) {
+            <g tabindex="0" [attr.aria-label]="(day.date | date:'dd/MM/yyyy') + ': ' + (day.total | money)"><title>{{ day.date | date:'dd/MM/yyyy' }} ? {{ day.total | money }}</title><rect [attr.x]="78 + i * 102" [attr.y]="184 - day.total / maxDailyTotal(data) * 136" width="40" [attr.height]="day.total / maxDailyTotal(data) * 136" rx="6" fill="#3949ab" /><text [attr.x]="98 + i * 102" [attr.y]="172 - day.total / maxDailyTotal(data) * 136" text-anchor="middle">{{ day.total | money }}</text><text [attr.x]="98 + i * 102" y="212" text-anchor="middle">{{ day.date | date:'dd/MM' }}</text></g>
+          }
+        </svg>
+      } @else { <app-empty-state message="dashboard.noSales" icon="bar_chart"><a mat-button routerLink="/pos">{{ 'sales.newSale' | transloco }}</a></app-empty-state> }
+    </mat-card>
     <div class="dashboard-grid">
-      <mat-card class="chart-card"><h2>{{ 'dashboard.last7Days' | transloco }}</h2><div class="bars">@for (day of data.last_7_days; track day.date) {<div class="bar-column"><span class="bar" [style.height.%]="day.total / maxDailyTotal(data) * 100"></span><small>{{ day.date | slice:5 }}</small></div>}</div></mat-card>
-      <mat-card><h2>{{ 'dashboard.readyForPickup' | transloco }}</h2>@for (ticket of data.ready_for_pickup; track ticket.id) {<a class="list-row" [routerLink]="['/repairs', ticket.id]"><span>{{ ticket.number }} · {{ ticket.device_brand }} {{ ticket.device_model }}</span><mat-icon>chevron_right</mat-icon></a>} @empty {<p>{{ 'dashboard.none' | transloco }}</p>}</mat-card>
-      <mat-card><h2>{{ 'dashboard.lowStock' | transloco }}</h2>@for (product of data.low_stock; track product.id) {<a class="list-row" routerLink="/inventory"><span>{{ product.name }}</span><strong>{{ product.stock_qty }}</strong></a>} @empty {<p>{{ 'dashboard.none' | transloco }}</p>}</mat-card>
+      <mat-card><h2>{{ 'dashboard.readyForPickup' | transloco }}</h2>@for(ticket of data.ready_for_pickup; track ticket.id){<a class="list-row" [routerLink]="['/repairs', ticket.id]"><span><strong>{{ ticket.number }}</strong><small>{{ ticket.device_brand }} {{ ticket.device_model }}</small></span><mat-icon class="directional">chevron_right</mat-icon></a>} @empty { <app-empty-state message="dashboard.none" icon="task_alt" /> }</mat-card>
+      <mat-card><h2>{{ 'dashboard.lowStock' | transloco }}</h2>@for(product of data.low_stock; track product.id){<a class="list-row" routerLink="/inventory" [queryParams]="{search:product.name}"><span>{{ product.name }}</span><strong class="stock-badge">{{ product.stock_qty }}</strong></a>} @empty { <app-empty-state message="dashboard.none" icon="inventory_2" /> }</mat-card>
     </div>
   }
 </section>

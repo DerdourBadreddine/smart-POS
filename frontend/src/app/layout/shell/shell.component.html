@@ -1,17 +1,22 @@
 <mat-sidenav-container class="shell" [dir]="language.language() === 'ar' ? 'rtl' : 'ltr'">
-  <mat-sidenav #drawer mode="side" opened class="sidenav">
+  <mat-sidenav #drawer mode="side" opened class="sidenav" [class.collapsed]="collapsed()">
     <div class="brand">
-      <div class="brand-mark">S</div>
-      <div>
+      <div class="brand-mark" aria-hidden="true">{{ settings.shopName().charAt(0) }}</div>
+      <div class="brand-copy">
         <strong>{{ settings.shopName() }}</strong>
         <span>{{ 'common.pointOfSale' | transloco }}</span>
       </div>
     </div>
-    <nav class="navigation" aria-label="Main navigation">
+    <nav class="navigation" [attr.aria-label]="'common.navigation' | transloco">
       @for (item of navigation; track item.path) {
-        <a mat-button class="nav-item" [routerLink]="item.path" routerLinkActive="active">
+        @if (!collapsed() && item.path === '/pos') {<span class="nav-group">{{ 'nav.groupSales' | transloco }}</span>}
+        @if (!collapsed() && item.path === '/inventory') {<span class="nav-group">{{ 'nav.groupStock' | transloco }}</span>}
+        @if (!collapsed() && item.path === '/repairs') {<span class="nav-group">{{ 'nav.groupService' | transloco }}</span>}
+        @if (!collapsed() && item.path === '/customers') {<span class="nav-group">{{ 'nav.groupPeople' | transloco }}</span>}
+        @if (!collapsed() && item.path === '/devices') {<span class="nav-group">{{ 'nav.groupTools' | transloco }}</span>}
+        <a mat-button class="nav-item" [routerLink]="item.path" routerLinkActive="active" [matTooltip]="collapsed() ? (item.label | transloco) : ''" [attr.aria-label]="item.label | transloco">
           <mat-icon>{{ item.icon }}</mat-icon>
-          <span>{{ item.label | transloco }}</span>
+          @if(!collapsed()){<span>{{ item.label | transloco }}</span>}
         </a>
       }
     </nav>
@@ -19,12 +24,12 @@
 
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">
-      <button mat-icon-button (click)="drawer.toggle()" [attr.aria-label]="'common.toggleMenu' | transloco">
+      <button mat-icon-button (click)="collapsed.set(!collapsed())" [attr.aria-label]="'common.toggleMenu' | transloco">
         <mat-icon>menu</mat-icon>
       </button>
       <span class="toolbar-title">{{ settings.shopName() }}</span>
       <span class="toolbar-spacer"></span>
-      <button mat-stroked-button class="language-button" (click)="language.toggle()">
+      <button mat-stroked-button class="language-button" [attr.aria-label]="'common.language' | transloco" (click)="language.toggle()">
         {{ language.language() === 'fr' ? 'عربي' : 'FR' }}
       </button>
     </mat-toolbar>
