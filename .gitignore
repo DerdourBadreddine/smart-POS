@@ -17,3 +17,6 @@ node_modules/
 .pytest_cache/
 Smart POS Vibe Coding Roadmap.md
 PROJECT_BRIEF.md
+.audit-data/
+frontend/test-results/
+frontend/playwright-report/

@@ -1,0 +1,785 @@
+[
+  {
+    "lang": "fr",
+    "route": "dashboard",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "TABLEAU DE BORD\nVue d'ensemble\n\nL'activité de votre boutique aujourd'hui.\n\nrefresh\nActualiser\nVentes du jour\nDA0.00\n0 ventes\nMarge brute\nDA0.00\nRevenus réparations\nDA0.00\nRéparations ouvertes\n0\nCrédit à recouvrer\nDA0.00\n7 derniers jours\n10-12\n10-13\n10-14\n10-15\n10-16\n10-17\n10-18\nPrêts à récupérer\n\nAucun élément\n\nStock faible\n\nAucun élément",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          [
+            "mat-card:nth-child(1) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ],
+          [
+            "mat-card:nth-child(1) > small"
+          ],
+          [
+            "mat-card:nth-child(2) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ],
+          [
+            "mat-card:nth-child(3) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ],
+          [
+            "mat-card:nth-child(4) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ],
+          [
+            "mat-card:nth-child(5) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "fr",
+    "route": "inventory",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "INVENTAIRE\nProduits\n\nGérez les téléphones, accessoires et pièces de rechange.\n\nswap_vert\nImport / Export\nadd\nAjouter un produit\nRechercher\nsearch\nActifs uniquement\nStock faible uniquement\nTéléchargez le catalogue actuel pour Excel ou votre comptable.\ndownload\nExporter le catalogue\nTous\nTéléphones\nAccessoires\nPièces\ninventory_2\nAucun produit trouvé\n\nModifiez vos filtres ou ajoutez votre premier produit.\n\nAjouter un produit",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mdc-checkbox",
+      "DIV.mdc-checkbox"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "pos",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "POINT DE VENTE\nNouvelle vente\n\nScannez un code-barres ou recherchez un produit.\n\nhistory\nHistorique\nRechercher ou scanner\nsearch\nqr_code_scanner\n\nCommencez à saisir un nom, un SKU ou un IMEI.\n\nPanier\nEffacer\nshopping_cart\n\nLe panier est vide.",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          [
+            ".empty-search > p"
+          ],
+          [
+            ".empty-cart > p"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "sales",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "VENTES\nHistorique des ventes\n\nConsultez, imprimez ou annulez une vente.\n\nNouvelle vente\nNuméro\tDate\tTotal\tPayé\tReste\tStatut\t\nItems per page:\n25\n0 of 0",
+    "violations": [
+      {
+        "id": "empty-table-header",
+        "impact": "minor",
+        "nodes": [
+          [
+            ".cdk-column-actions"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-paginator-range-actions",
+      "BUTTON.mat-mdc-tooltip-trigger mat-mdc-paginator-navigation-previous mdc-icon-button mat-mdc-icon-button mat-mdc-button-disabled mat-mdc-button-disabled-interactive mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled",
+      "BUTTON.mat-mdc-tooltip-trigger mat-mdc-paginator-navigation-next mdc-icon-button mat-mdc-icon-button mat-mdc-button-disabled mat-mdc-button-disabled-interactive mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "repairs",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "RÉPARATIONS\nTickets de réparation\n\nSuivez les appareils reçus et leur avancement.\n\nadd\nNouveau ticket\nTickets ouverts uniquement\ntable_rows\nTableau\nview_kanban\nTableau kanban\nbuild_circle\nAucun ticket trouvé\n\nModifiez vos filtres ou créez un nouveau ticket.",
+    "violations": [
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          [
+            ".empty-state > p"
+          ]
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "nodes": [
+          [
+            ".mdc-checkbox__native-control"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mdc-checkbox",
+      "MAT-SELECT.mat-mdc-select status-filter",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "repairs/new",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "RÉPARATIONS\nNouveau ticket\nClient\nSélectionner un client\nMarque\nModèle\nIMEI\nProblème\nAccessoires laissés\nCoût estimé\nAcompte\nDate promise\nJours de garantie\nAnnuler\nEnregistrer",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "MAT-FORM-FIELD.mat-mdc-form-field mat-mdc-form-field-type-mat-select mat-form-field-appearance-outline mat-primary ng-untouched ng-pristine ng-invalid mat-form-field-animations-enabled",
+      "DIV.mat-mdc-text-field-wrapper mdc-text-field mdc-text-field--outlined",
+      "DIV.mat-mdc-form-field-flex",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-form-field-infix",
+      "MAT-SELECT.mat-mdc-select mat-mdc-select-required ng-untouched ng-pristine ng-invalid",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "customers",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "CLIENTS\nRépertoire clients\nadd\nAjouter un client\nRechercher\nDoit de l'argent\nNom\tTéléphone\tSolde\t\nkhalil\t0793456002\tDA0.00\t\nDétails\nedit",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": [
+          [
+            ".cdk-column-actions.mat-column-actions > .mdc-icon-button.mat-mdc-icon-button[mat-icon-button=\"\"]"
+          ]
+        ]
+      },
+      {
+        "id": "empty-table-header",
+        "impact": "minor",
+        "nodes": [
+          [
+            ".mat-mdc-header-row > .cdk-column-actions.mat-column-actions"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mdc-checkbox",
+      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "devices",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "APPAREILS\nRecherche IMEI\nIMEI\nRechercher",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "fr",
+    "route": "expenses",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "DÉPENSES\nListe des dépenses\nAjouter une dépense\nDu\nAu\nRechercher\nDate\tLibellé\tCatégorie\tMontant",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "fr",
+    "route": "reports",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "RAPPORTS\nFin de journée\nImprimer\nDate\nRechercher\nSales\n0\nCount\n0\nRepair income\n0\nExpenses\n0\nNet total\n0",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "fr",
+    "route": "settings",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "PARAMÈTRES\nParamètres de la boutique\nEnregistrer",
+    "violations": [
+      {
+        "id": "aria-input-field-name",
+        "impact": "serious",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-form-field-flex",
+      "DIV.mat-mdc-form-field-infix",
+      "MAT-SELECT.mat-mdc-select",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "dashboard",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "لوحة التحكم\nنظرة عامة\n\nنشاط المحل اليوم.\n\nrefresh\nتحديث\nمبيعات اليوم\nDA0.00\n0 مبيعات\nالربح الإجمالي\nDA0.00\nإيرادات الإصلاح\nDA0.00\nالإصلاحات المفتوحة\n0\nالديون المستحقة\nDA0.00\nآخر 7 أيام\n10-12\n10-13\n10-14\n10-15\n10-16\n10-17\n10-18\nجاهز للاستلام\n\nلا توجد عناصر\n\nمخزون منخفض\n\nلا توجد عناصر",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          [
+            "mat-card:nth-child(1) > span[_ngcontent-ng-c4079458809=\"\"]"
+          ],
+          [
+            "mat-card:nth-child(1) > small"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "ar",
+    "route": "inventory",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "المخزون\nالمنتجات\n\nإدارة الهواتف والملحقات وقطع الغيار.\n\nswap_vert\nاستيراد / تصدير\nadd\nإضافة منتج\nبحث\nsearch\nالنشطة فقط\nالمخزون المنخفض فقط\nحمّل الكتالوج الحالي إلى Excel أو للمحاسب.\ndownload\nتصدير الكتالوج\nالكل\nالهواتف\nالملحقات\nقطع الغيار\ninventory_2\nلم يتم العثور على منتجات\n\nغيّر الفلاتر أو أضف أول منتج.\n\nإضافة منتج",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mdc-checkbox",
+      "DIV.mdc-checkbox"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "pos",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "نقطة البيع\nبيع جديد\n\nامسح الرمز أو ابحث عن منتج.\n\nhistory\nالسجل\nبحث أو مسح\nsearch\nqr_code_scanner\n\nابدأ بكتابة الاسم أو SKU أو IMEI.\n\nالسلة\nمسح\nshopping_cart\n\nالسلة فارغة.",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "sales",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "المبيعات\nسجل المبيعات\n\nعرض أو طباعة أو إلغاء المبيعات.\n\nبيع جديد\nالرقم\tالتاريخ\tالمجموع\tالمدفوع\tالمتبقي\tالحالة\t\nItems per page:\n25\n0 of 0",
+    "violations": [
+      {
+        "id": "empty-table-header",
+        "impact": "minor",
+        "nodes": [
+          [
+            ".cdk-column-actions"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-paginator-range-actions",
+      "BUTTON.mat-mdc-tooltip-trigger mat-mdc-paginator-navigation-previous mdc-icon-button mat-mdc-icon-button mat-mdc-button-disabled mat-mdc-button-disabled-interactive mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled",
+      "BUTTON.mat-mdc-tooltip-trigger mat-mdc-paginator-navigation-next mdc-icon-button mat-mdc-icon-button mat-mdc-button-disabled mat-mdc-button-disabled-interactive mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "repairs",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "الإصلاحات\nتذاكر الإصلاح\n\nتتبع الأجهزة المستلمة وتقدم إصلاحها.\n\nadd\nتذكرة جديدة\nالتذاكر المفتوحة فقط\ntable_rows\nجدول\nview_kanban\nلوحة\nbuild_circle\nلم يتم العثور على تذاكر\n\nغيّر الفلاتر أو أنشئ تذكرة جديدة.",
+    "violations": [
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "nodes": [
+          [
+            ".mdc-checkbox__native-control"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mdc-checkbox",
+      "MAT-SELECT.mat-mdc-select status-filter",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "repairs/new",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "الإصلاحات\nتذكرة جديدة\nالزبون\nاختيار الزبون\nالعلامة\nالموديل\nIMEI\nالمشكلة\nالملحقات المتروكة\nالتكلفة المقدرة\nالعربون\nتاريخ التسليم المتوقع\nأيام الضمان\nإلغاء\nحفظ",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-form-field-flex",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-form-field-infix",
+      "MAT-SELECT.mat-mdc-select mat-mdc-select-required ng-untouched ng-pristine ng-invalid",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "customers",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "الزبائن\nدليل الزبائن\nadd\nإضافة زبون\nبحث\nعليه دين\nالاسم\tالهاتف\tالرصيد\t\nkhalil\t0793456002\tDA0.00\t\nالتفاصيل\nedit",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": [
+          [
+            ".cdk-column-actions.mat-column-actions > .mdc-icon-button.mat-mdc-icon-button[mat-icon-button=\"\"]"
+          ]
+        ]
+      },
+      {
+        "id": "empty-table-header",
+        "impact": "minor",
+        "nodes": [
+          [
+            ".mat-mdc-header-row > .cdk-column-actions.mat-column-actions"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch",
+      "DIV.mdc-checkbox",
+      "BUTTON.mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "devices",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "الأجهزة\nالبحث عن IMEI\nIMEI\nبحث",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-notch-piece mdc-notched-outline__notch"
+    ]
+  },
+  {
+    "lang": "ar",
+    "route": "expenses",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "المصاريف\nقائمة المصاريف\nإضافة مصروف\nمن\nإلى\nبحث\nالتاريخ\tالوصف\tالفئة\tالمبلغ",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "ar",
+    "route": "reports",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "التقارير\nنهاية اليوم\nطباعة\nالتاريخ\nبحث\nSales\n0\nCount\n0\nRepair income\n0\nExpenses\n0\nNet total\n0",
+    "violations": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "lang": "ar",
+    "route": "settings",
+    "errors": [],
+    "failed": [],
+    "external": [],
+    "body": "الإعدادات\nإعدادات المحل\nحفظ",
+    "violations": [
+      {
+        "id": "aria-input-field-name",
+        "impact": "serious",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "nodes": [
+          [
+            "mat-select"
+          ]
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "nodes": [
+          [
+            ".brand"
+          ],
+          [
+            ".toolbar-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": [
+      "DIV.mat-mdc-form-field-flex",
+      "DIV.mat-mdc-form-field-infix",
+      "MAT-SELECT.mat-mdc-select",
+      "DIV.mat-mdc-select-trigger",
+      "DIV.mat-mdc-select-arrow-wrapper",
+      "DIV.mat-mdc-select-arrow"
+    ]
+  }
+]
