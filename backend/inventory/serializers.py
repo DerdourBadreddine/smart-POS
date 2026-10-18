@@ -8,6 +8,7 @@ class PhoneUnitSerializer(serializers.ModelSerializer):
     product_name = serializers.CharField(source="product.name", read_only=True)
 
     class Meta:
+        read_only_fields = ["status"]
         model = PhoneUnit
         fields = [
             "id",

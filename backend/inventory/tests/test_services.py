@@ -54,7 +54,7 @@ def test_adjust_stock_rejects_imei_products(phone):
 def test_receive_phone_creates_unit_and_movement(phone):
     unit = receive_phone(
         product=phone,
-        imei="352099001234569",
+        imei="490154203237518",
         condition=PhoneUnit.Condition.NEW,
         cost_price=Decimal("100.00"),
         sell_price=Decimal("150.00"),

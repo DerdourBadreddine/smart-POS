@@ -25,7 +25,8 @@ def _next_number(current_date: date) -> str:
 
 @transaction.atomic
 def create_ticket(*, data: dict) -> RepairTicket:
-    deposit = Decimal(data.pop("deposit_paid", 0))
+    data = dict(data)
+    deposit = Decimal(data.get("deposit_paid", 0))
     if deposit < 0:
         raise ValidationError(_("Deposit cannot be negative."))
     ticket = RepairTicket.objects.create(
@@ -35,6 +36,27 @@ def create_ticket(*, data: dict) -> RepairTicket:
     )
     if ticket.amount_paid > ticket.total:
         raise ValidationError(_("Deposit cannot exceed the repair total."))
+    return ticket
+
+
+def _editable(ticket: RepairTicket) -> RepairTicket:
+    ticket = RepairTicket.objects.select_for_update().get(pk=ticket.pk)
+    if ticket.status in {RepairTicket.Status.DELIVERED, RepairTicket.Status.CANCELLED}:
+        raise ValidationError(_("This ticket cannot change status again."))
+    return ticket
+
+
+@transaction.atomic
+def update_ticket(*, ticket: RepairTicket, data: dict) -> RepairTicket:
+    ticket = _editable(ticket)
+    for field, value in data.items():
+        setattr(ticket, field, value)
+    if ticket.labor_cost < 0 or ticket.estimated_cost < 0 or ticket.warranty_days < 0:
+        raise ValidationError(_("Values cannot be negative."))
+    if ticket.balance < 0:
+        raise ValidationError(_("Payment cannot exceed the remaining balance."))
+    ticket.full_clean()
+    ticket.save()
     return ticket
 
 
@@ -65,9 +87,14 @@ def add_part(
     quantity: int,
     unit_price: Decimal | None = None,
 ) -> RepairPart:
+    ticket = _editable(ticket)
     if quantity < 1:
         raise ValidationError(_("Part quantity must be positive."))
-    product = Product.objects.select_for_update().get(pk=product_id)
+    product = Product.objects.select_for_update().filter(pk=product_id).first()
+    if product is None or not product.is_active:
+        raise ValidationError(_("The selected product does not exist."))
+    if unit_price is not None and (not Decimal(unit_price).is_finite() or Decimal(unit_price) < 0):
+        raise ValidationError(_("Unit price cannot be negative."))
     if product.track_imei:
         raise ValidationError(_("IMEI-tracked products cannot be used as repair parts."))
     if product.stock_qty < quantity:
@@ -92,9 +119,12 @@ def add_part(
 
 @transaction.atomic
 def remove_part(*, ticket: RepairTicket, part_id: int) -> None:
+    ticket = _editable(ticket)
     part = RepairPart.objects.select_for_update().filter(pk=part_id, ticket=ticket).first()
     if part is None:
         raise ValidationError(_("Repair part was not found."))
+    if ticket.total - part.quantity * part.unit_price < ticket.amount_paid:
+        raise ValidationError(_("Payment cannot exceed the remaining balance."))
     product = Product.objects.select_for_update().get(pk=part.product_id)
     product.stock_qty += part.quantity
     product.save(update_fields=["stock_qty", "updated_at"])
@@ -109,7 +139,7 @@ def remove_part(*, ticket: RepairTicket, part_id: int) -> None:
 
 @transaction.atomic
 def record_payment(*, ticket: RepairTicket, amount: Decimal) -> RepairTicket:
-    ticket = RepairTicket.objects.select_for_update().get(pk=ticket.pk)
+    ticket = _editable(ticket)
     amount = Decimal(amount)
     if amount <= 0:
         raise ValidationError(_("Payment amount must be positive."))

@@ -29,6 +29,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
 
 class ProductViewSet(viewsets.ModelViewSet):
+    http_method_names = ["get", "post", "put", "patch", "head", "options"]
     queryset = Product.objects.select_related("category").all()
     serializer_class = ProductSerializer
     permission_classes = [AllowAny]
@@ -96,39 +97,8 @@ class ProductViewSet(viewsets.ModelViewSet):
         except UnicodeDecodeError:
             return Response({"detail": _("CSV must be UTF-8 encoded.")}, status=status.HTTP_400_BAD_REQUEST)
 
-        delimiter = ";" if content.splitlines() and content.splitlines()[0].count(";") > content.splitlines()[0].count(",") else ","
-        rows = csv.DictReader(io.StringIO(content), delimiter=delimiter)
-        required = {"sku", "name", "category", "cost_price", "sell_price"}
-        if not required.issubset(set(rows.fieldnames or [])):
-            return Response({"detail": _("CSV is missing required columns.")}, status=status.HTTP_400_BAD_REQUEST)
-
-        dry_run = request.query_params.get("dry_run", "").lower() == "true"
-        result = {"created": 0, "updated": 0, "errors": []}
-        with transaction.atomic():
-            for line_number, row in enumerate(rows, start=2):
-                try:
-                    category, _ = Category.objects.get_or_create(
-                        name=row["category"].strip(),
-                        defaults={"kind": Category.Kind.ACCESSORY},
-                    )
-                    defaults = {
-                        "name": row["name"].strip(),
-                        "category": category,
-                        "brand": row.get("brand", "").strip(),
-                        "model_name": row.get("model_name", "").strip(),
-                        "cost_price": Decimal(row["cost_price"]),
-                        "sell_price": Decimal(row["sell_price"]),
-                        "stock_qty": int(row.get("stock_qty") or 0),
-                        "low_stock_threshold": int(row.get("low_stock_threshold") or 2),
-                        "warranty_days": int(row.get("warranty_days") or 0),
-                    }
-                    _, created = Product.objects.update_or_create(sku=row["sku"].strip(), defaults=defaults)
-                    result["created" if created else "updated"] += 1
-                except (KeyError, InvalidOperation, TypeError, ValueError) as exc:
-                    result["errors"].append({"line": line_number, "error": str(exc)})
-            if result["errors"] or dry_run:
-                transaction.set_rollback(True)
-        return Response(result)
+        from catalog.services import import_catalog
+        return Response(import_catalog(content=content, dry_run=request.query_params.get("dry_run", "").lower() == "true"))
 
     @action(detail=False, methods=["get"], url_path="export-csv")
     def export_csv(self, request):

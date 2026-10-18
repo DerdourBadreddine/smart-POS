@@ -9,6 +9,7 @@ from inventory.serializers import PhoneUnitSerializer, StockMovementSerializer
 
 
 class PhoneUnitViewSet(viewsets.ModelViewSet):
+    http_method_names = ["get", "post", "head", "options"]
     queryset = PhoneUnit.objects.select_related("product").all()
     serializer_class = PhoneUnitSerializer
     permission_classes = [AllowAny]

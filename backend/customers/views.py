@@ -8,6 +8,8 @@ from customers.models import Customer
 from customers.serializers import CustomerSerializer
 from sales.models import Sale, SalePayment
 from sales.serializers import SalePaymentSerializer, SaleSerializer
+from repairs.serializers import RepairTicketSerializer
+from customers.services import collect_payment
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
@@ -27,7 +29,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=["get"])
     def statement(self, request, pk=None):
         customer = self.get_object()
-        sales = customer.sales.filter(status=Sale.Status.COMPLETED).prefetch_related("payments", "items")
+        sales = customer.sales.filter(status=Sale.Status.COMPLETED).prefetch_related("payments", "items").order_by("created_at", "id")
         unpaid_sales = [sale for sale in sales if sale.balance > 0]
         payments = SalePayment.objects.filter(sale__customer=customer).select_related("sale")
         return Response(
@@ -35,5 +37,14 @@ class CustomerViewSet(viewsets.ModelViewSet):
                 "customer": CustomerSerializer(customer).data,
                 "unpaid_sales": SaleSerializer(unpaid_sales, many=True).data,
                 "payments": SalePaymentSerializer(payments, many=True).data,
+                "sales": SaleSerializer(sales, many=True).data,
+                "repairs": RepairTicketSerializer(customer.repair_tickets.all(), many=True).data,
             }
         )
+
+    @action(detail=True, methods=["post"])
+    def collect(self, request, pk=None):
+        serializer = SalePaymentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        collect_payment(customer=self.get_object(), **serializer.validated_data)
+        return Response(CustomerSerializer(self.get_object()).data)

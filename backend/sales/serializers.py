@@ -1,3 +1,4 @@
+from decimal import Decimal
 from rest_framework import serializers
 
 from sales.models import Sale, SaleItem, SalePayment
@@ -5,12 +6,14 @@ from sales.services import create_sale
 
 
 class SaleItemSerializer(serializers.ModelSerializer):
+    imei = serializers.CharField(source="phone_unit.imei", read_only=True, default="")
     class Meta:
         model = SaleItem
         fields = [
             "id",
             "product",
             "phone_unit",
+            "imei",
             "description",
             "quantity",
             "unit_price",
@@ -46,8 +49,15 @@ class SaleSerializer(serializers.ModelSerializer):
         ]
 
 
+class SaleInputItemSerializer(serializers.Serializer):
+    product_id = serializers.IntegerField(required=False, min_value=1)
+    phone_unit_id = serializers.IntegerField(required=False, min_value=1)
+    quantity = serializers.IntegerField(default=1, min_value=1)
+    unit_price = serializers.DecimalField(max_digits=10, decimal_places=2, min_value=Decimal("0"), required=False)
+
+
 class SaleCreateSerializer(serializers.Serializer):
-    items = serializers.ListField(child=serializers.DictField(), allow_empty=False)
+    items = SaleInputItemSerializer(many=True, allow_empty=False)
     customer_id = serializers.IntegerField(required=False, allow_null=True)
     discount = serializers.DecimalField(max_digits=10, decimal_places=2, default=0)
     payment_method = serializers.ChoiceField(choices=Sale.PaymentMethod.choices)

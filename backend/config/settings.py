@@ -81,7 +81,7 @@ LANGUAGES = [
     ("fr", "Français"),
     ("ar", "العربية"),
 ]
-LOCALE_PATHS = [BASE_DIR / "locale"]
+LOCALE_PATHS = [CODE_DIR / "locale"]
 TIME_ZONE = "Africa/Algiers"
 USE_I18N = True
 USE_TZ = True
@@ -94,10 +94,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
+    "EXCEPTION_HANDLER": "common.api.api_exception_handler",
     "DEFAULT_FILTER_BACKENDS": [
         "django_filters.rest_framework.DjangoFilterBackend",
     ],
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "DEFAULT_PAGINATION_CLASS": "common.pagination.ResourcePagination",
     "PAGE_SIZE": 25,
 }
 

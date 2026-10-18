@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from repairs.models import RepairPart, RepairTicket
-from repairs.services import create_ticket
+from repairs.services import create_ticket, update_ticket
 
 
 class RepairPartSerializer(serializers.ModelSerializer):
@@ -20,6 +20,7 @@ class RepairTicketSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RepairTicket
+        read_only_fields = ["number", "status", "amount_paid", "received_at", "completed_at", "delivered_at"]
         fields = [
             "id",
             "number",
@@ -50,6 +51,10 @@ class RepairTicketSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return create_ticket(data=validated_data)
+
+    def update(self, instance, validated_data):
+        validated_data.pop("deposit_paid", None)
+        return update_ticket(ticket=instance, data=validated_data)
 
 
 class RepairStatusSerializer(serializers.Serializer):

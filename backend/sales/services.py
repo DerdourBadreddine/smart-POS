@@ -27,7 +27,7 @@ def _next_number(prefix: str, current_date) -> str:
 def create_sale(
     *,
     items: list[dict],
-    customer_id: int | None,
+    customer_id: int | None = None,
     discount: Decimal = Decimal("0.00"),
     payment_method: str = Sale.PaymentMethod.CASH,
     amount_paid: Decimal = Decimal("0.00"),
@@ -56,13 +56,23 @@ def create_sale(
 
     sale_items: list[SaleItem] = []
     subtotal = Decimal("0.00")
+    requested: dict[int, int] = {}
+    seen_units: set[int] = set()
     for item in items:
-        quantity = int(item.get("quantity", 1))
+        try:
+            quantity = int(item.get("quantity", 1))
+        except (TypeError, ValueError):
+            raise ValidationError(_("Item quantity must be positive."))
+        if str(quantity) != str(item.get("quantity", 1)):
+            raise ValidationError(_("Item quantity must be positive."))
         if quantity < 1:
             raise ValidationError(_("Item quantity must be positive."))
         phone_unit_id = item.get("phone_unit_id")
         product_id = item.get("product_id")
         if phone_unit_id is not None:
+            if phone_unit_id in seen_units:
+                raise ValidationError(_("The selected phone unit is not in stock."))
+            seen_units.add(phone_unit_id)
             if quantity != 1:
                 raise ValidationError(_("A phone unit sale must have quantity one."))
             unit = (
@@ -78,7 +88,9 @@ def create_sale(
             unit_cost = unit.cost_price
             phone_unit = unit
         elif product_id is not None:
-            product = Product.objects.select_for_update().get(pk=product_id)
+            product = Product.objects.select_for_update().filter(pk=product_id).first()
+            if product is None:
+                raise ValidationError(_("The selected product does not exist."))
             if product.track_imei:
                 raise ValidationError(_("This product must be sold by phone unit."))
             if product.stock_qty < quantity:
@@ -89,7 +101,12 @@ def create_sale(
         else:
             raise ValidationError(_("Each sale item needs a product or phone unit."))
 
-        if unit_price < 0:
+        if not product.is_active:
+            raise ValidationError(_("The selected product is inactive."))
+        requested[product.pk] = requested.get(product.pk, 0) + quantity
+        if requested[product.pk] > product.stock_qty:
+            raise ValidationError(_("Insufficient stock for %(product)s.") % {"product": product.name})
+        if not unit_price.is_finite() or unit_price < 0:
             raise ValidationError(_("Unit price cannot be negative."))
         line_total = unit_price * quantity
         sale_items.append(

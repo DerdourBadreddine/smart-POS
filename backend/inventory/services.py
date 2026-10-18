@@ -29,7 +29,7 @@ def receive_phone(
     if PhoneUnit.objects.filter(imei=imei).exists():
         raise ValidationError(_("A phone unit with this IMEI already exists."))
 
-    unit = PhoneUnit.objects.create(
+    unit = PhoneUnit(
         product=product,
         imei=imei,
         condition=condition,
@@ -39,6 +39,8 @@ def receive_phone(
         supplier=supplier,
         notes=notes,
     )
+    unit.full_clean()
+    unit.save()
     product.stock_qty += 1
     product.save(update_fields=["stock_qty", "updated_at"])
     StockMovement.objects.create(

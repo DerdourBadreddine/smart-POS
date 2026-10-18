@@ -16,6 +16,11 @@ from repairs.services import add_part, change_status, record_payment, remove_par
 
 
 class RepairTicketViewSet(viewsets.ModelViewSet):
+    http_method_names = ["get", "post", "put", "patch", "delete", "head", "options"]
+
+    def destroy(self, request, *args, **kwargs):
+        from rest_framework.exceptions import MethodNotAllowed
+        raise MethodNotAllowed("DELETE")
     queryset = RepairTicket.objects.select_related("customer").prefetch_related("parts__product").all()
     serializer_class = RepairTicketSerializer
     permission_classes = [AllowAny]

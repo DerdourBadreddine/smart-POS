@@ -1,0 +1,131 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\nLanguage: ar\n"
+
+msgid "A customer is required for a credit sale."
+msgstr "يجب تحديد عميل للبيع بالدين."
+
+msgid "A phone unit sale must have quantity one."
+msgstr "يجب أن تكون كمية الهاتف واحداً."
+
+msgid "A phone unit with this IMEI already exists."
+msgstr "يوجد هاتف بهذا الرقم بالفعل."
+
+msgid "A sale must contain at least one item."
+msgstr "يجب أن تحتوي عملية البيع على منتج واحد على الأقل."
+
+msgid "Amount paid must be between zero and the sale total."
+msgstr "يجب أن يكون المبلغ المدفوع بين الصفر وإجمالي البيع."
+
+msgid "CSV file is required."
+msgstr "ملف CSV مطلوب."
+
+msgid "CSV is missing required columns."
+msgstr "يفتقد ملف CSV أعمدة مطلوبة."
+
+msgid "CSV must be UTF-8 encoded."
+msgstr "يجب ترميز ملف CSV بصيغة UTF-8."
+
+msgid "Deposit cannot be negative."
+msgstr "لا يمكن أن يكون العربون سالباً."
+
+msgid "Deposit cannot exceed the repair total."
+msgstr "لا يمكن أن يتجاوز العربون إجمالي الإصلاح."
+
+msgid "Discount cannot be negative."
+msgstr "لا يمكن أن يكون الخصم سالباً."
+
+msgid "Discount cannot exceed the subtotal."
+msgstr "لا يمكن أن يتجاوز الخصم المجموع الفرعي."
+
+msgid "Each sale item needs a product or phone unit."
+msgstr "يجب تحديد منتج أو هاتف لكل بند."
+
+msgid "IMEI check digit is invalid."
+msgstr "رقم التحقق من IMEI غير صالح."
+
+msgid "IMEI must contain exactly 15 digits."
+msgstr "يجب أن يحتوي IMEI على 15 رقماً بالضبط."
+
+msgid "IMEI-tracked products cannot be used as repair parts."
+msgstr "لا يمكن استخدام الهواتف المتتبعة برقم IMEI كقطع إصلاح."
+
+msgid "IMEI-tracked products must be received one unit at a time."
+msgstr "يجب استلام الهواتف واحداً تلو الآخر حسب IMEI."
+
+msgid "Insufficient stock for %(product)s."
+msgstr "المخزون غير كاف للمنتج %(product)s."
+
+msgid "Invalid CSV row."
+msgstr "سطر CSV غير صالح."
+
+msgid "Invalid money amount."
+msgstr "المبلغ المالي غير صالح."
+
+msgid "Invalid payment method."
+msgstr "طريقة الدفع غير صالحة."
+
+msgid "Invalid repair status."
+msgstr "حالة الإصلاح غير صالحة."
+
+msgid "Invalid stock movement reason."
+msgstr "سبب حركة المخزون غير صالح."
+
+msgid "Item quantity must be positive."
+msgstr "يجب أن تكون الكمية عدداً صحيحاً موجباً."
+
+msgid "Only IMEI-tracked products can receive phone units."
+msgstr "يمكن استلام الهواتف للمنتجات المتتبعة برقم IMEI فقط."
+
+msgid "Only completed sales can be voided."
+msgstr "يمكن إلغاء المبيعات المكتملة فقط."
+
+msgid "Part quantity must be positive."
+msgstr "يجب أن تكون كمية القطع موجبة."
+
+msgid "Payment amount must be positive."
+msgstr "يجب أن يكون مبلغ الدفع موجباً."
+
+msgid "Payment cannot exceed the remaining balance."
+msgstr "لا يمكن أن يتجاوز الدفع الرصيد المتبقي."
+
+msgid "Payments can only be added to completed sales."
+msgstr "يمكن إضافة دفعات إلى المبيعات المكتملة فقط."
+
+msgid "Repair part was not found."
+msgstr "قطعة الإصلاح غير موجودة."
+
+msgid "Stock adjustment cannot be zero."
+msgstr "لا يمكن أن يكون تعديل المخزون صفراً."
+
+msgid "Stock cannot become negative."
+msgstr "لا يمكن أن يصبح المخزون سالباً."
+
+msgid "Stock tracking cannot change while units exist."
+msgstr "لا يمكن تغيير طريقة التتبع مع وجود وحدات."
+
+msgid "The repair balance must be zero before delivery."
+msgstr "يجب تسديد رصيد الإصلاح قبل التسليم."
+
+msgid "The selected customer does not exist."
+msgstr "العميل المحدد غير موجود."
+
+msgid "The selected phone unit is not in stock."
+msgstr "الهاتف المحدد غير متوفر في المخزون."
+
+msgid "The selected product does not exist."
+msgstr "المنتج المحدد غير موجود."
+
+msgid "The selected product is inactive."
+msgstr "المنتج المحدد غير نشط."
+
+msgid "This product must be sold by phone unit."
+msgstr "يجب بيع هذا المنتج حسب رقم IMEI."
+
+msgid "This ticket cannot change status again."
+msgstr "هذه التذكرة مغلقة ولا يمكن تعديلها."
+
+msgid "Unit price cannot be negative."
+msgstr "لا يمكن أن يكون سعر الوحدة سالباً."
+
+msgid "Values cannot be negative."
+msgstr "لا يمكن أن تكون القيم سالبة."

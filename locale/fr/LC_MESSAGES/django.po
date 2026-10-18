@@ -1,0 +1,131 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\nLanguage: fr\n"
+
+msgid "A customer is required for a credit sale."
+msgstr "Un client est obligatoire pour une vente à crédit."
+
+msgid "A phone unit sale must have quantity one."
+msgstr "Un téléphone IMEI doit avoir une quantité de un."
+
+msgid "A phone unit with this IMEI already exists."
+msgstr "Un téléphone avec cet IMEI existe déjà."
+
+msgid "A sale must contain at least one item."
+msgstr "Une vente doit contenir au moins un article."
+
+msgid "Amount paid must be between zero and the sale total."
+msgstr "Le paiement doit être compris entre zéro et le total."
+
+msgid "CSV file is required."
+msgstr "Un fichier CSV est obligatoire."
+
+msgid "CSV is missing required columns."
+msgstr "Des colonnes obligatoires manquent dans le CSV."
+
+msgid "CSV must be UTF-8 encoded."
+msgstr "Le fichier CSV doit être encodé en UTF-8."
+
+msgid "Deposit cannot be negative."
+msgstr "L’acompte ne peut pas être négatif."
+
+msgid "Deposit cannot exceed the repair total."
+msgstr "L’acompte ne peut pas dépasser le total de la réparation."
+
+msgid "Discount cannot be negative."
+msgstr "La remise ne peut pas être négative."
+
+msgid "Discount cannot exceed the subtotal."
+msgstr "La remise ne peut pas dépasser le sous-total."
+
+msgid "Each sale item needs a product or phone unit."
+msgstr "Chaque ligne doit contenir un produit ou un téléphone."
+
+msgid "IMEI check digit is invalid."
+msgstr "Le chiffre de contrôle IMEI est invalide."
+
+msgid "IMEI must contain exactly 15 digits."
+msgstr "L’IMEI doit contenir exactement 15 chiffres."
+
+msgid "IMEI-tracked products cannot be used as repair parts."
+msgstr "Un téléphone suivi par IMEI ne peut pas servir de pièce."
+
+msgid "IMEI-tracked products must be received one unit at a time."
+msgstr "Les téléphones doivent être réceptionnés un par un par IMEI."
+
+msgid "Insufficient stock for %(product)s."
+msgstr "Stock insuffisant pour %(product)s."
+
+msgid "Invalid CSV row."
+msgstr "Ligne CSV invalide."
+
+msgid "Invalid money amount."
+msgstr "Montant monétaire invalide."
+
+msgid "Invalid payment method."
+msgstr "Mode de paiement invalide."
+
+msgid "Invalid repair status."
+msgstr "Statut de réparation invalide."
+
+msgid "Invalid stock movement reason."
+msgstr "Motif de mouvement de stock invalide."
+
+msgid "Item quantity must be positive."
+msgstr "La quantité doit être un entier positif."
+
+msgid "Only IMEI-tracked products can receive phone units."
+msgstr "Seuls les produits suivis par IMEI peuvent recevoir un téléphone."
+
+msgid "Only completed sales can be voided."
+msgstr "Seules les ventes terminées peuvent être annulées."
+
+msgid "Part quantity must be positive."
+msgstr "La quantité de pièces doit être positive."
+
+msgid "Payment amount must be positive."
+msgstr "Le montant du paiement doit être positif."
+
+msgid "Payment cannot exceed the remaining balance."
+msgstr "Le paiement ne peut pas dépasser le solde restant."
+
+msgid "Payments can only be added to completed sales."
+msgstr "Un paiement nécessite une vente terminée."
+
+msgid "Repair part was not found."
+msgstr "Pièce de réparation introuvable."
+
+msgid "Stock adjustment cannot be zero."
+msgstr "La variation de stock ne peut pas être zéro."
+
+msgid "Stock cannot become negative."
+msgstr "Le stock ne peut pas devenir négatif."
+
+msgid "Stock tracking cannot change while units exist."
+msgstr "Le suivi ne peut pas changer tant que des unités existent."
+
+msgid "The repair balance must be zero before delivery."
+msgstr "Le solde de la réparation doit être réglé avant la livraison."
+
+msgid "The selected customer does not exist."
+msgstr "Le client sélectionné n’existe pas."
+
+msgid "The selected phone unit is not in stock."
+msgstr "Ce téléphone n’est pas disponible en stock."
+
+msgid "The selected product does not exist."
+msgstr "Le produit sélectionné n’existe pas."
+
+msgid "The selected product is inactive."
+msgstr "Le produit sélectionné est inactif."
+
+msgid "This product must be sold by phone unit."
+msgstr "Ce produit doit être vendu par IMEI."
+
+msgid "This ticket cannot change status again."
+msgstr "Ce ticket est clôturé et ne peut plus être modifié."
+
+msgid "Unit price cannot be negative."
+msgstr "Le prix unitaire ne peut pas être négatif."
+
+msgid "Values cannot be negative."
+msgstr "Les valeurs ne peuvent pas être négatives."

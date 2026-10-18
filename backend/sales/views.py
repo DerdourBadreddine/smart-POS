@@ -11,6 +11,7 @@ from sales.services import record_payment, void_sale
 
 
 class SaleViewSet(viewsets.ModelViewSet):
+    http_method_names = ["get", "post", "head", "options"]
     queryset = Sale.objects.prefetch_related("items", "payments").select_related("customer").all()
     permission_classes = [AllowAny]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]

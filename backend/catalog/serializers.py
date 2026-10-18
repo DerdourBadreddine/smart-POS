@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from catalog.models import Category, Product
+from catalog.services import save_product
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -12,6 +13,12 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source="category.name", read_only=True)
     category_kind = serializers.CharField(source="category.kind", read_only=True)
+
+    def create(self, validated_data):
+        return save_product(data=validated_data)
+
+    def update(self, instance, validated_data):
+        return save_product(product=instance, data=validated_data)
 
     class Meta:
         model = Product
@@ -41,8 +48,6 @@ class ProductLookupSerializer(serializers.ModelSerializer):
     category_kind = serializers.CharField(source="category.kind", read_only=True)
     matched_phone_unit_id = serializers.IntegerField(read_only=True, allow_null=True, default=None)
     matched_imei = serializers.CharField(read_only=True, allow_null=True, default=None)
-    matched_phone_unit_id = serializers.IntegerField(read_only=True)
-    matched_imei = serializers.CharField(read_only=True)
 
     class Meta:
         model = Product
