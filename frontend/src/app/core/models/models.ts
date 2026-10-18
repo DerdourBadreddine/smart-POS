@@ -99,6 +99,8 @@ export interface SaleItem {
 }
 
 export interface Sale {
+  customer_name?: string;
+  change_due?: number;
   id: number;
   number: string;
   customer: number | null;
@@ -134,6 +136,7 @@ export interface RepairPart {
 }
 
 export interface RepairTicket {
+  warranty_until?: string | null;
   id: number;
   number: string;
   customer: number;
@@ -196,9 +199,9 @@ export interface ShopSettings {
 }
 
 export interface DeviceHistory {
-  phone_unit: PhoneUnit | null;
-  sales: Array<{ number: string; date: string; customer: string | null; price: number; warranty_until: string | null }>;
-  repairs: Array<{ number: string; status: string; received_at: string; delivered_at: string | null; warranty_days: number }>;
+  phone_unit: {id:number; imei:string; product:{id:number;name:string;sku:string};status:PhoneUnit['status'];purchased_at:string} | null;
+  sales: Array<{ id:number; number: string; date: string; customer: string | null; price: number; warranty_until: string | null }>;
+  repairs: Array<{ id:number; number: string; status: string; received_at: string; delivered_at: string | null; warranty_days: number }>;
   warranty: {
     active: boolean;
     ends_on: string | null;

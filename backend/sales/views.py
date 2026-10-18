@@ -55,7 +55,7 @@ class SaleViewSet(viewsets.ModelViewSet):
         try:
             sale = serializer.save()
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(SaleSerializer(sale).data, status=status.HTTP_201_CREATED)
 
     @action(detail=True, methods=["post"])
@@ -63,7 +63,7 @@ class SaleViewSet(viewsets.ModelViewSet):
         try:
             sale = void_sale(self.get_object())
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(SaleSerializer(sale).data)
 
     @action(detail=True, methods=["post"])
@@ -73,5 +73,5 @@ class SaleViewSet(viewsets.ModelViewSet):
         try:
             payment = record_payment(sale=self.get_object(), **serializer.validated_data)
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(SalePaymentSerializer(payment).data, status=status.HTTP_201_CREATED)

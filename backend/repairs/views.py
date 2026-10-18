@@ -42,7 +42,7 @@ class RepairTicketViewSet(viewsets.ModelViewSet):
         try:
             ticket = change_status(ticket=self.get_object(), new_status=serializer.validated_data["status"])
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(RepairTicketSerializer(ticket).data)
 
     @action(detail=True, methods=["post"], url_path="add-part")
@@ -52,7 +52,7 @@ class RepairTicketViewSet(viewsets.ModelViewSet):
         try:
             part = add_part(ticket=self.get_object(), **serializer.validated_data)
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         from repairs.serializers import RepairPartSerializer
 
         return Response(RepairPartSerializer(part).data, status=status.HTTP_201_CREATED)
@@ -62,7 +62,7 @@ class RepairTicketViewSet(viewsets.ModelViewSet):
         try:
             remove_part(ticket=self.get_object(), part_id=int(part_id))
         except (ValidationError, ValueError) as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=True, methods=["post"])
@@ -72,5 +72,5 @@ class RepairTicketViewSet(viewsets.ModelViewSet):
         try:
             ticket = record_payment(ticket=self.get_object(), **serializer.validated_data)
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(RepairTicketSerializer(ticket).data)

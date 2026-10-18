@@ -65,3 +65,15 @@ def test_unknown_imei_has_no_warranty_or_history():
     assert response.data['sales']==[]
     assert response.data['repairs']==[]
     assert response.data['warranty']=={'active':False,'ends_on':None,'source':None}
+
+
+@pytest.mark.django_db
+def test_repair_warranty_uses_shop_calendar_date_at_midnight():
+    from datetime import datetime, timezone as utc_timezone
+    from repairs.serializers import RepairTicketSerializer
+    customer=Customer.objects.create(name='Midnight warranty')
+    ticket=RepairTicket.objects.create(number='R-MIDNIGHT',customer=customer,device_brand='Test',device_model='Phone',issue_description='Broken',imei='490154203237518',status='DELIVERED',delivered_at=datetime(2026,10,17,23,30,tzinfo=utc_timezone.utc),warranty_days=30)
+    response=APIClient().get('/api/devices/lookup/?imei=490154203237518')
+    from datetime import date
+    assert response.data['warranty']['ends_on']==date(2026,11,17)
+    assert RepairTicketSerializer(ticket).data['warranty_until']==date(2026,11,17)

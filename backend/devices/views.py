@@ -1,4 +1,5 @@
 from datetime import date, timedelta
+from django.utils import timezone
 
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -22,7 +23,7 @@ class DeviceLookupView(APIView):
         repairs = list(RepairTicket.objects.filter(imei=imei).select_related("customer"))
         sale_dates = [item.warranty_until for item in sale_items if item.warranty_until]
         repair_dates = [
-            ticket.delivered_at.date() + timedelta(days=ticket.warranty_days)
+            timezone.localdate(ticket.delivered_at) + timedelta(days=ticket.warranty_days)
             for ticket in repairs
             if ticket.delivered_at and ticket.warranty_days > 0
         ]
@@ -36,14 +37,16 @@ class DeviceLookupView(APIView):
                         "imei": unit.imei,
                         "product": {"id": unit.product_id, "name": unit.product.name, "sku": unit.product.sku},
                         "status": unit.status,
+                        "purchased_at": unit.purchased_at,
                     }
                     if unit
                     else None
                 ),
                 "sales": [
                     {
+                        "id": item.sale_id,
                         "number": item.sale.number,
-                        "date": item.sale.created_at.date(),
+                        "date": timezone.localdate(item.sale.created_at),
                         "customer": item.sale.customer.name if item.sale.customer else None,
                         "price": item.unit_price,
                         "warranty_until": item.warranty_until,
@@ -52,6 +55,7 @@ class DeviceLookupView(APIView):
                 ],
                 "repairs": [
                     {
+                        "id": ticket.pk,
                         "number": ticket.number,
                         "status": ticket.status,
                         "received_at": ticket.received_at,
@@ -61,7 +65,7 @@ class DeviceLookupView(APIView):
                     for ticket in repairs
                 ],
                 "warranty": {
-                    "active": warranty_end is not None and warranty_end >= date.today(),
+                    "active": warranty_end is not None and warranty_end >= timezone.localdate(),
                     "ends_on": warranty_end,
                     "source": source if warranty_end else None,
                 },

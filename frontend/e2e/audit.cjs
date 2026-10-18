@@ -14,6 +14,7 @@ const path = require('node:path');
   const base = process.env.BASE_URL || 'http://127.0.0.1:8765';
   const phones = await (await api.request.get(`${base}/api/products/?category__kind=PHONE`)).json();
   const repairs = await (await api.request.get(`${base}/api/repairs/`)).json();
+  const soldUnits = await (await api.request.get(`${base}/api/phone-units/?status=SOLD`)).json();
   if(stage==='after' && phones.results?.length) routes.push(`inventory/phones/${phones.results[0].id}`);
   if(stage==='after' && repairs.results?.length) routes.push(`repairs/${repairs.results[0].id}`);
   await api.close();
@@ -29,6 +30,11 @@ const path = require('node:path');
       page.on('pageerror', onError); page.on('response', onResponse); page.on('request', onRequest);
       await page.goto(`${process.env.BASE_URL || 'http://127.0.0.1:8765'}/${route}`);
       await page.waitForTimeout(500);
+      if(stage==='after' && route==='devices' && soldUnits.results?.length){
+        await page.locator('input').fill(soldUnits.results[0].imei);
+        await page.locator('form button').click();
+        await page.waitForTimeout(300);
+      }
       await page.screenshot({ path: path.join(out, `${lang}-${route.replaceAll('/', '-')}.png`), fullPage: true });
       entry.body = (await page.locator('main').innerText()).slice(0, 4000);
       entry.violations = (await new AxeBuilder({ page }).analyze()).violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) }));

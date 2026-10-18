@@ -49,8 +49,7 @@ def run_migrations() -> None:
     (ROOT / "backend").mkdir(parents=True, exist_ok=True)
     os.environ["SMART_POS_DATA_DIR"] = str(ROOT)
     os.environ["SMART_POS_FRONTEND_DIR"] = str(BUNDLE_ROOT / "frontend_dist")
-    if getattr(sys, "frozen", False):
-        os.environ["DJANGO_DEBUG"] = "0"
+    os.environ["DJANGO_DEBUG"] = "0"
     if getattr(sys, "frozen", False):
         sys.path.insert(0, str(BACKEND))
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
@@ -71,8 +70,7 @@ def start_server():
     sys.path.insert(0, str(BACKEND))
     os.environ["SMART_POS_DATA_DIR"] = str(ROOT)
     os.environ["SMART_POS_FRONTEND_DIR"] = str(BUNDLE_ROOT / "frontend_dist")
-    if getattr(sys, "frozen", False):
-        os.environ["DJANGO_DEBUG"] = "0"
+    os.environ["DJANGO_DEBUG"] = "0"
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     from config.wsgi import application
 

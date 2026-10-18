@@ -84,7 +84,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         try:
             product = adjust_stock(product=product, **serializer.validated_data)
         except ValidationError as exc:
-            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": getattr(exc, "messages", [str(exc)])}, status=status.HTTP_400_BAD_REQUEST)
         return Response(ProductSerializer(product).data)
 
     @action(detail=False, methods=["post"], url_path="import-csv")

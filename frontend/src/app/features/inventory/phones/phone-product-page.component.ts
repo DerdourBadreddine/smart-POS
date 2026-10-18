@@ -85,7 +85,7 @@ export class PhoneProductPageComponent {
     if (!product) return;
     this.dialog.open(ReceivePhoneDialogComponent, {
       width: 'min(42rem, calc(100vw - 2rem))',
-      data: { product },
+      data: { product, imei: this.route.snapshot.queryParamMap.get('imei') || '' },
     }).afterClosed().subscribe((saved: boolean | undefined) => {
       if (saved) {
         this.productsApi.get(this.productId).subscribe((updated) => this.product.set(updated));

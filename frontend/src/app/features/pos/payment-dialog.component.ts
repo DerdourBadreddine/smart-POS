@@ -17,6 +17,7 @@ export interface PaymentResult {
   customerId: number | null;
   paymentMethod: Sale['payment_method'];
   amountPaid: number;
+  tendered: number;
 }
 
 @Component({
@@ -53,6 +54,6 @@ export class PaymentDialogComponent {
       this.form.markAllAsTouched();
       return;
     }
-    this.ref.close({ customerId, paymentMethod: this.form.controls.paymentMethod.value, amountPaid: Math.min(amount, this.data.total) } satisfies PaymentResult);
+    this.ref.close({ customerId, paymentMethod: this.form.controls.paymentMethod.value, amountPaid: Math.min(amount, this.data.total), tendered: amount } satisfies PaymentResult);
   }
 }

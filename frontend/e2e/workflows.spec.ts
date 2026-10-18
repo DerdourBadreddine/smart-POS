@@ -72,6 +72,8 @@ test('inventory forms, limits, credit refusal, settings, repair refusal and keyb
     await page.keyboard.press('F9');await page.getByRole('dialog').locator('input').fill('1');await page.getByRole('button',{name:t.pos.confirmSale,exact:true}).click();await expect(page.getByRole('dialog')).toContainText(t.pos.creditCustomerRequired);
     await page.getByRole('dialog').locator('input').fill('200');const sold=page.waitForResponse(r=>r.url().endsWith('/api/sales/')&&r.request().method()==='POST');await page.getByRole('button',{name:t.pos.confirmSale,exact:true}).click();expect(Number((await(await sold).json()).total)).toBe(160);
     await expect(page.locator('#print-receipt')).toContainText((lang==='fr'?'FR':'AR')+' Footer '+id);
+    await expect(page.locator('#print-receipt')).toContainText(t.pos.changeDue);
+    await expect(page.locator('#print-receipt')).toContainText(lang==='fr'?'40,00':'40.00');
     await page.getByRole('button',{name:t.common.close,exact:true}).click();
     await page.locator('input').first().fill('FORM'+id);await page.locator('input').first().press('Enter');await expect(page.locator('.cart-line')).toHaveCount(0);
   }finally{await request.put('/api/settings/1/',{data:settings});}
@@ -146,18 +148,25 @@ test('checkout, credit collection, void, repair, expenses and report', async ({ 
   await page.locator('[formControlName=issue_description]').fill('Broken screen');
   await page.locator('[formControlName=labor_cost]').fill('30');
   await page.locator('[formControlName=deposit_paid]').fill('10');
+  await page.locator('[formControlName=warranty_days]').fill('30');
   const ticketResponse=page.waitForResponse(r=>r.url().endsWith('/api/repairs/') && r.request().method()==='POST');
   await page.getByRole('button',{name:t.common.save,exact:true}).click();
   const ticket=await (await ticketResponse).json();
   expect(Number(ticket.deposit_paid)).toBe(10);
   await expect(page).toHaveURL(new RegExp(`/repairs/${ticket.id}$`));
-  await page.locator('input').first().fill(id);
+  const otherPart=await(await request.post('/api/products/',{data:{name:`Cable ${id} B`,sku:`other-${id}`,category:category.id,cost_price:'5',sell_price:'25',stock_qty:10}})).json();
+  await page.locator('input').first().fill(product.name);
+  await page.getByRole('button',{name:t.common.add,exact:true}).click();
+  await page.getByRole('combobox',{name:t.repairs.selectPart,exact:true}).press('Enter');
+  await page.getByRole('option',{name:`${product.name} · ${product.sku}`,exact:true}).click();
+  expect((await(await request.get(`/api/products/${product.id}/`)).json()).stock_qty).toBe(10);
   const addPart=page.waitForResponse(r=>r.url().endsWith('/add-part/'));
   await page.getByRole('button',{name:t.common.add,exact:true}).click();
   const part=await (await addPart).json();
   expect((await (await request.get(`/api/products/${product.id}/`)).json()).stock_qty).toBe(9);
   await page.getByRole('button',{name:t.common.remove,exact:true}).click();
   await expect.poll(async()=>(await (await request.get(`/api/products/${product.id}/`)).json()).stock_qty).toBe(10);
+  expect((await(await request.get(`/api/products/${otherPart.id}/`)).json()).stock_qty).toBe(10);
   await page.getByRole('button',{name:t.repairs.recordPayment,exact:true}).click();
   const payment=page.waitForResponse(r=>r.url().endsWith('/payment/'));
   await page.getByRole('dialog').getByRole('button',{name:t.common.confirm,exact:true}).click();
@@ -165,9 +174,13 @@ test('checkout, credit collection, void, repair, expenses and report', async ({ 
   await page.locator('mat-select').first().click();
   await page.getByRole('option',{name:t.repairs.statuses.READY,exact:true}).click();
   await expect(page.getByRole('button',{name:t.repairs.whatsapp})).toBeVisible();
+  await page.evaluate(()=>{window.open=(url)=>{document.body.dataset['whatsapp']=String(url);return null;};});
+  await page.getByRole('button',{name:t.repairs.whatsapp}).click();
+  await expect(page.locator('body')).toHaveAttribute('data-whatsapp',/^https:\/\/wa\.me\/213555123456\?text=/);
   await page.locator('mat-select').first().click();
   await page.getByRole('option',{name:t.repairs.statuses.DELIVERED,exact:true}).click();
   await expect.poll(async()=> (await (await request.get(`/api/repairs/${ticket.id}/`)).json()).status).toBe('DELIVERED');
+  await expect(page.locator('.print-document')).toContainText(t.pos.warranty);
   await page.pdf({path:path.join(printDirectory,`${testInfo.project.name}-repair.pdf`),format:'A4',printBackground:true});
 
   await page.goto('/expenses');
@@ -227,7 +240,11 @@ test('receive valid IMEI, reject invalid check digit, scan sale, CSV preview and
   await expect(page.locator('#print-receipt')).toContainText(imei);
   await expect(page.locator('#print-receipt')).toContainText(t.pos.warranty);
   const device=await(await request.get('/api/devices/lookup/?imei='+imei)).json();expect(device.warranty.active).toBe(true);
-  await page.goto('/devices');await page.locator('input').fill(imei);await page.getByRole('button',{name:t.common.search,exact:true}).click();await expect(page.locator('.banner')).toContainText(t.devices.underWarranty);
+  await page.goto('/devices');await page.locator('input').fill(imei.slice(0,14));await page.getByRole('button',{name:t.common.search,exact:true}).click();await expect(page.locator('mat-error')).toContainText(t.inventory.imeiFormat);
+  await page.locator('input').fill(imei);await page.getByRole('button',{name:t.common.search,exact:true}).click();await expect(page.locator('.banner')).toContainText(t.devices.underWarranty);
+  await page.getByRole('button',{name:sale.number,exact:true}).click();await expect(page.locator('#print-receipt')).toContainText(imei);await page.getByRole('button',{name:t.common.close,exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.locator('input').fill('490154203237518');await page.getByRole('button',{name:t.common.search,exact:true}).click();await expect(page.locator('main')).toContainText(t.devices.unknown);
+  await page.getByRole('link',{name:t.inventory.receivePhone,exact:true}).click();await page.locator('input').first().fill(product.sku);await page.getByRole('link',{name:product.name,exact:true}).click();await page.getByRole('button',{name:t.inventory.receivePhone,exact:true}).first().click();await expect(page.locator('[formControlName=imei]')).toHaveValue('490154203237518');await page.getByRole('button',{name:t.common.cancel,exact:true}).click();
   await page.goto('/inventory');await page.getByRole('button',{name:t.inventory.csv.importExport,exact:true}).click();
   const csv=`sku;name;category;cost_price;sell_price;stock_qty\nCSV${id};Câble كابل ${id};Import;1.25;2.50;3\n`;
   await page.locator('input[type=file]').setInputFiles({name:'catalog.csv',mimeType:'text/csv',buffer:Buffer.from('\ufeff'+csv)});

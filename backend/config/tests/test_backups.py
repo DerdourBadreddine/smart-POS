@@ -44,3 +44,15 @@ def test_launcher_finds_standard_x86_edge_and_uses_writable_profile(tmp_path,mon
     command=launcher.browser_command()
     assert command[0]==str(browser)
     assert f'--user-data-dir={tmp_path / "launcher" / "profile"}' in command
+
+
+def test_source_launcher_uses_production_frontend_mode(tmp_path,monkeypatch):
+    launcher=load('launcher')
+    launcher.ROOT=tmp_path
+    monkeypatch.setattr(launcher.sys,'frozen',False,raising=False)
+    for key in ('SMART_POS_DATA_DIR','SMART_POS_FRONTEND_DIR','DJANGO_DEBUG'):
+        monkeypatch.setenv(key,'placeholder')
+    captured=[]
+    monkeypatch.setattr(launcher.subprocess,'run',lambda *args,**kwargs:captured.append(kwargs['env']))
+    launcher.run_migrations()
+    assert captured[0]['DJANGO_DEBUG']=='0'

@@ -31,15 +31,15 @@ export class ReceivePhoneDialogComponent {
   private readonly api = inject(PhoneUnitsApi);
   private readonly ref = inject(MatDialogRef<ReceivePhoneDialogComponent>);
 
-  readonly data: { product: Product };
+  readonly data: { product: Product; imei?: string };
   readonly form;
   saving = false;
 
-  constructor(@Inject(MAT_DIALOG_DATA) data: { product: Product }) {
+  constructor(@Inject(MAT_DIALOG_DATA) data: { product: Product; imei?: string }) {
     this.data = data;
     this.form = this.fb.nonNullable.group({
       product: [data.product.id],
-      imei: ['', [Validators.required, imeiValidator()]],
+      imei: [data.imei ?? '', [Validators.required, imeiValidator()]],
       condition: ['NEW', Validators.required],
       cost_price: [data.product.cost_price, [Validators.required, Validators.min(0)]],
       sell_price: [data.product.sell_price, [Validators.required, Validators.min(0)]],

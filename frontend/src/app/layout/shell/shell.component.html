@@ -27,8 +27,8 @@
       <button mat-icon-button (click)="collapsed.set(!collapsed())" [attr.aria-label]="'common.toggleMenu' | transloco">
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="toolbar-title">{{ settings.shopName() }}</span>
-      <span class="toolbar-spacer"></span>
+      <span class="toolbar-title">{{ pageTitle() | transloco }}</span>
+      <span class="toolbar-spacer"></span><span class="toolbar-shop">{{ settings.shopName() }}</span>
       <button mat-stroked-button class="language-button" [attr.aria-label]="'common.language' | transloco" (click)="language.toggle()">
         {{ language.language() === 'fr' ? 'عربي' : 'FR' }}
       </button>

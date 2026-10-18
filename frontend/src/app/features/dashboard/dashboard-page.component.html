@@ -18,7 +18,7 @@
           <line x1="48" y1="100" x2="790" y2="100" stroke="#edf0f6" />
           <text x="8" y="188">0</text>
           @for(day of data.last_7_days; track day.date; let i = $index) {
-            <g tabindex="0" [attr.aria-label]="(day.date | date:'dd/MM/yyyy') + ': ' + (day.total | money)"><title>{{ day.date | date:'dd/MM/yyyy' }} ? {{ day.total | money }}</title><rect [attr.x]="78 + i * 102" [attr.y]="184 - day.total / maxDailyTotal(data) * 136" width="40" [attr.height]="day.total / maxDailyTotal(data) * 136" rx="6" fill="#3949ab" /><text [attr.x]="98 + i * 102" [attr.y]="172 - day.total / maxDailyTotal(data) * 136" text-anchor="middle">{{ day.total | money }}</text><text [attr.x]="98 + i * 102" y="212" text-anchor="middle">{{ day.date | date:'dd/MM' }}</text></g>
+            <g tabindex="0" [attr.aria-label]="(day.date | date:'dd/MM/yyyy') + ': ' + (day.total | money)"><title>{{ day.date | date:'dd/MM/yyyy' }} &#183; {{ day.total | money }}</title><rect [attr.x]="78 + i * 102" [attr.y]="184 - day.total / maxDailyTotal(data) * 136" width="40" [attr.height]="day.total / maxDailyTotal(data) * 136" rx="6" fill="#3949ab" /><text [attr.x]="98 + i * 102" [attr.y]="172 - day.total / maxDailyTotal(data) * 136" text-anchor="middle">{{ day.total | money }}</text><text [attr.x]="98 + i * 102" y="212" text-anchor="middle">{{ day.date | date:'dd/MM' }}</text></g>
           }
         </svg>
       } @else { <app-empty-state message="dashboard.noSales" icon="bar_chart"><a mat-button routerLink="/pos">{{ 'sales.newSale' | transloco }}</a></app-empty-state> }

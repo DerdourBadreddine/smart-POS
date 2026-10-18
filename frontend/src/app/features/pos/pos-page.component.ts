@@ -105,7 +105,7 @@ export class PosPageComponent {
     this.salesApi.createSale({ items, customer_id: payment.customerId, discount: this.cart.discount(), payment_method: payment.paymentMethod, amount_paid: payment.amountPaid }).subscribe({
       next: (sale) => {
         this.snackBar.open(`${sale.number} ${this.transloco.translate('pos.saleCompleted')}`, this.transloco.translate('confirmation.ok'), { duration: 4000 });
-        this.dialog.open(ReceiptDialogComponent, { data: sale, width: '440px' });
+        this.dialog.open(ReceiptDialogComponent, { data: { ...sale, change_due: Math.max(0, payment.tendered - Number(sale.total)) }, width: '440px' });
         this.cart.clear();
         this.search.setValue('');
       },

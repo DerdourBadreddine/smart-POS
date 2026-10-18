@@ -1,10 +1,11 @@
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TranslocoPipe } from '../../core/i18n/bundled-transloco.pipe';
 
 import { LanguageService } from '../../core/i18n/language.service';
@@ -33,6 +34,12 @@ interface NavigationItem {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellComponent {
+  readonly pageTitle=signal('nav.dashboard');
+  private readonly router=inject(Router);
+  constructor(){
+    const update=()=>{let route=this.router.routerState.snapshot.root;while(route.firstChild)route=route.firstChild;this.pageTitle.set(route.data['titleKey']||'nav.dashboard');};
+    this.router.events.pipe(takeUntilDestroyed()).subscribe(event=>{if(event instanceof NavigationEnd)update();});update();
+  }
   readonly collapsed = signal(false);
   readonly language = inject(LanguageService);
   readonly settings = inject(SettingsStore);

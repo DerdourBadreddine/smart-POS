@@ -99,6 +99,8 @@ select {
 }
 
 html[dir='rtl'] {
+  --mat-sys-title-large-font: 'Noto Sans Arabic', 'Inter', sans-serif;
+  --mat-sys-title-medium-font: 'Noto Sans Arabic', 'Inter', sans-serif;
   --mat-sys-body-large-font: 'Noto Sans Arabic', 'Inter', sans-serif;
   --mat-sys-body-medium-font: 'Noto Sans Arabic', 'Inter', sans-serif;
   --mat-sys-body-small-font: 'Noto Sans Arabic', 'Inter', sans-serif;
@@ -161,3 +163,5 @@ html[dir=rtl] .directional { transform: scaleX(-1); }
   mat-dialog-actions,.cdk-overlay-backdrop { display: none !important; }
   .mat-drawer-content,.shell,.content { overflow: visible !important; block-size: auto !important; margin: 0 !important; padding: 0 !important; }
 }
+
+.directional { display: inline-block; }

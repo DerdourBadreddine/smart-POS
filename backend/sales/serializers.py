@@ -24,6 +24,7 @@ class SaleItemSerializer(serializers.ModelSerializer):
 
 
 class SaleSerializer(serializers.ModelSerializer):
+    customer_name = serializers.CharField(source="customer.name", read_only=True, default="")
     items = SaleItemSerializer(many=True, read_only=True)
     paid_total = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     balance = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
@@ -34,6 +35,7 @@ class SaleSerializer(serializers.ModelSerializer):
             "id",
             "number",
             "customer",
+            "customer_name",
             "subtotal",
             "discount",
             "total",

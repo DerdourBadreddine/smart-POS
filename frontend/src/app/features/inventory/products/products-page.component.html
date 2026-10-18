@@ -76,7 +76,7 @@
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef>{{ 'inventory.name' | transloco }}</th>
             <td mat-cell *matCellDef="let product">
-              @if(product.track_imei){<a [routerLink]="['/inventory/phones',product.id]">{{product.name}}</a>}@else{<strong>{{ product.name }}</strong>}
+              @if(product.track_imei){<a [routerLink]="['/inventory/phones',product.id]" [queryParams]="{imei:imeiSearch.value}">{{product.name}}</a>}@else{<strong>{{ product.name }}</strong>}
               @if (product.brand || product.model_name) {
                 <small>{{ product.brand }} {{ product.model_name }}</small>
               }

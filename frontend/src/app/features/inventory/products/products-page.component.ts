@@ -69,6 +69,7 @@ export class ProductsPageComponent {
 
   constructor() {
     const query=inject(ActivatedRoute).snapshot.queryParamMap;
+    if(query.get('imei'))this.imeiSearch.setValue(query.get('imei')!);
     if(query.get('search'))this.search.setValue(query.get('search')!);
     if(query.get('kind')==='PHONE')this.selectedKind.set('PHONE');
     this.categoriesApi
